@@ -161,7 +161,7 @@ FIELDS:
      Populated by the system. Read-only. More info:
      https://git.k8s.io/community/contributors/devel/api-conventions.md#spec-and-status
 
-$ kubectl explain pod.spec #### detail  အသံုးျပဳနိုင္တဲ့ spec ေတြကို ေတြ႕ရပါမယ္ 
+$ kubectl explain pod.spec #### detail    အသုံးပြုနိုင်တဲ့ spec တွေကို တွေ့ရပါမယ်
 ```
 ```
 Reference:
