@@ -4,7 +4,7 @@ description: how to create pods in Myanmar
 
 # Creating pods
 
-![](.gitbook/assets/pods3.svg)
+![](.gitbook/assets/pods3.png)
 
         Pods နဲ့ တခြား kubernetes resources တွေကို json သို့မဟုတ် YAML manifest တွေနဲ့ Kubernetes REST API endpoint သို့ post လုပ်ပြီး ဖန်တီးလို့ရနိုင်ပါတယ်။ နောက်တခြား နည်းလမ်းတစ်ခုကတော့ ရိုးရှင်းတဲ့ kubectl run command နဲ့ create လုပ်လို့ရနိုင်ပါတယ်။ kubectl command က အတော်အများ အသုံးဝင် ပေမယ့် တချို့ properties တွေကိုတော့ လုပ်လို့မရပါဘူး၊ limitation တွေ ရှိပါတယ် သို့သော်များလဲ cluster administrator တစ်ယောက် အနေနဲ့ နေ့စဉ် အမြဲ ထိတွေ့နေရတဲ့ အရေးပါတဲ့ နေရာမှာ ရှိပါတယ်။ pod manifest မှာ ဘာတွေ ပါဝင်နိုင်သလဲ ? Pod ရဲ့ အဓိက manifest ကတော့ အပိုင်း ၄ခု ပါဝင်ပါတယ်။ manifest တိုင်းမှာ ပထမဦးစွာ မပါမဖြစ်ပါဝင်တာကတော့ K8s ရဲ့ API version တွေပါ။ API version ဆိုတာ ကတော့ k8s မှာ pod သို့မဟုတ် တခြားသော resource တွေ ကို ဖန်းတီးတဲ့ အခါ မတူညီတဲ့ versions \(stable/ Beta/ Alpha\) တွေရဲ့ feature တွေကို ကိုယ်ဘာတွေ သုံးချင်လဲ အပေါ်မှာ မူတည်ပြီ ထည့်လို့ရနိုင်ပါတယ်။ ယေဘုယျ အားဖြင့်တော့ ကျွန်တော်တို့တွေ က stable တွေကို သုံးကြပါတယ်၊ stable ကတော့ vX \(eg. v1\) ဖြစ်ပြီး X ကတော့ အဲနေရာမှာ 1, 2 အစရှိသဖြင့် integer တွေ ဖြစ်ပါတယ်။ ခုနက ပြောသလိုဘဲ API version တစ်ခုနဲ့ တစ်ခုမှာ လုပ်လို့ရတာတွေ၊ လုပ်လို့မရတာတွေ၊ ပိုကောင်းမွန်တဲ့ feature တွေ၊ stable မှာ မရှိတော့တဲ့ deprecate feature တွေ၊ support လုပ်တဲ့ feature တွေ အစရှိသဖြင့် ကွဲပြားခြားနား ပါတယ်။ အသေးစိတ် ကိုတော့ kubernetes ရဲ့ [document](https://kubernetes.io/docs/concepts/overview/kubernetes-api/) မှာ ကြည့်နိုင်ပါတယ်။ တခြား ပါဝင်တာတွေကတော့ -
 
