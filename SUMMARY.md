@@ -3,8 +3,8 @@
 * [Main](README.md)
 * [K8s Cluster Architecture](k8s-cluster-achitecture.md)
 * [Pods](pods.md)
-* [Creating pods](untitled.md)
-* [Labels and Selectors](untitled-1.md)
-* [Replication Controller](untitled-2.md)
-* [ReplicaSet](untitled-3.md)
+* [Creating pods](creating-pods.md)
+* [Labels and Selectors](labels-and-selectors.md)
+* [Replication Controller](replication-controller.md)
+* [ReplicaSet](replicaset.md)
 
