@@ -4,7 +4,7 @@ description: Kubernetes Cluster Achitecture အကြမ်းဖျင်း
 
 # K8s Cluster Achitecture
 
-![](.gitbook/assets/k8s-cluster-arch00.png)
+![](.gitbook/assets/k8s-cluster-arch00%20%281%29.png)
 
 
 
