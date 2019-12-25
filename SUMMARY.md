@@ -6,5 +6,5 @@
 * [Creating pods](untitled.md)
 * [Labels and Selectors](untitled-1.md)
 * [Replication Controller](untitled-2.md)
-* [index](untitled-3.md)
+* [ReplicaSet](untitled-3.md)
 
