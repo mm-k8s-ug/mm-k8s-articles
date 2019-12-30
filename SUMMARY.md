@@ -7,4 +7,5 @@
 * [Labels and Selectors](labels-and-selectors.md)
 * [Replication Controller](replication-controller.md)
 * [ReplicaSet](replicaset.md)
+* [DaemonSet](daemonset.md)
 
