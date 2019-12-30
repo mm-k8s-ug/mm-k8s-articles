@@ -8,4 +8,5 @@
 * [Replication Controller](replication-controller.md)
 * [ReplicaSet](replicaset.md)
 * [DaemonSet](ds.md)
+* [Service](service.md)
 
