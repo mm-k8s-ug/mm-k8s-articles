@@ -51,7 +51,7 @@ NAME READY STATUS RESTARTS AGE LABELS
 label_lab1 1/1 Running 0 10m app=label_lab1, env=dev
 ```
 
-Pod ေဆာက်ပီးမှ label ထည့်လို့လဲရပါတယ်။
+Pod ဆောက်ပီးမှ label ထည့်လို့လဲရပါတယ်။
 
 ```text
 $ kubectl label pods label_lab1 rel=1.0
