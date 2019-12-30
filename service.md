@@ -16,7 +16,7 @@ Kubernetes ရဲ့ **Service** ဆိုတာကတော့ Cluster ထဲ�
 
 ဟုတ်ပြီ ဒီတော့ ‌မေးစရာလေးတွေဖြစ်လာပြီ Kubernetes Service က LabelSelector တူရာ Pod တွေကိုဘယ်လိုစုလာလဲဆိုတော့ \( Labels and Selectorsတွေအကြောင်းကိုတော့ [ဒီမှာ](https://myanmar-kubernetes.gitbook.io/kubernetes-myanmar/labels-and-selectors) ‌လေ့လာနိုင်ပါတယ် \)
 
-#### Lable selectors
+#### LabelSelectors
 
 ![](https://i.imgur.com/ahpQU73.png)
 
@@ -56,4 +56,5 @@ Service ကို Expose လုပ်တဲ့နေရာမှာ Kubernetes S
 > `Reference -` [`https://kubernetes.io/docs/concepts/services-networking/service/`](https://kubernetes.io/docs/concepts/services-networking/service/)\`\`
 >
 > * `Kubernetes in action book`
+> * `Photo Ref: Google`
 
