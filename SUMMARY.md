@@ -9,4 +9,9 @@
 * [ReplicaSet](replicaset.md)
 * [DaemonSet](ds.md)
 * [Service](service.md)
+* [Job](job.md)
+
+## container
+
+* [Container Options](container/container-options.md)
 
