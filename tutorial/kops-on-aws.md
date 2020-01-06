@@ -101,7 +101,7 @@ $ kops create cluster ${NAME} --state=${KOPS_STATE_STORE} --master-count 3 --mas
 Line number  ၁၀ နှင့် ၁၁ တွင်ရှိသော အောက်ဖော်ပြပါ **authentication:aws:{}**  ကိုထည့်ပေးရန်လိုအပ်ပါသည်။
 
 {% hint style="warning" %}
-AWS IAM နှင့် Authentication ကို Integrate မလုပ်ချင်ပါက ယခု Config ကို ပြင်ဆင်စရာမလိုအပ်ပါ။ပြီးတော့ aws-iam-authenticator ကို   
+AWS IAM နှင့် Authentication ကို Integrate မလုပ်ချင်ပါက ယခု Config ကို ပြင်ဆင်စရာမလိုအပ်ပါ။ပြီးတော့ aws-iam-authenticator ကို  
 {% endhint %}
 
 {% code title="mycluster.yaml" %}
@@ -881,7 +881,7 @@ $ kubectl create -f external-dns.yaml
 ```
 {% endcode %}
 
-ယခုအခြေအနေတွင်အားလုံးတည်ဆောက်ပြီး
+ယခုအခြေအနေတွင်အားလုံးတည်ဆောက်ပြီး 
 
 တည်ဆောက်ခဲ့သည့် cluster, iam authentication and k8s rbac, alb ingress and automatic external DNS service များကို စမ်းသပ်ရန်အတွက် အောက်ဖော်ပြပါ 2048 web application game ဖြင့်စမ်းသပ်နိုင်ပါသည်။ 
 
