@@ -4,12 +4,14 @@ description: Kops on AWS
 
 # How to complete setup Kubernetes Cluster on AWS using Kops
 
+#### 
+
 #### Thinking Basic requirement 
 
-* Installing cluster \(IAC\)
-* Authentication \(IAM\)
-* Authorization \(k8s resources\)
-* Ingress Controller \(ALB\)
+* Installing Cluster \( IAC \)
+* Authentication \( IAM \)
+* Authorization \( K8s resources\)
+* Ingress Controller \( ALB \)
 * External DNS 
 
 #### Prerequisites before setup cluster
@@ -19,21 +21,21 @@ description: Kops on AWS
 * [aws-iam-authenticator](https://github.com/kubernetes-sigs/aws-iam-authenticator)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
-#### what is kops ? 
+#### What is Kops ? 
 
-**Kops** သည် K for kubernetes၊ ops for Operations ၂ခု ပေါင်းသည့်အခါ Kubernetes Operations ဟုတ် အဓိပ္ပါယ်ရသည်။ အမျိုးမျိုးသော cloud platforms များပေါ်တွင် kubernetes cluster ကို version control system ဖြင့် install ပြုလုပ်ခြင်း၊ manage ပြုလုပ်ခြင်း၊ စသည့် operation များကို ကူညီ အထောက်အပံ ဖြစ်ရန် ရည်ရွယ် ထုတ်လုပ်ထားသည့် cli tool တစ်ခု ဖြစ်သည်။ Kops သည် kubernetes project အတူဖြစ်ပေါ်လာပြီ K8s team မှ ထိန်းသိမ်းသည့် tools တစ်ခု ဖြစ်သည်။ 
+**Kops** သည် K for kubernetes၊ ops for Operations ၂ခု ပေါင်းသည့်အခါ Kubernetes Operations ဟုတ် အဓိပ္ပါယ်ရသည်။ အမျိုးမျိုးသော cloud platforms များပေါ်တွင် kubernetes cluster ကို version control system ဖြင့် install ပြုလုပ်ခြင်း၊ manage ပြုလုပ်ခြင်း၊ စသည့် operation များကို ကူညီ အထောက်အပံ ဖြစ်ရန် ရည်ရွယ် ထုတ်လုပ်ထားသည့် CLI tool တစ်ခုလည်း ဖြစ်ပါသည်။ Kops သည် kubernetes project အတူဖြစ်ပေါ်လာပြီး K8s team မှ ထိန်းသိမ်းသည့် tools တစ်ခု ဖြစ်သည်။ 
 
-#### what is aws cli ? 
+#### What is AWS CLI ? 
 
-**AWS cli** သည် developer များ၊ Ops များ အတွက် AWS cloud platform ၏ resources များကို command line မှ တဆင့် အလွယ်တကူ အသုံးပြုနိုင်ရန် အထူးပြုလုပ်ထားသော Amazon Web Services မှ tools တစ်ခုဖြစ်သည်။
+**AWS CLI** သည် Developer များ၊ Ops များ အတွက် AWS cloud platform ၏ resources များကို command line မှ တဆင့် အလွယ်တကူ အသုံးပြုနိုင်ရန် အထူးပြုလုပ်ထားသော Amazon Web Services မှ tools တစ်ခုဖြစ်သည်။
 
-#### what is aws-iam-authenticator ?
+#### What is aws-iam-authenticator ?
 
-Kubernetes Cluster ကို AWS ၏ IAM ကို အသုံးပြု၍ authentication ပြုလုပ်နိုင်ရန် အတွက် ထုတ်လုပ်ထားသော tools တစ်ခုဖြစ်သည်။ aws-iam-authenticator သည် kubernetes special interest groups ၏ project တစ်ခု ဖြစ်ပြီး ယခု လက်ရှိတွင် Heptio and Amazon EKS OSS မှ ထိန်းသိမ်းသည်။ 
+Kubernetes Cluster ကို AWS ၏ **IAM** ကို အသုံးပြု၍ authentication ပြုလုပ်နိုင်ရန် အတွက် ထုတ်လုပ်ထားသော tools တစ်ခုဖြစ်သည်။ aws-iam-authenticator သည် kubernetes special interest groups \( SIG \) ၏ project တစ်ခု ဖြစ်ပြီး ယခု လက်ရှိတွင် Heptio and Amazon EKS OSS မှ ထိန်းသိမ်ထားပါသည်။  
 
-#### what is kubectl ? 
+#### What is kubectl ? 
 
-Kubectl သည် kubernetes cluster အတွက် client command line interface tool တစ်ခု ဖြစ်သည်. kubectl သည် kubernetes cluster ကို ဆက်သွယ် ချိတ်ဆက် ရန် $HOME/.kube directory အောက် တွင် ရှိသောက် config file များကို ဖတ်သည်။ environment variable _**KUBECONFIG**_ ကိုလဲ config file အစား အသုံး ပြုနိုင်သည်။
+Kubectl သည် kubernetes cluster အတွက် client command line interface tool တစ်ခု ဖြစ်သည်။ kubectl သည် kubernetes cluster ကို ဆက်သွယ် ချိတ်ဆက် ရန် $HOME/.kube directory အောက် တွင် ရှိသောက် config file များကို ဖတ်သည်။ environment variable _**KUBECONFIG**_ ကိုလဲ config file အစား အသုံး ပြုနိုင်သည်။
 
 
 
@@ -49,7 +51,7 @@ $ sudo mv kops-linux-amd64 /usr/local/bin/kops
 ```
 {% endcode %}
 
-Kops ကို အသုံးပြုရန် AWS ၏ IAM user တစ်ခု လိုအပ်ပါသည်။ ထို IAM user တွင် Kops မှ AWS ၏ resource များကို အသုံးပြုရန် အနည်းဆုံး အောက်ပါ permission များ လိုအပ်ပါသည်။ 
+Kops ကို အသုံးပြုရန် AWS ၏ IAM user တစ်ယောက် လိုအပ်ပါသည်။ ထို IAM user တွင် Kops မှ AWS ၏ resource များကို အသုံးပြုရန် အနည်းဆုံး အောက်ပါ permission များ လိုအပ်ပါသည်။ 
 
 * `AmazonEC2FullAccess`
 * `AmazonRoute53FullAccess`
@@ -57,7 +59,7 @@ Kops ကို အသုံးပြုရန် AWS ၏ IAM user တစ်ခ�
 * `IAMFullAccess`
 * `AmazonVPCFullAccess`
 
-လိုအပ်သော Permission နှင့် User  တစ်ယောက်ဆောက်ပြီးသည့်အခါတွင်အောက်ဖော်ပြပါ Command နဲ့ AWS CLI ကို Setup လုပ်ပေးရမည်။ 
+လိုအပ်သော Permission နှင့် User  တစ်ယောက်ဆောက်ပြီးသည့်အခါတွင် အောက်ဖော်ပြပါ Command နဲ့ AWS CLI ကို Setup လုပ်ပေးရမည်။ 
 
 {% code title="Terminal" %}
 ```bash
@@ -65,7 +67,7 @@ $ aws configure
 ```
 {% endcode %}
 
-AWS cli ကို setup လုပ်ပြီ:သောအခါ AWS ၏ S3 bucket တစ်ကို  kops state file များ သိမ်းရန် အောက်ပါ command များကို အသုံးပြု၍ တည်ဆောက်နိုင်ပါသည်။
+AWS CLI  ကို setup လုပ်ပြီသောအခါ AWS ၏ S3 bucket တစ်ကို  kops state file များ သိမ်းရန် အောက်ပါ command များကို အသုံးပြု၍ တည်ဆောက်နိုင်ပါသည်။
 
 {% code title="Terminal" %}
 ```bash
@@ -78,7 +80,7 @@ $ aws s3api put-bucket-encryption --bucket ${NAME} --server-side-encryption-conf
 ```
 {% endcode %}
 
-AWS S3 တည်ဆောက်ပြီသောအခါ ကျွန်တော်တို့ လိုချင်သည့် ပုံစံဖြင့် kubernetes cluster ကို တည်ဆောက်ရန် အဆင်သင့် ဖြစ်နေပြီ ဖြစ်သည်။ Kops ကို အသုံးပြု၍ private နဲ့ public topology ၂ မျိုးဖြင့် cluster ကို တည်ဆောက် နိုင်ပါသည်။ 
+AWS S3 တည်ဆောက်ပြီသောအခါ မှာကျွန်တော်တို့ လိုချင်သည့် ပုံစံဖြင့် kubernetes cluster ကို တည်ဆောက်ရန် အဆင်သင့် ဖြစ်နေပြီပဲ ဖြစ်ပါသည်။ Kops ကို အသုံးပြု၍ private နဲ့ public topology ၂ မျိုးဖြင့် cluster ကို တည်ဆောက် နိုင်ပါသည်။ 
 
 ဒီ scenario မှာတော့ private topology ကျွန်တော် အသုံးပြုသွားမှာ ဖြစ်သည်။ t3.medium instance type နှင့် weave network plugin ကို အသုံးပြုပြီး masters ၃ လုံး၊ nodes ၃လုံးကို အသုံးပြု၍တည်ဆောက်သွားမည်ဖြစ်ပါသည်။
 
@@ -101,7 +103,7 @@ $ kops create cluster ${NAME} --state=${KOPS_STATE_STORE} --master-count 3 --mas
 Line number  ၁၀ နှင့် ၁၁ တွင်ရှိသော အောက်ဖော်ပြပါ **authentication:aws:{}**  ကိုထည့်ပေးရန်လိုအပ်ပါသည်။
 
 {% hint style="warning" %}
-AWS IAM နှင့် Authentication ကို Integrate မလုပ်ချင်ပါက ယခု Config ကို ပြင်ဆင်စရာမလိုအပ်ပါ။ပြီးတော့ aws-iam-authenticator ကို  ထည့်သွင်းပေးစရာမလိုပါ။ 
+AWS IAM နှင့် Authentication ကို Integrate မလုပ်ချင်ပါက ယခု Config ကို ပြင်ဆင်စရာမလိုအပ်ပါ။ပြီးတော့ aws-iam-authenticator ကို  ထည့်သွင်းပေးရန်မလိုပါ။
 {% endhint %}
 
 {% code title="mycluster.yaml" %}
@@ -392,8 +394,7 @@ spec:
 {% endcode %}
 
 အားလုံးပြင်ဆင်ပြီးနောက် cluster ကို အောက်ပါ command များဖြင့် bootstrap လုပ်နိုင်ပါပြီ။  
-Bootstrap လုပ်နေချိန်တွင် မိနစ်အနည်းငယ် စောင့်ရန်လိုအပ်ပါသည်။  
-
+Bootstrap လုပ်နေချိန်တွင် မိနစ်အနည်းငယ် စောင့်ရန်လိုအပ်ပါသည်။
 
 {% code title="Terminal" %}
 ```bash
@@ -404,7 +405,7 @@ $ kops kops validate cluster # validate cluster is check for your cluster state
 ```
 {% endcode %}
 
-Cluster ဆောက်ပြီးဖြစ်သော်လည်း Status ကတော့  valid ဖြစ်သေးမှာမဟုတ်ပါဘူး။အကြောင်းရင်းမှာ authentication plugin ၏ configuration လိုနေသောကြောင့်ဖြစ်ပါသည်။
+Cluster တည်ဆောက်ပြီးဖြစ်သော်လည်း Status ကတော့  valid ဖြစ်သေးမှာမဟုတ်ပါဘူး။ ဘာလို့လဲဆိုတော့ authentication plugin ၏ configuration လိုနေသောကြောင့်ဖြစ်ပါသည်။
 
 {% code title="json" %}
 ```javascript
@@ -460,7 +461,7 @@ Cluster ဆောက်ပြီးဖြစ်သော်လည်း Status �
 {% hint style="warning" %}
 အောက်တွင်ဖော်ပြထားသော commands ဖြင့် K8sDeveloper နှင့် K8sAdmin အစရှိသော role နှစ်ခုကို configmap အတွက်  တည်ဆောက်သည့်အခါတွင် အပေါ် မှာ json များထွက်လာမည်ဖြစ်ပါသည်။ 
 
-Example ဖော်ပြထားခြင်းသာဖြစ်ပါသည်။   
+Example ပြထားခြင်းဖြစ်ပါသည်။   
 {% endhint %}
 
 {% code title="Terminal" %}
@@ -569,7 +570,7 @@ $ kubectl create -f developer-rbac.yaml
 ```
 {% endcode %}
 
-aws-iam-authenticator အလုပ်လုပ်ရန် နင့် သတ်မှတ်ထားသည့် user group policy  များ အသက်ဝင်ရန် အောက်ပါ configmap ကို create ပြုလုပ်ရပါမည်။ 
+aws-iam-authenticator အလုပ်လုပ်ရန် နင့် သတ်မှတ်ထားသည့် user group policy  များ အသက်ဝင်ရန် အောက်ပါ configmap ကို create ပြုလုပ်ပေးရန်လိုအပ်ပါသည်။ 
 
 {% code title="aws-auth.yaml" %}
 ```yaml
@@ -602,7 +603,7 @@ $ kubectl create -f aws-auth.yaml
 ```
 {% endcode %}
 
-ယခုအခြေအနေတွင် Kubernetes cluster နှင့် authentication/authorization setup ပြုလုပ်ခြင်းမှာ ပြီးမြောက်လုနီးပါးဖြစ်ပါသည်။ Kubernetes client \(kubectl\) မှ cluster ကို access လုပ်ရန် configure ချဖို. လိုအပ်ပါသည်။   
+ယခုအခြေအနေတွင် Kubernetes cluster နှင့် authentication/authorization setup ပြုလုပ်ခြင်းမှာ ပြီးမြောက်လုနီးပါးဖြစ်ပါသည်။ Kubernetes client \(kubectl\) မှ cluster ကို access လုပ်ရန် configure ချဖို. လိုအပ်ပါသည်။  
 အောက်ဖော်ပြပါ config နှစ်ခုသည် Developer နှင့် Administrator အတွက် ဖြစ်ပါသည်။   
 ကျွန်တော် ကတော့ Admin config အသုံးပြုပြီး AWS Application LoadBalancer ကိုဆက်လက် setup လုပ်သွားမှာ ဖြစ်ပါသည်။ 
 
@@ -686,7 +687,7 @@ $ kubectl get nodes # test what you authorized
 ```
 {% endcode %}
 
-ထို.နောက် AWS Application LoadBalancer ကို Kubernetes Ingress Controller နဲ့ integrate ပြုလုပ်ရန် အောက်ဖော်ပြပါအတိုင်း RBAC နှင့် alb-ingress-controller deployment ကို kube-system တွင် create လုပ်ရမည်ဖြစ်ပါသည်။ လိုအပ်သော additional policy များကို cluster bootstrap လုပ်ခဲ့တုန်း ကထည့်သွင်းခဲ့ပြီးဖြစ်ပါသည်။
+ထို့နောက် AWS Application LoadBalancer ကို Kubernetes Ingress Controller နဲ့ integrate ပြုလုပ်ရန် အောက်ဖော်ပြပါအတိုင်း RBAC နှင့် alb-ingress-controller deployment ကို kube-system တွင် create လုပ်ရမည်ဖြစ်ပါသည်။ လိုအပ်သော additional policy များကို cluster bootstrap လုပ်ခဲ့တုန်း ကထည့်သွင်းခဲ့ပြီးဖြစ်ပါသည်။
 
 {% code title="alb-rbac.yaml" %}
 ```yaml
@@ -881,9 +882,9 @@ $ kubectl create -f external-dns.yaml
 ```
 {% endcode %}
 
-ယခုအခြေအနေတွင်အားလုံးတည်ဆောက်ပြီး ဖြစ်ပါသည်။
+ယခုအခြေအနေတွင်အားလုံးတည်ဆောက်ပြီး ဖြစ်ပါသည်။ 
 
-တည်ဆောက်ခဲ့သည့် cluster, iam authentication and k8s rbac, alb ingress and automatic external DNS service များကို စမ်းသပ်ရန်အတွက် အောက်ဖော်ပြပါ 2048 web application game ဖြင့်စမ်းသပ်နိုင်ပါသည်။ 
+တည်ဆောက်ခဲ့သည့် Cluster, IAM authentication and k8s RBAC, ALB ingress and automatic external DNS service များကို စမ်းသပ်ရန်အတွက် အောက်ဖော်ပြပါ 2048 web application game ဖြင့်စမ်းသပ်နိုင်ပါသည်။ 
 
 {% code title="Terminal" %}
 ```bash
@@ -929,6 +930,6 @@ $ google-chrome-stable yourcluster.com
 {% endcode %}
 
 {% hint style="success" %}
-ယခု ကျွန်တော်တို. လုပ်ပြထားသော tutorial လေးသည် Non-Profit Organization တစ်ခုတွက်ကျွန်တော်တို. Setup လုပ်ပေးခဲ့သော Production Kops cluster Setup Usecase မှ ကောက်နုတ်ဖော်ပြထားချင်းဖြစ်သည့်အတွက် စာဖတ်သူတို.စိတ်ထဲတွင် မရှင်းမလင်းတစ်ခုခုခံစားခဲ့ရရင်ကျွန်တော်တို.ရဲ့ Facebook Group or Page ကိုဆက်သွယ်မေးမြန်းနိုင်ပါသည်။ 
+ယခု ကျွန်တော်တို. လုပ်ပြထားသော tutorial လေးသည် Non-Profit Organization တစ်ခုအတွက် ကျွန်တော်တို. Setup လုပ်ပေးခဲ့သော Production Grade Kops Cluster Setup Use-case မှ ကောက်နုတ်ဖော်ပြထားခြင်းဖြစ်သည့်အတွက် စာဖတ်သူတို.စိတ်ထဲတွင် မရှင်းမလင်းတစ်ခုခုခံစားခဲ့ရရင်ကျွန်တော်တို.ရဲ့ Facebook Group or Page ကိုဆက်သွယ်မေးမြန်းနိုင်ပါသည်။ 
 {% endhint %}
 
