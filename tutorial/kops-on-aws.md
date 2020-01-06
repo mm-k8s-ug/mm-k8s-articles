@@ -881,7 +881,7 @@ $ kubectl create -f external-dns.yaml
 ```
 {% endcode %}
 
-ယခုအခြေအနေတွင်အားလုံးတည်ဆောက်ပြီး 
+ယခုအခြေအနေတွင်အားလုံးတည်ဆောက်ပြီး
 
 တည်ဆောက်ခဲ့သည့် cluster, iam authentication and k8s rbac, alb ingress and automatic external DNS service များကို စမ်းသပ်ရန်အတွက် အောက်ဖော်ပြပါ 2048 web application game ဖြင့်စမ်းသပ်နိုင်ပါသည်။ 
 
