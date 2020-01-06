@@ -101,7 +101,7 @@ $ kops create cluster ${NAME} --state=${KOPS_STATE_STORE} --master-count 3 --mas
 Line number  ၁၀ နှင့် ၁၁ တွင်ရှိသော အောက်ဖော်ပြပါ **authentication:aws:{}**  ကိုထည့်ပေးရန်လိုအပ်ပါသည်။
 
 {% hint style="warning" %}
-AWS IAM နှင့် Authentication ကို Integrate မလုပ်ချင်ပါက ယခု Config ကို ပြင်ဆင်စရာမလိုအပ်ပါ။ပြီးတော့ aws-iam-authenticator ကို  
+AWS IAM နှင့် Authentication ကို Integrate မလုပ်ချင်ပါက ယခု Config ကို ပြင်ဆင်စရာမလိုအပ်ပါ။ပြီးတော့ aws-iam-authenticator ကို  ထည့်သွင်းပေးစရာမလိုပါ။ 
 {% endhint %}
 
 {% code title="mycluster.yaml" %}
