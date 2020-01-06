@@ -10,7 +10,6 @@
 * [DaemonSet](ds.md)
 * [Service](service.md)
 * [Job](job.md)
-* [test](test.md)
 
 ## container
 
