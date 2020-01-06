@@ -21,5 +21,5 @@
 
 ## TUTORIAL
 
-* [How to complete setup Kubernetes Cluster on AWS using Kops](tutorial/untitled.md)
+* [How to complete setup Kubernetes Cluster on AWS using Kops](tutorial/kops-on-aws.md)
 
