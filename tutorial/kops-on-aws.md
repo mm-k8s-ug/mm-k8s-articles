@@ -29,7 +29,7 @@ description: Kops on AWS
 
 #### what is aws-iam-authenticator ?
 
-Kubernetes Cluster ကို AWS ၏ IAM ကို အသုံးပြု၍ authentication ပြုလုပ်နိုင်ရန် အတွက် ထုတ်လုပ်ထားသော tools တစ်ခုဖြစ်သည်။ aws-iam-authenticator သည် kubernetes special interest groups ၏ project တစ်ခု ဖြစ်ပြီး ယခု လက်ရှိတွင် Heptio and Amazon EKS OSS မှ ထိန်းသိမ်းသည်။ 
+Kubernetes Cluster ကို AWS ၏ IAM ကို အသုံးပြု၍ authentication ပြုလုပ်နိုင်ရန် အတွက် ထုတ်လုပ်ထားသော tools တစ်ခုဖြစ်သည်။ aws-iam-authenticator သည် kubernetes special interest groups ၏ project တစ်ခု ဖြစ်ပြီး ယခု လက်ရှိတွင် Heptio and Amazon EKS OSS မှ ထိန်းသိမ်းသည်။
 
 #### what is kubectl ? 
 
@@ -101,7 +101,7 @@ $ kops create cluster ${NAME} --state=${KOPS_STATE_STORE} --master-count 3 --mas
 Line number  ၁၀ နှင့် ၁၁ တွင်ရှိသော အောက်ဖော်ပြပါ **authentication:aws:{}**  ကိုထည့်ပေးရန်လိုအပ်ပါသည်။
 
 {% hint style="warning" %}
-AWS IAM နှင့် Authentication ကို Integrate မလုပ်ချင်ပါက ယခု Config ကို ပြင်ဆင်စရာမလိုအပ်ပါ။ပြီးတော့ aws-iam-authenticator ကို  ထည့်သွင်းပေးစရာမလိုပါ။ 
+AWS IAM နှင့် Authentication ကို Integrate မလုပ်ချင်ပါက ယခု Config ကို ပြင်ဆင်စရာမလိုအပ်ပါ။ပြီးတော့ aws-iam-authenticator ကို  
 {% endhint %}
 
 {% code title="mycluster.yaml" %}
@@ -460,7 +460,7 @@ Cluster ဆောက်ပြီးဖြစ်သော်လည်း Status �
 {% hint style="warning" %}
 အောက်တွင်ဖော်ပြထားသော commands ဖြင့် K8sDeveloper နှင့် K8sAdmin အစရှိသော role နှစ်ခုကို configmap အတွက်  တည်ဆောက်သည့်အခါတွင် အပေါ် မှာ json များထွက်လာမည်ဖြစ်ပါသည်။ 
 
-Example ဖော်ပြထားခြင်းသာဖြစ်ပါသည်။   
+Example   
 {% endhint %}
 
 {% code title="Terminal" %}
@@ -569,7 +569,7 @@ $ kubectl create -f developer-rbac.yaml
 ```
 {% endcode %}
 
-aws-iam-authenticator အလုပ်လုပ်ရန် နင့် သတ်မှတ်ထားသည့် user group policy  များ အသက်ဝင်ရန် အောက်ပါ configmap ကို create ပြုလုပ်ရပါမည်။ 
+aws-iam-authenticator အလုပ်လုပ်ရန် နင့် သတ်မှတ်ထားသည့် user group policy  များ အသက်ဝင်ရန် အောက်ပါ configmap ကို create 
 
 {% code title="aws-auth.yaml" %}
 ```yaml
@@ -881,7 +881,7 @@ $ kubectl create -f external-dns.yaml
 ```
 {% endcode %}
 
-ယခုအခြေအနေတွင်အားလုံးတည်ဆောက်ပြီး ဖြစ်ပါသည်။ 
+ယခုအခြေအနေတွင်အားလုံးတည်ဆောက်ပြီး 
 
 တည်ဆောက်ခဲ့သည့် cluster, iam authentication and k8s rbac, alb ingress and automatic external DNS service များကို စမ်းသပ်ရန်အတွက် အောက်ဖော်ပြပါ 2048 web application game ဖြင့်စမ်းသပ်နိုင်ပါသည်။ 
 
