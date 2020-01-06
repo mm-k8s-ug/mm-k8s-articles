@@ -4,9 +4,7 @@ description: Kops on AWS
 
 # How to complete setup Kubernetes Cluster on AWS using Kops
 
-#### 
-
-#### Thinking Basic requirement 
+Thinking Basic requirement 
 
 * Installing Cluster \( IAC \)
 * Authentication \( IAM \)
