@@ -29,7 +29,7 @@ description: Kops on AWS
 
 #### what is aws-iam-authenticator ?
 
-Kubernetes Cluster ကို AWS ၏ IAM ကို အသုံးပြု၍ authentication ပြုလုပ်နိုင်ရန် အတွက် ထုတ်လုပ်ထားသော tools တစ်ခုဖြစ်သည်။ aws-iam-authenticator သည် kubernetes special interest groups ၏ project တစ်ခု ဖြစ်ပြီး ယခု လက်ရှိတွင် Heptio and Amazon EKS OSS မှ ထိန်းသိမ်းသည်။
+Kubernetes Cluster ကို AWS ၏ IAM ကို အသုံးပြု၍ authentication ပြုလုပ်နိုင်ရန် အတွက် ထုတ်လုပ်ထားသော tools တစ်ခုဖြစ်သည်။ aws-iam-authenticator သည် kubernetes special interest groups ၏ project တစ်ခု ဖြစ်ပြီး ယခု လက်ရှိတွင် Heptio and Amazon EKS OSS မှ ထိန်းသိမ်းသည်။ 
 
 #### what is kubectl ? 
 
