@@ -686,7 +686,7 @@ $ kubectl get nodes # test what you authorized
 ```
 {% endcode %}
 
-ထို.နောက် AWS Application LoadBalancer ကို Kubernetes Ingress Controller နဲ့ integrate ပြုလုပ်ရန် အောက်ဖော်ပြပါအတိုင်း RBAC နှင့် alb-ingress-controller deployment ကို kube-system တွင် create လုပ်ရမည်ဖြစ်ပါသည်။  လိုအပ်သော additional policy များကို cluster bootstrap လုပ်ခဲ့တုန်း ကထည့်သွင်းခဲ့ပြီးဖြစ်ပါသည်
+ထို.နောက် AWS Application LoadBalancer ကို Kubernetes Ingress Controller နဲ့ integrate ပြုလုပ်ရန် အောက်ဖော်ပြပါအတိုင်း RBAC နှင့် alb-ingress-controller deployment ကို kube-system တွင် create လုပ်ရမည်ဖြစ်ပါသည်။ လိုအပ်သော additional policy များကို cluster bootstrap လုပ်ခဲ့တုန်း ကထည့်သွင်းခဲ့ပြီးဖြစ်ပါသည်။
 
 {% code title="alb-rbac.yaml" %}
 ```yaml
