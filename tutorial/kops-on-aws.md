@@ -602,7 +602,7 @@ $ kubectl create -f aws-auth.yaml
 ```
 {% endcode %}
 
-ယခုအခြေအနေတွင် Kubernetes cluster နှင့် authentication/authorization setup ပြုလုပ်ခြင်းမှာ ပြီးမြောက်လုနီးပါးဖြစ်ပါသည်။ Kubernetes client \(kubectl\) မှ cluster ကို access လုပ်ရန် configure ချဖို. လိုအပ်ပါသည်။  
+ယခုအခြေအနေတွင် Kubernetes cluster နှင့် authentication/authorization setup ပြုလုပ်ခြင်းမှာ ပြီးမြောက်လုနီးပါးဖြစ်ပါသည်။ Kubernetes client \(kubectl\) မှ cluster ကို access လုပ်ရန် configure ချဖို. လိုအပ်ပါသည်။   
 အောက်ဖော်ပြပါ config နှစ်ခုသည် Developer နှင့် Administrator အတွက် ဖြစ်ပါသည်။   
 ကျွန်တော် ကတော့ Admin config အသုံးပြုပြီး AWS Application LoadBalancer ကိုဆက်လက် setup လုပ်သွားမှာ ဖြစ်ပါသည်။ 
 
