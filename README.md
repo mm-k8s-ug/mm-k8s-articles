@@ -23,3 +23,7 @@ description: Kubernetes User Group Myanmar
 * [Containerd](https://blog.k8smm.org/container/containerd)
 * [Docker](https://blog.k8smm.org/container/docker)
 
+## **TUTORIAL**
+
+* [How to complete setup kubernetes Cluster on AWS using Kops](https://blog.k8smm.org/tutorial/kops-on-aws)
+
