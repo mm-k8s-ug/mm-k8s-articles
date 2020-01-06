@@ -460,7 +460,7 @@ Cluster ဆောက်ပြီးဖြစ်သော်လည်း Status �
 {% hint style="warning" %}
 အောက်တွင်ဖော်ပြထားသော commands ဖြင့် K8sDeveloper နှင့် K8sAdmin အစရှိသော role နှစ်ခုကို configmap အတွက်  တည်ဆောက်သည့်အခါတွင် အပေါ် မှာ json များထွက်လာမည်ဖြစ်ပါသည်။ 
 
-Example   
+Example ဖော်ပြထားခြင်းသာဖြစ်ပါသည်။   
 {% endhint %}
 
 {% code title="Terminal" %}
