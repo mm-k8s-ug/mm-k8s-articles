@@ -1,4 +1,2 @@
 # Job
 
-Kubernetes
-
