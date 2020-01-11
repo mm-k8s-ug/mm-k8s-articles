@@ -1,5 +1,5 @@
 ---
-description: how to create pods in Myanmar
+description: How to create pod in K8S cluster
 ---
 
 # Creating pods
