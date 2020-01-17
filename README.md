@@ -14,6 +14,7 @@ description: Kubernetes User Group Myanmar
 * [ReplicaSet](https://blog.k8smm.org/replicaset)
 * [DaemonSet](https://blog.k8smm.org/ds)
 * [Service](https://blog.k8smm.org/service)
+* [Job](https://blog.k8smm.org/job)
 
 ## **CONTAINER**
 
