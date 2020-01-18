@@ -1,7 +1,3 @@
----
-description: Basic Concept of Job
----
-
 # Job
 
 ကျွန်တော်တို့ [Replication Controller](https://blog.k8smm.org/replication-controller), [ReplicaSet](https://blog.k8smm.org/replicaset), [Daemonset](https://blog.k8smm.org/ds) တို့ကို ရှေ့ blog တွေမှာ လေ့လာခဲ့ကြပါတယ်။ ဒီ resources တွေရဲ့ပုံစံက pod ရဲ့ အခြေအနေကို အမြဲစောင့်ကြည့်နေပီး pod သေသွားရင် pod အသစ် ပြန်ဆောက်ပေးလေ့ရှိပါတယ်။ ဒီလိုမျိုး pod ရဲ့လုပ်ဆောင်မှူကို အစဥ်မပြတ် running state ဖြစ်နေတာကို continuous task လို့သုံးနှုန်းပါတယ်။
