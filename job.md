@@ -70,7 +70,7 @@ $ for i in $(kubectl  get po --no-headers -o custom-columns=NAME:.metadata.name)
 အကယ်၍ policy ကို OnFailure နဲ့ဆိုရင် Job controller က Pod အသစ်ဆောက်ပေးတာမျိုးမလုပ်ပဲ process မပီးသေးသ၍ container ကို ပြန် run ေနပါတယ်။ Pod တစ်ခုပဲ run မှာဖြစ်တဲ့အတွက် pod ရဲ့ status ကို -w option နဲ့ real-time ကြည့်မှသာ လုပ်ဆောင်ချက်ကို သေချာမြင်ရမှာဖြစ်တယ်။
 
 ```bash
-$ kubectl  get po
+$ kubectl  get po -w
 NAME               READY   STATUS             RESTARTS   AGE
 throw-dice-h6z82   0/1     ContainerCreating  0          1s
 throw-dice-h6z82   0/1     Error              0          3s
@@ -116,11 +116,16 @@ spec:
 completions တန်ဖိုးကို 3 ပေးထားတဲ့အတွက် successful pod အရေအတွက် ၃ခု မဆောက်ရသေးသ၍ pod တစ်ခုပီးမှနောက်တစ်ခု run မှာဖြစ်ပါတယ်။ ဥပမာ ပထမ pod completed ဖြစ်တဲ့အတွက် ဒုတိယ pod run ေပမဲ့ fail သွားတယ်ဆိုရင် တတိယ pod ကို ထပ်ဆောက်လို့ success ဖြစ်သွားမယ်ဆိုရင် pod ၃ခု ဆောက်သွားတယ်ဆိုပေမဲ့ completed ဖြစ်တဲ့ pod ၂ခု ပဲဖြစ်သေးတဲ့အတွက် သတ်မှတ်ထားတဲ့ ၃ခု မရောက်မချင်း pod အသစ်တစ်ခုထပ်ဆောက်နေမှာပါ။
 
 ```bash
-$ kubectl  get po
+$ kubectl get po
 NAME                READY   STATUS       RESTARTS  AGE
 random-error-xkbqs  0/1     Completed    0         2m
 random-error-zcmp9  0/1     Error        0         2m
 random-error-zmvpi  0/1     Completed    0         2m
+random-error-zogti  0/1     Completed    0         2m
+
+$ kubectl get jobs
+NAME                DESIRED   SUCCESSFUL   AGE
+random-error        3         3            2m
 ```
 
 နောက်တစ်နည်းကတော့ Job process ကို pod တွေ parallel ဆောက်ပီး ပီးမြောက်စေချင်တဲ့အခါ သုံးကြပါတယ်။ completions နဲ့တွဲပီးလဲသုံးလို့ရတယ်။ Job process ၅ခုလုပ်မယ်ဆိုရင် pod တစ်ခုပီးမှ တစ်ခု run ေပမဲ့ တစ်ခါ run ရင် pod ၂ခုဆီ ပေး run ချင်တယ်ဆိုတာမျိုးလဲရတယ်။ ခုနက manifest မှာ parallelism value ထပ်ထည့်ပီး စမ်းကြည့်လို့ရပါတယ်။
