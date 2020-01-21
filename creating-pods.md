@@ -16,6 +16,8 @@ description: How to create pod in K8S cluster
 
   ဒါတွေကတော့ pod manifest\(definition လို့လည်း ခေါ်တယ်၊ descriptor လို့လည်း ခေါ်တယ်\) ရဲ့ အဓိက ပါဝင်တဲ့ အပိုင်း ၄ ပိုင်း ဖြစ်ပါတယ်။ pod ဖန်တီးတဲ့ အခါမှာတော့ နောက်ဆုံးက status ဆိုတဲ့ အပိုင်းကို ထည့်ရေးစရာ မလိုပါဘူး။ status ကတော့ လက်ရှိ cluster ထဲမှာ တည်ဆောက်ထားတဲ့ pod ကို retrieve လုပ်လိုက်တဲ့ အခါမှာ cluster ဘက် အခြမ်းမှ ထုတ်ပြပေးတဲ့ information တွေသာ ဖြစ်ပါတယ်။ တချို့ အခြေနေ တွေမှာ information တွေ သိရဖို့ အသုံးဝင်ပါတယ်။ pod တခုကို ဖန်တီးသည့် အခါ Metadata, Spec တို့ရဲ့ field တွေကို သိရှိနိင်ဖို့ k8s API document တဆင့် သို့မဟုတ် kubectl explain command နဲ့ ဖြစ်နိုင်ခြေရှိတဲ့ API object fields တွေကို လဲ ရှာဖွေလို့ရနိုင်ပါတယ်၊ လွန်စွာ အသုံးဝင်ပါတယ်။
 
+![](.gitbook/assets/screenshot-from-2020-01-17-23-16-16.png)
+
 ```yaml
 # A basic pod manifest:
 apiVersion: v1
