@@ -26,5 +26,5 @@
 
 ## K8s related articles
 
-* [Terraform 101](k8s-related-articles/terraform-101.md)
+* [Terraform First Step](k8s-related-articles/terraform-1st-step.md)
 
