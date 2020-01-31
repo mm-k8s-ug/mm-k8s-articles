@@ -10,6 +10,7 @@
 * [DaemonSet](ds.md)
 * [Service](service.md)
 * [Job](job.md)
+* [CronJob](cronjob.md)
 
 ## container
 
