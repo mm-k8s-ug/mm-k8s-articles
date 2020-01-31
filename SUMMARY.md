@@ -23,3 +23,7 @@
 
 * [How to complete setup Kubernetes Cluster on AWS using Kops](tutorial/kops-on-aws.md)
 
+## K8s related articles
+
+* [Terraform 101](k8s-related-articles/terraform-101.md)
+
