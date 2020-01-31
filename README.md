@@ -28,3 +28,9 @@ description: Kubernetes User Group Myanmar
 
 * [How to complete setup kubernetes Cluster on AWS using Kops](https://blog.k8smm.org/tutorial/kops-on-aws)
 
+
+
+## K8S RELATED ARTICLES
+
+* [Terraform First Step](https://blog.k8smm.org/k8s-related-articles/terraform-1st-step)
+
