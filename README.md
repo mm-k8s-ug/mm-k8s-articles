@@ -15,6 +15,7 @@ description: Kubernetes User Group Myanmar
 * [DaemonSet](https://blog.k8smm.org/ds)
 * [Service](https://blog.k8smm.org/service)
 * [Job](https://blog.k8smm.org/job)
+* [CronJob](https://blog.k8smm.org/cronjob)
 
 ## **CONTAINER**
 
