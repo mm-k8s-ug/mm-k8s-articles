@@ -66,10 +66,7 @@ Community ဆိုတဲ့အတိုင်း တစ်ဦးတစ်ယ
 
 
 
-```yaml
-Reference:
-
-https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
-https://github.com/kubernetes/kubernetes/issues/73169
-```
+> `Reference -` [`https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/`](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)\`\`
+>
+> \`\`[`https://github.com/kubernetes/kubernetes/issues/73169`](https://github.com/kubernetes/kubernetes/issues/73169)\`\`
 
