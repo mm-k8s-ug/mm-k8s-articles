@@ -62,7 +62,7 @@ Service ကို Expose လုပ်တဲ့နေရာမှာ Kubernetes S
 
 ဒီကတော့ Kubernetes Service ရဲ့ အကြမ်းဖျင်း နဲ့ Basic အကြောင်းအရာနဲ့ အလုပ်လုပ်ပုံလေးတွေပဲဖြစ်ပါတယ်။ Kubernetes Service Types အကြောင်း နဲ့ တစ်ချို့ ကိုတော့ ‌နောက်ထပ် article တစ်ခုအနေနဲ့ ဆက်လက်ရေးသားသွားပါဦးမယ်။
 
-> `Reference -` [`https://kubernetes.io/docs/concepts/services-networking/service/`](https://kubernetes.io/docs/concepts/services-networking/service/)\`\`
+> `Reference -` [`https://kubernetes.io/docs/concepts/services-networking/service`](https://kubernetes.io/docs/concepts/services-networking/service/)\`\`
 >
 > * `Kubernetes in action book`
 > * `Photo Ref: Google`
