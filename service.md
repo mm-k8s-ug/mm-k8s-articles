@@ -36,7 +36,18 @@ Kubernetes ရဲ့ **Service** ဆိုတာကတော့ Cluster ထဲ�
 
 #### Service Manifest
 
-![](https://i.imgur.com/rLBei7R.png)
+```text
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: nginx
+```
 
 K8S manifestတွေရဲ့ ထုံးစံအတိုင်း apiVersion , kind, metadata, spec ပါမယ်။ Service IP ရဲ့ Port နံပါတ်ဘယ်လောက်က Pod ရဲ့ Port နံပါတ်ဘယ်လောက်ကို Listen လုပ်မယ် ဘာညာပါမယ်။ အဓိကကတော့ selector ပါ။ စကားမစပ်ကြေငြာဝင်ချင်တာက Kubernetes မှာ Label က အသက်ပါ။ Service ကတော့ selector မှာ app=kubia ပါမယ်။ ‌ပုံမှာမြင်တဲ့ အတိုင်း **app=kubia** label ပါတဲ့ Pod တိုင်း ဒီ Service က SELECT လုပ်မှာဖြစ်ပါတယ်။
 
