@@ -927,9 +927,7 @@ $ google-chrome-stable yourcluster.com
 ```
 {% endcode %}
 
-&lt;iframe width="560" height="315" src="[https://www.youtube.com/embed/zPl11ivpajE](https://www.youtube.com/embed/zPl11ivpajE)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
-
+{% embed url="https://www.youtube.com/embed/zPl11ivpajE" caption="k8s cluster setup on aws ec2 using kops" %}
 
 {% hint style="success" %}
 ယခု ကျွန်တော်တို. လုပ်ပြထားသော tutorial လေးသည် Non-Profit Organization တစ်ခုအတွက် ကျွန်တော်တို. Setup လုပ်ပေးခဲ့သော Production Grade Kops Cluster Setup Use-case မှ ကောက်နုတ်ဖော်ပြထားခြင်းဖြစ်သည့်အတွက် စာဖတ်သူတို.စိတ်ထဲတွင် မရှင်းမလင်းတစ်ခုခုခံစားခဲ့ရရင်ကျွန်တော်တို.ရဲ့ Facebook Group or Page ကိုဆက်သွယ်မေးမြန်းနိုင်ပါသည်။ 
