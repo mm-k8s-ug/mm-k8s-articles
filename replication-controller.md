@@ -24,6 +24,8 @@ ReplicationController မှ တည်ဆောက်ထားတဲ့ pod က 
 
 ![](.gitbook/assets/rc03.jpg)
 
+![](.gitbook/assets/rc-beforeandafter.png)
+
 ```text
 Reference: - https://kubernetes.io/docs/home/
            - kubernetes in action book
