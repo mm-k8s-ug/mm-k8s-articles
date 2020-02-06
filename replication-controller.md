@@ -12,7 +12,7 @@ ReplicationController ရဲ့ spec \(ဝိသေသန/Characteristic\) ထ�
 * **selector \(label selector\)** ဘယ် pod တွေက ReplicationController ရဲ့ manage အောက်တွင် \(သို့\) scope ထဲတွင်  ရှိတယ် ဆိုတာ ဆုံးဖြတ်ပေးတယ်။
 * **template \(pod template\)** ဒီထဲမှာတော့ pod ရဲ့ manifest တွေရှိတယ် \(ကိုယ်လုပ်ချင်တဲ့ pod ပုံစံ\)
 
-![](.gitbook/assets/rc01.jpg)
+![](.gitbook/assets/replicationcontroller-template.png)
 
 အပေါ်က ပုံမှာ kubia ကတော့ ReplicationController ရဲ့ object name ဖြစ်ပြီ app: kubia ကတော့ pod အတွက် pod template ထဲမှာ တပ်ပေးထားတဲ့ label ဖြစ်ပါတယ်။
 
