@@ -8,7 +8,8 @@
 * [Replication Controller](replication-controller.md)
 * [ReplicaSet](replicaset.md)
 * [DaemonSet](ds.md)
-* [Service](service.md)
+* [Service](service/README.md)
+  * [Service Part 2](service/service-part-2.md)
 * [Job](job.md)
 * [CronJob](cronjob.md)
 
