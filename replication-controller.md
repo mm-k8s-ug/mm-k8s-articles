@@ -22,7 +22,7 @@ ReplicationController က replication ကို ဘယ်လို အလုပ�
 
 ReplicationController မှ တည်ဆောက်ထားတဲ့ pod က ပျက်မသွားဘဲ label ကို ဖျက်လိုက်မယ် \(သို့\) label ကို ပြင်လိုက်မယ် ဆိုပါက ReplicationController သည် သူ၏ selector မှ သိသည့် label မဟုတ်တော့ သည့် အတွက် ပြောင်လဲသွားသော pod ကို ဂရုစိုက်တော့မည် မဟုတ်ဘဲ pod အသစ်ကို template ထဲက အတိုင်း replica count မှ label ဖျက်လိုက်/ပြင်လိုက် သည့် အရေအတွက် အတိုင်း ပြန်ဆောက် ပေးသွားမှာ ဖြစ်ပါတယ်။ ReplicationController ရဲ့ ကောင်းကျိုတွေကတော့ ကိုယ် တည်ဆောက်ထားတဲ့ pod တစ်ခုခုဖြစ်ပြီး down သွားမှာ တို့ကို အမြဲ လိုက် ကြည့်နေစရာ မလိုခြင်း၊ node တစ်ခုခု fail ဖြစ်သွားသည့်တိုင် အသစ် ပြန်လည်တည်ဆောက် ပေးခြင်း၊ pod scaling လုပ်ရာတွေ manual နဲ့ automatic အလွယ်တကူ ပြုလုပ်နိုင်ခြင်း ဖြစ်ကြပါတယ်။ ဒါတွေကတော့ ReplicationController နဲ့ ပတ်သတ်လို့ သိသင့်သိထိုက်တဲ့ အကြောင်းအရာတွေ ဖြစ်ပါတယ်။
 
-![](.gitbook/assets/rc03.jpg)
+![](.gitbook/assets/rc-simple.png)
 
 ![](.gitbook/assets/rc-beforeandafter.png)
 
