@@ -2,26 +2,24 @@
 
 ![Clusters as Cattle](../.gitbook/assets/kubernetes-cluster-logos_final-01.svg)
 
-Clusters as Cattle ဆိုသည္မွာ kubernetes cluster တစ္ခုမွ တစ္ျခားေသာ kubernetes clusters မ်ားကို kubernetes ၏ အေသးဆံုး unit  ျဖစ္ေသာ pod မ်ား က့ဲသို႔ လိုအပ္ရင္ လိုအပ္ သလို create, scale, upgrade, destroy အလြယ္ တကူ ျပဳလုပ္ျခင္း ျဖစ္သည္။
-
-
+Clusters as Cattle ဆိုသည်မှာ kubernetes cluster တစ်ခုမှ တစ်ခြားသော kubernetes clusters များကို kubernetes ၏ အသေးဆုံး unit ဖြစ်သော pod များ ကဲ့သို့ လိုအပ်ရင် လိုအပ် သလို create, scale, upgrade, destroy အလွယ် တကူ ပြုလုပ်ခြင်း ဖြစ်သည်။
 
 ![Cluster API](../.gitbook/assets/kubernetes-cluster-logos_final-02.svg)
 
-Kubernetes project တစ္ခု ျဖစ္သည့္ Cluster API သည္  declarative ပံုစံ Kubernetes style APIs ျဖင့္ kubernetes မွ တစ္ျခားေသာ kubernetes cluster မ်ားကို သက္ဆိုင္ရာ provider မ်ားတြင္ creation, configuration, and management စသည့္ တို႔ကို ျပဳလုပ္ေပး ပါသည္။
+Kubernetes project တစ်ခု ဖြစ်သည့် Cluster API သည် declarative ပုံစံ Kubernetes style APIs ဖြင့် kubernetes မှ တစ်ခြားသော kubernetes cluster များကို သက်ဆိုင်ရာ provider များတွင် creation, configuration, and management စသည့် တို့ကို ပြုလုပ်ပေး ပါသည်။
 
 ![Kind to AWS](../.gitbook/assets/cluster-as-cattle.png)
 
-ဒီ Scenario တြင္ Local \(laptop သို႔မဟုတ္ Desktop \) ထဲမွ Kind ျဖင့္ kubernetes cluster  တစ္ခု တည္ေဆာက္ျပီး Cluster API ကို အသံုးျပဳကာ AWS cloud provider နွင့္ integration ျပုလုပ္ျပီး local k8s cluster မွာ     ေနာက္ ထပ္ kubernetes clusters မ်ားကို AWS EC2 ေပၚတြင္ လုိခ်င္ သေလာက္ တည္ေဆာက္ သြားမွာ ျဖစ္ပါတယ္။
+ဒီ Scenario တွင် Local \(laptop သို့မဟုတ် Desktop \) ထဲမှ Kind ဖြင့် kubernetes cluster တစ်ခု တည်ဆောက်ပြီး Cluster API ကို အသုံးပြုကာ AWS cloud provider နှင့် integration ပြုလုပ်ပြီး local k8s cluster မှာ နောက် ထပ် kubernetes clusters များကို AWS EC2 ပေါ်တွင် လိုချင် သလောက် တည်ဆောက် သွားမှာ ဖြစ်ပါတယ်။
 
 #### Workshop Prerequisite
 
-* base64
-* jq
-* kubectl
-* awscli
-* kind
-* cluster-api-provider-aws
+* [base64](https://linux.die.net/man/1/base64)
+* [jq](https://stedolan.github.io/jq/)
+* [kubectl](https://github.com/kubernetes/kubectl)
+* [awscli](https://aws.amazon.com/cli/)
+* [kind](https://github.com/kubernetes-sigs/kind)
+* [cluster-api-provider-aws](https://github.com/kubernetes-sigs/cluster-api-provider-aws)
 
 {% tabs %}
 {% tab title="Linux" %}
@@ -98,7 +96,7 @@ $ sudo mv ./clusterawsadm /bin/
 {% endtab %}
 {% endtabs %}
 
-ပထမဆံုး ကြ်န္ေတာ္တို႔ clusterawsadm ကို အသံုးျပဳျပီး AWS  အေပၚ bootstrap ျပဳလုပ္ရာ၌ IAM ထဲတြင္ လိုအပ္သည္ policy မ်ား role မ်ားကို တည္ ေဆာက္ေပးရန္ aws cli ကို configure လုပ္ထားရမွာ ျဖစ္ပါတယ္။   aws cli ကို configure  လုပ္ျပီးသြားလွ်င္ clusterawsadm ျဖင့္ bootstrap စလုပ္ ရမွာ ျဖစ္ပါတယ္။clusterawsadm သည္ အလြယ္ေျပာရရင္ aws cloud provider API မ်ားကို အသံုးျပဳျပီး cluster တည္ေဆာက္ရန္ အတြက္ automation ျပဳလုပ္ေပးထားသည့္ golang ျဖင့္ ေရးထားသည့္ client binary tool တစ္ခု ျဖစ္သည္။ clusterawsadm နဲ႔ က လုပ္ေပးနိုင္သည့္ feature မ်ား ကို ေဖၚ ျပေပးပါမယ္။
+ပထမဆုံး ကျွန်တော်တို့ clusterawsadm ကို အသုံးပြုပြီး AWS အပေါ် bootstrap ပြုလုပ်ရာ၌ IAM ထဲတွင် လိုအပ်သည် policy များ role များကို တည် ဆောက်ပေးရန် aws cli ကို configure လုပ်ထားရမှာ ဖြစ်ပါတယ်။ aws cli ကို configure လုပ်ပြီးသွားလျှင် clusterawsadm ဖြင့် bootstrap စလုပ် ရမှာ ဖြစ်ပါတယ်။clusterawsadm သည် အလွယ်ပြောရရင် aws cloud provider API များကို အသုံးပြုပြီး cluster တည်ဆောက်ရန် အတွက် automation ပြုလုပ်ပေးထားသည့် golang ဖြင့် ရေးထားသည့် client binary tool တစ်ခု ဖြစ်သည်။ clusterawsadm နဲ့ က လုပ်ပေးနိုင်သည့် feature များ ကို ဖေါ် ပြပေးပါမယ်။
 
 ### Kubernetes Cluster API Provider AWS
 
@@ -116,7 +114,7 @@ $ sudo mv ./clusterawsadm /bin/
 $ clusterawsadm alpha bootstrap create-stack
 ```
 
-AWS ကို access လုပ္ရန္ လုိအပ္သည့္ environment variables မ်ားကို ေၾက ညာရမည္။
+AWS ကို access လုပ်ရန် လိုအပ်သည့် environment variables များကို ကြေညာ ရမည်။
 
 ```bash
 $ export AWS_CREDENTIALS=$(aws iam create-access-key --user-name bootstrapper.cluster-api-provider-aws.sigs.k8s.io)
@@ -126,7 +124,7 @@ $ export AWS_REGION=us-east-2
 $ export AWS_B64ENCODED_CREDENTIALS=$(clusterawsadm alpha bootstrap encode-aws-credentials)
 ```
 
-AWS EC2 instance အတြက္ local မွ  key pair မွ public key ကို upload လုပ္ေပးရမည္။
+AWS EC2 instance အတွက် local မှ key pair မှ public key ကို upload လုပ်ပေးရမည်။
 
 ```bash
 $ aws ec2 import-key-pair \
@@ -135,7 +133,7 @@ $ aws ec2 import-key-pair \
 ```
 
 {% hint style="info" %}
-Work shop part-1 တြင္ kind ျဖင့္ cluster တည္ေဆာက္ျပီး ပါက ထပ္ေဆာက္ရန္ မလိုအပ္ပါ။
+Work shop part-1 တွင် kind ဖြင့် cluster တည်ဆောက်ပြီး ပါက ထပ်ဆောက်ရန် မလိုအပ်ပါ။
 {% endhint %}
 
 ```bash
@@ -144,32 +142,32 @@ $ kind get nodes
 $ kubectl cluster-info
 ```
 
-လိုအပ္သည့္ manifest မ်ားကို Kubernetes User Group Myanmar git repo မွ clone ရပါမည္။
+လိုအပ်သည့် manifest များကို [Kubernetes User Group Myanmar git repo](https://github.com/mm-k8s-ug) မှ clone ရပါမည်။
 
 ```bash
 $ git clone https://github.com/mm-k8s-ug/Workshop-01.git
 $ cd Workshop-01/part-2/
 ```
 
-Cluster API ကို kind မွ create လုပ္ထားေသာ kubernetes cluster တြင္  ေအာက္ ေဖၚျပပါ command ျဖင့္ install ျပဳလုပ္ရပါမယ္။
+Cluster API ကို kind မှ create လုပ်ထားသော kubernetes cluster တွင် အောက် ဖေါ်ပြပါ command ဖြင့် install ပြုလုပ်ရပါမယ်။
 
 ```bash
 $ kubectl create -f cluster-api-components.yaml 
 ```
 
-Kubernetes ကို bootstrap ျပဳလုပ္ရန္ လုိ အပ္သည့္ cloud init script မ်ားကို generate ထုတ္ရန္ Cluster API ရဲ႕ component တစ္ခုျဖစ္တဲ့ bootstrap-components ကို ထည့္သြင္းေပးရပါမယ္။
+Kubernetes ကို bootstrap ပြုလုပ်ရန် လို အပ်သည့် cloud init script များကို generate ထုတ်ရန် Cluster API ရဲ့ component တစ်ခုဖြစ်တဲ့ bootstrap-components ကို ထည့်သွင်းပေးရပါမယ်။
 
 ```bash
 $ kubectl create -f bootstrap-components.yaml
 ```
 
-infrastructure provision ျပုလုပ္ရန္လုိအပ္သည့္ AWS resources မ်ားကို ယူသံုးရန္ infrastructure-components မ်ားကို လည္း ထည့္သြင္းေပးရပါမယ္။
+infrastructure provision ပြုလုပ်ရန်လိုအပ်သည့် AWS resources များကို ယူသုံးရန် infrastructure-components များကို လည်း ထည့်သွင်းပေးရပါမယ်။
 
 ```bash
 $ cat infrastructure-components.yaml |envsubst |kubectl create -f -
 ```
 
-local k8s cluster တြင္ အေပၚမွ ထည့္သြင္းခဲ့သည့္ components ၃ ခု running ျဖစ္သြားလွ်င္ local k8s cluster နွင့္ aws ကို integration ျပဳလုပ္   ျပီး ျဖစ္ပါတယ္။
+local k8s cluster တွင် အပေါ်မှ ထည့်သွင်းခဲ့သည့် components ၃ ခု running ဖြစ်သွားလျှင် local k8s cluster နှင့် aws ကို integration ပြုလုပ် ပြီး ဖြစ်ပါတယ်။
 
 ```bash
 $ kubectl get ns
@@ -181,7 +179,7 @@ $ kubectl get pod -A
 # --------
 ```
 
-AWS အေပၚတြင္ Cluster တည္ေဆာက္မည္ ျဖစ္သျဖင့္ CRD ျဖစ္တဲ့ AWSCluster resource ႏွင့္ Cluster resource ၂ မ်ိဳးကို တည္ေဆာက္ေပးရပါမယ္။ name တြင္ ကိုယ္လုိခ်င္သည့္ နာမည္ ေပးနိုင္ပါတယ္။ region တြင္ အေပၚတြင္ export လုပ္ခဲ့ေသာ Env variable မွ တန္ဖိုးကို ေျပာင္းလဲ ထားေပးရပါမယ္၊ sshKeyName တြင္ ေရွ႕တြင္ aws အေပၚသို႔ upload လုပ္ေပးခဲ့ ေသာ key pair name ျဖစ္ရပါမယ္။
+AWS အပေါ်တွင် Cluster တည်ဆောက်မည် ဖြစ်သဖြင့် CRD ဖြစ်တဲ့ AWSCluster resource နှင့် Cluster resource ၂ မျိုးကို တည်ဆောက်ပေးရပါမယ်။ name တွင် ကိုယ်လိုချင်သည့် နာမည် ပေးနိုင်ပါတယ်။ region တွင် အပေါ်တွင် export လုပ်ခဲ့သော Env variable မှ တန်ဖိုးကို ပြောင်းလဲ ထားပေးရပါမယ်၊ sshKeyName တွင် ရှေ့တွင် aws အပေါ်သို့ upload လုပ်ပေးခဲ့ သော key pair name ဖြစ်ရပါမယ်။
 
 {% code title="k8smm-cluster.yaml" %}
 ```yaml
@@ -208,14 +206,14 @@ spec:
 ```
 {% endcode %}
 
-kubectl get clusters ျဖင့္ တည္ေဆာက္ခဲ့ ေသာ kubernetes cluster မ်ားကို တည္ေဆာက္ခဲ့သည့္ နာမည္နွင့္ ေတြ႕ရပါလိမ့္မယ္။ PHASE  section တြင္ provisioning အေျခေန ျဖစ္ေနပါလိမ့္မယ္။ AWS အေပၚတြင္ ကြ်န္ေတာ္တို႔ create လုပ္ေသာ cluster မေရာက္ေသးပါ။ 
+kubectl get clusters ဖြင့် တည်ဆောက်ခဲ့ သော kubernetes cluster များကို တည်ဆောက်ခဲ့သည့် နာမည်နှင့် တွေ့ရပါလိမ့်မယ်။ PHASE section တွင် provisioning အခြေနေ ဖြစ်နေပါလိမ့်မယ်။ AWS အပေါ်တွင် ကျွန်တော်တို့ create လုပ်သော cluster မရောက်သေးပါ။
 
 ```bash
 $ kubectl create -f k8smm-cluster.yaml
 $ kubectl get clusters
 ```
 
-ကြ်န္ေတာ္တို႔ ပံုမွန္ cluster setup လုပ္သည့္အတုိင္း control-plane နွင့္ worker node မ်ားကို setup လုပ္ရန္ က်န္ ရွိေသးသည္။ kubernetes ၏  Machine resource နွင့္ AWSMachine resource ကို အသံုးျပဳကာ Cluster ရဲ႕ control-plane object ကို တည္ေဆာက္ရပါမယ္။ ေရွ႕ က အတုိင္း sshKeyName မ်ားကို ျပန္ထည့္ရန္လုိအပ္တယ္။ 
+ကျွန်တော်တို့ ပုံမှန် cluster setup လုပ်သည့်အတိုင်း control-plane နှင့် worker node များကို setup လုပ်ရန် ကျန် ရှိသေးသည်။ kubernetes ၏ Machine resource နှင့် AWSMachine resource ကို အသုံးပြုကာ Cluster ရဲ့ control-plane object ကို တည်ဆောက်ရပါမယ်။ ရှေ့ က အတိုင်း sshKeyName များကို ပြန်ထည့်ရန်လိုအပ်တယ်။
 
 {% code title="k8smm-control-plane.yaml" %}
 ```yaml
@@ -271,7 +269,7 @@ spec:
 ```
 {% endcode %}
 
-control-plane object ကို တည္ေဆာက္ျပီးသည့္ ေနာက္မွာေတာ့ မေတာ္တဆ တတ္လာနိုင္သည့္ error မ်ားကို သိရွိရန္ events မ်ားကို ေစာင့္ၾကည့္နုိင္ပါတယ္။ kubectl get machines ျဖင့္ control-plane ရဲ႕ အေျခေနကိုလည္း သိရွိနုိင္ပါတယ္။
+control-plane object ကို တည်ဆောက်ပြီးသည့် နောက်မှာတော့ မတော်တဆ တတ်လာနိုင်သည့် error များကို သိရှိရန် events များကို စောင့်ကြည့်နိုင်ပါတယ်။ kubectl get machines ဖြင့် control-plane ရဲ့ အခြေနေကိုလည်း သိရှိနိုင်ပါတယ်။
 
 ```bash
 $ kubectl create -f k8smm-control-plane.yaml 
@@ -279,7 +277,7 @@ $ kubectl get event -w  # SuccessfulSetNodeRef
 $ kubectl get machines  
 ```
 
-control-plane တည္ေဆာက္ျပီးစီးသြားတဲ့ အခါမွာေတာ့ local kubernetes cluster ၏ လက္ရွိ namespace ရဲ႕ secrets ထဲတြင္ AWS အေပၚ၌ တည္      ေဆာက္ခဲ့သည့္ kubernetes cluster ၏ control-plane ကို access ျပုလုပ္ နိုင္သည့္ kubeconfig file ရွိေနမွာ ျဖစ္ပါတယ္။ ေအာက္ေဖၚျပပါ command မ်ားျဖင့္ kubconfig file ကို ဆြဲထုတ္ျပီး aws အေပၚတြင္ တည္ေဆာက္ ခဲ့သည့္ cluster ကို access လုပ္နုိင္မွာ ျဖစ္ပါတယ္။
+control-plane တည်ဆောက်ပြီးစီးသွားတဲ့ အခါမှာတော့ local kubernetes cluster ၏ လက်ရှိ namespace ရဲ့ secrets ထဲတွင် AWS အပေါ်၌ တည် ဆောက်ခဲ့သည့် kubernetes cluster ၏ control-plane ကို access ပြုလုပ် နိုင်သည့် kubeconfig file ရှိနေမှာ ဖြစ်ပါတယ်။ အောက်ဖေါ်ပြပါ command များဖြင့် kubconfig file ကို ဆွဲထုတ်ပြီး aws အပေါ်တွင် တည်ဆောက် ခဲ့သည့် cluster ကို access လုပ်နိုင်မှာ ဖြစ်ပါတယ်။
 
 ```bash
 $ kubectl get secrets
@@ -293,14 +291,14 @@ NAME                                       STATUS     ROLES    AGE     VERSION
 ip-10-0-0-242.us-east-2.compute.internal   NotReady   master   9m50s   v1.15.3
 ```
 
-git မွ clone ထားသည့္ workshop part-2 file ထဲတြင္ calico manifest ကို အသံုး ျပဳျပီး network plugin ကို AWS အေပၚတြင္ ရွိေသာ kubernetes cluster ၏ control-plane တြင္ ထည့္သြင္းရမွာ ျဖစ္ပါတယ္။ ထည့္သြင္းျပီး ရင္ nodes status  မွာ Ready ျဖစ္သြားမွာ ျဖစ္ပါတယ္။
+git မှ clone ထားသည့် workshop part-2 file ထဲတွင် calico manifest ကို အသုံး ပြုပြီး network plugin ကို AWS အပေါ်တွင် ရှိသော kubernetes cluster ၏ control-plane တွင် ထည့်သွင်းရမှာ ဖြစ်ပါတယ်။ ထည့်သွင်းပြီး ရင် nodes status မှာ Ready ဖြစ်သွားမှာ ဖြစ်ပါတယ်။
 
 ```bash
 $ kubectl --kubeconfig=./k8smm-aws.kubeconfig create -f calico.yaml
 $ kubectl --kubeconfig=./k8smm-aws.kubeconfig get nodes
 ```
 
-control-plane တည္ေဆာက္ျပီးေနာက္ worker node တည္ေဆာက္ရန္ MachineDeployment resource ႏွင့္ AWSMachineTemplate ကို အသံုး  ျပဳျပီး တည္ေဆာက္သြားရမွာ ျဖစ္ပါတယ္။ ေရွ႕မွာ ျပဳလုပ္ခဲ့သည့္ အတုိင္း sshKeyName ကို ထားေပးရမွာ ျဖစ္ပါတယ္။
+control-plane တည်ဆောက်ပြီးနောက် worker node တည်ဆောက်ရန် MachineDeployment resource နှင့် AWSMachineTemplate ကို အသုံး ပြုပြီး တည်ဆောက်သွားရမှာ ဖြစ်ပါတယ်။ ရှေ့မှာ ပြုလုပ်ခဲ့သည့် အတိုင်း sshKeyName ကို ထားပေးရမှာ ဖြစ်ပါတယ်။
 
 ![k8s MachineDelployment Like k8s Deployment Resource](../.gitbook/assets/md-ms-m%20%281%29.png)
 
@@ -364,7 +362,7 @@ spec:
 ```
 {% endcode %}
 
-worker ကို တည္ေဆာက္ျပီးသည့္ အခါမွာ ေအာက္ပါ command မ်ားျဖစ္ သိ    နိုင္၊ ၾကည့္နိုင္ပါသည္။ kubectl get cluster တြင္လဲ k8s cluster တစ္ခုလံုးကို provisioned လုပ္ျပီးစီး သည့္ အေျခေန ကို ျမင္ရမွာ ျဖစ္ပါတယ္။   
+worker ကို တည်ဆောက်ပြီးသည့် အခါမှာ အောက်ပါ command များဖြစ် သိ နိုင်၊ ကြည့်နိုင်ပါသည်။ kubectl get cluster တွင်လဲ k8s cluster တစ်ခုလုံးကို provisioned လုပ်ပြီးစီး သည့် အခြေနေ ကို မြင်ရမှာ ဖြစ်ပါတယ်။  
 
 ```bash
 $ kubectl create -f k8smm-worker.yaml
@@ -384,7 +382,7 @@ NAME        PHASE
 k8smm-aws   provisioned
 ```
 
-ယခု အခါတြင္ local kubernetes cluster မွ AWS အေပၚတြင္ Kubernetes cluster ကို တည္ေဆာက္ ျပီးစီးျပီ ျဖစ္သည္။ ေနာက္ထပ္လဲ လိုအပ္ သေလာက္္ လိုခ်င္သေလာက္ cluster မ်ားကို ဒီပံုစံ အတုိင္း တည္ေဆာက္ သြားနုိင္မွာ     ျဖစ္သည္။
+ယခု အခါတွင် local kubernetes cluster မှ AWS အပေါ်တွင် Kubernetes cluster ကို တည်ဆောက် ပြီးစီးပြီ ဖြစ်သည်။ နောက်ထပ်လဲ လိုအပ် သလောက် လိုချင်သလောက် cluster များကို ဒီပုံစံ အတိုင်း တည်ဆောက် သွားနိုင်မှာ ဖြစ်သည်။
 
 ### Another Next k8s clusters
 
@@ -414,7 +412,9 @@ spec:
 {% endcode %}
 
 {% hint style="success" %}
-`name မ်ားကို vim သုိ႔မဟုတ္ sed အသံုး ျပဳ၍ အလြယ္ တကူ  manifest မ်ားကို ေျပာင္းလဲ အသံုးျပဳ နုိင္သည္။       :%s/k8smm-aws/awsugmm-aws/g`
+name များကို vim သို့မဟုတ် sed အသုံး ပြု၍ အလွယ် တကူ manifest များကို ပြောင်းလဲ အသုံးပြု နိုင်သည်။ 
+
+:%s/k8smm-aws/awsugmm-aws/g
 {% endhint %}
 
 ```bash
@@ -591,7 +591,7 @@ awsugmm-aws   provisioned
 k8smm-aws     provisioned
 ```
 
-AWS EC2 dashboard တြင္လဲ local kubernetes cluster မွ တည္ေဆာက္ ထားေသာ တျခား ေသာ cluster မ်ား ၏ instance မ်ားကို ေတြ႕ရမွာ ျဖစ္ပါတယ္
+AWS EC2 dashboard တွင်လဲ local kubernetes cluster မှ တည်ဆောက် ထားသော တခြား သော cluster များ ၏ instance များကို တွေ့ရမှာ ဖြစ်ပါတယ်
 
 ![AWS EC2 Dashboard](../.gitbook/assets/aws-es2-dashboard.png)
 
