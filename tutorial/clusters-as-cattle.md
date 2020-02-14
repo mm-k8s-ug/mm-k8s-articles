@@ -96,8 +96,7 @@ $ sudo mv ./clusterawsadm /bin/
 {% endtab %}
 {% endtabs %}
 
-ပထမဆုံး  clusterawsadm ကိုအသုံးပြုပြီး AWS အပေါ် bootstrap ပြုလုပ်ရာ၌ IAM ထဲတွင် လိုအပ်သည် policy များ role များကို တည် ဆောက်ပေးရန် aws cli ကို configure လုပ်ထားရမှာ ဖြစ်ပါတယ်။   
-aws cli ကို configure လုပ်ပြီးသွားလျှင် clusterawsadm ဖြင့် bootstrap စလုပ် ရမှာ ဖြစ်ပါတယ်။ clusterawsadm သည် အလွယ်ပြောရရင် aws cloud provider API များကို အသုံးပြုပြီး cluster တည်ဆောက်ရန် အတွက် automation ပြုလုပ်ပေးထားသည့် golang ဖြင့် ရေးထားသည့် client binary tool တစ်ခု ဖြစ်သည်။ clusterawsadm နဲ့ က လုပ်ပေးနိုင်သည့် feature များ ကို ဖေါ် ပြပေးပါမယ်။
+ပထမဆုံး  clusterawsadm ကိုအသုံးပြုပြီး AWS  IAM ထဲတွင်  policy များ role များ စသည့် လိုအပ်ချက်များကို  bootstrap လုပ်ပေးရမှာ ဖြစ်ပါသည်။ clusterawsadm သည် အလွယ်ပြောရရင် aws cloud provider API များကိုအသုံးပြုပြီး cluster တည်ဆောက်ရန်အတွက် automation ပြုလုပ်ပေးထားသည့် golang ဖြင့် ရေးထားသည့် client binary tool တစ်ခု ဖြစ်သည်။ clusterawsadm နှင့် လုပ်ပေးနိုင်သည့် feature များကို ဖေါ် ပြပေးပါမည်။
 
 ### Kubernetes Cluster API Provider AWS
 
