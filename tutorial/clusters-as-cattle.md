@@ -207,14 +207,14 @@ spec:
 ```
 {% endcode %}
 
-တည်ဆောက်ခဲ့သော kubernetes cluster များကို kubectl get clusters ဖြင့် တွေ့ရပါလိမ့်မယ်။ PHASE section တွင် provisioning အခြေနေ ဖြစ်နေပါလိမ့်မယ်။ AWS အပေါ်တွင် ကျွန်တော်တို့ create လုပ်သော cluster မရောက်သေးပါ။
+တည်ဆောက်ခဲ့သော kubernetes cluster များကို kubectl get clusters ဖြင့် တွေ့ရပါလိမ့်မယ်။ PHASE section တွင် provisioning  ဖြစ်နေပါလိမ့်မည်။ AWS အပေါ်တွင်  create လုပ်သော cluster မရောက်သေးပါ။
 
 ```bash
 $ kubectl create -f k8smm-cluster.yaml
 $ kubectl get clusters
 ```
 
-ကျွန်တော်တို့ ပုံမှန် cluster setup လုပ်သည့်အတိုင်း control-plane နှင့် worker node များကို setup လုပ်ရန် ကျန် ရှိသေးသည်။ kubernetes ၏ Machine resource နှင့် AWSMachine resource ကို အသုံးပြုကာ Cluster ရဲ့ control-plane object ကို တည်ဆောက်ရပါမယ်။ ရှေ့ က အတိုင်း sshKeyName များကို ပြန်ထည့်ရန်လိုအပ်တယ်။
+ပုံမှန် cluster setup လုပ်သည့်အတိုင်း control-plane နှင့် worker node များကို setup လုပ်ရန် ကျန်ရှိသေးသည်။ kubernetes ၏ Machine resource နှင့် AWSMachine resource ကိုအသုံးပြုကာ Cluster ၏ control-plane object ကို တည်ဆောက်ရမည်။ ရှေ့ကအတိုင်း sshKeyName များကို ပြန်ထည့်ရန်လိုအပ်ပါသည်။
 
 {% code title="k8smm-control-plane.yaml" %}
 ```yaml
@@ -270,7 +270,7 @@ spec:
 ```
 {% endcode %}
 
-control-plane object ကို တည်ဆောက်ပြီးသည့် နောက်မှာတော့ မတော်တဆ တတ်လာနိုင်သည့် error များကို သိရှိရန် events များကို စောင့်ကြည့်နိုင်ပါတယ်။ kubectl get machines ဖြင့် control-plane ရဲ့ အခြေနေကိုလည်း သိရှိနိုင်ပါတယ်။
+control-plane object ကို တည်ဆောက်ပြီးသည့်အခါ မတော်တဆ တတ်လာနိုင်သည့် error များကို သိရှိရန် events များကို စောင့်ကြည့်နိုင်ပါသည်။ kubectl get machines ဖြင့် control-plane ၏ အခြေနေကိုလည်း သိရှိနိုင်ပါသည်။
 
 ```bash
 $ kubectl create -f k8smm-control-plane.yaml 
@@ -278,7 +278,8 @@ $ kubectl get event -w  # SuccessfulSetNodeRef
 $ kubectl get machines  
 ```
 
-control-plane တည်ဆောက်ပြီးစီးသွားတဲ့ အခါမှာတော့ local kubernetes cluster ၏ လက်ရှိ namespace ရဲ့ secrets ထဲတွင် AWS အပေါ်၌ တည် ဆောက်ခဲ့သည့် kubernetes cluster ၏ control-plane ကို access ပြုလုပ် နိုင်သည့် kubeconfig file ရှိနေမှာ ဖြစ်ပါတယ်။ အောက်ဖေါ်ပြပါ command များဖြင့် kubconfig file ကို ဆွဲထုတ်ပြီး aws အပေါ်တွင် တည်ဆောက် ခဲ့သည့် cluster ကို access လုပ်နိုင်မှာ ဖြစ်ပါတယ်။
+control-plane တည်ဆောက်ပြီးစီးသွားသည့်အခါတွင်  AWS အပေါ်၌ တည်ဆောက်ခဲ့သည့် k8s cluster ၏ control-plane အား access ပြုလုပ်နိုင်သည့် kubeconfig file ကို local k8s cluster ၏ default namespace မှ secrets ထဲတွင် တွေ့မြင်မှာဖြစ်ပါသည်။  
+အောက်ဖေါ်ပြပါ command များဖြင့် kubconfig file ကို ဆွဲထုတ်ပြီး aws အပေါ်တွင် တည်ဆောက်ခဲ့သည့် cluster ကို access လုပ်နိုင်မှာ ဖြစ်ပါသည်။
 
 ```bash
 $ kubectl get secrets
@@ -292,14 +293,14 @@ NAME                                       STATUS     ROLES    AGE     VERSION
 ip-10-0-0-242.us-east-2.compute.internal   NotReady   master   9m50s   v1.15.3
 ```
 
-git မှ clone ထားသည့် workshop part-2 file ထဲတွင် calico manifest ကို အသုံး ပြုပြီး network plugin ကို AWS အပေါ်တွင် ရှိသော kubernetes cluster ၏ control-plane တွင် ထည့်သွင်းရမှာ ဖြစ်ပါတယ်။ ထည့်သွင်းပြီး ရင် nodes status မှာ Ready ဖြစ်သွားမှာ ဖြစ်ပါတယ်။
+git clone ထားသည့် workshop part-2 file ထဲမှ calico manifest ကို အသုံးပြုပြီး network plugin ကို AWS အပေါ်တွင်ရှိသော kubernetes cluster ၏ control-plane တွင် ထည့်သွင်းရမှာဖြစ်ပါသည်။ ထည့်သွင်းပြီးသည့်အခါ nodes status တွင် Ready ဖြစ်သွားပါမည်။
 
 ```bash
 $ kubectl --kubeconfig=./k8smm-aws.kubeconfig create -f calico.yaml
 $ kubectl --kubeconfig=./k8smm-aws.kubeconfig get nodes
 ```
 
-control-plane တည်ဆောက်ပြီးနောက် worker node တည်ဆောက်ရန် MachineDeployment resource နှင့် AWSMachineTemplate ကို အသုံး ပြုပြီး တည်ဆောက်သွားရမှာ ဖြစ်ပါတယ်။ ရှေ့မှာ ပြုလုပ်ခဲ့သည့် အတိုင်း sshKeyName ကို ထားပေးရမှာ ဖြစ်ပါတယ်။
+control-plane တည်ဆောက်ပြီးနောက် worker node တည်ဆောက်ရန် MachineDeployment resource နှင့် AWSMachineTemplate ကို အသုံးပြုပြီး တည်ဆောက်သွားရမှာ ဖြစ်ပါသည််။ ရှေ့တွင် ပြုလုပ်ခဲ့သည့်အတိုင်း sshKeyName ကို ထားပေးရမှာ ဖြစ်ပါသည်။
 
 ![k8s MachineDelployment Like k8s Deployment Resource](../.gitbook/assets/md-ms-m%20%281%29.png)
 
@@ -363,7 +364,7 @@ spec:
 ```
 {% endcode %}
 
-worker ကို တည်ဆောက်ပြီးသည့် အခါမှာ အောက်ပါ command များဖြစ် သိ နိုင်၊ ကြည့်နိုင်ပါသည်။ kubectl get cluster တွင်လဲ k8s cluster တစ်ခုလုံးကို provisioned လုပ်ပြီးစီး သည့် အခြေနေ ကို မြင်ရမှာ ဖြစ်ပါတယ်။  
+worker ကို တည်ဆောက်ပြီးသည့်အခါ အောက်ပါ command များဖြင့် သိနိုင်၊ ကြည့်နိုင်ပါသည်။ kubectl get cluster တွင်လဲ k8s cluster တစ်ခုလုံးကို provisioned ပြီးစီးသည့် အခြေအနေကို မြင်ရမှာဖြစ်ပါသည်။
 
 ```bash
 $ kubectl create -f k8smm-worker.yaml
@@ -383,7 +384,7 @@ NAME        PHASE
 k8smm-aws   provisioned
 ```
 
-ယခု အခါတွင် local kubernetes cluster မှ AWS အပေါ်တွင် Kubernetes cluster ကို တည်ဆောက် ပြီးစီးပြီ ဖြစ်သည်။ နောက်ထပ်လဲ လိုအပ် သလောက် လိုချင်သလောက် cluster များကို ဒီပုံစံ အတိုင်း တည်ဆောက် သွားနိုင်မှာ ဖြစ်သည်။
+ယခုအခါတွင် local kubernetes cluster မှ AWS အပေါ်တွင် Kubernetes cluster ကို တည်ဆောက်ပြီးစီးပြီဖြစ်သည်။ နောက်ထပ်လဲ လိုချင်သလောက် cluster များကို ဒီပုံစံ အတိုင်း တည်ဆောက်သွားနိုင်မှာဖြစ်သည်။
 
 ### Another Next k8s clusters
 
@@ -413,7 +414,7 @@ spec:
 {% endcode %}
 
 {% hint style="success" %}
-name များကို vim သို့မဟုတ် sed အသုံး ပြု၍ အလွယ် တကူ manifest များကို ပြောင်းလဲ အသုံးပြု နိုင်သည်။ 
+name များကို vim သို့မဟုတ် sed အသုံးပြု၍ အလွယ်တကူ manifest များကို ပြောင်းလဲအသုံးပြုနိုင်သည်။ 
 
 :%s/k8smm-aws/awsugmm-aws/g
 {% endhint %}
@@ -583,7 +584,7 @@ ip-10-0-0-188.us-east-2.compute.internal   Ready    <none>   99s   v1.15.3
 ip-10-0-0-97.us-east-2.compute.internal    Ready    master   12m   v1.15.3
 ```
 
-ယခု အေျခေနတြင္ စုစု ေပါင္း cluster ၂ လံုး တည္ေဆာက္ ျပီး ျဖစ္သည္။
+ယခု အခြေအနေတွင် စုစုပေါင်း cluster ၂လုံး တည်ဆောက်ပြီးဖြစ်ပါသည်။
 
 ```bash
 $ kubectl get clusters
@@ -592,7 +593,7 @@ awsugmm-aws   provisioned
 k8smm-aws     provisioned
 ```
 
-AWS EC2 dashboard တွင်လဲ local kubernetes cluster မှ တည်ဆောက် ထားသော တခြား သော cluster များ ၏ instance များကို တွေ့ရမှာ ဖြစ်ပါတယ်
+AWS EC2 dashboard တွင်လဲ local kubernetes cluster မှ တည်ဆောက်ထားသော တခြား cluster များ၏ instance များကို တွေ့ရမှာဖြစ်ပါသည်။
 
 ![AWS EC2 Dashboard](../.gitbook/assets/aws-es2-dashboard.png)
 
