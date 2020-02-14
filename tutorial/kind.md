@@ -79,6 +79,13 @@ $ kind delete cluster --name k8smm
 
 အထက်ပါ command များသည် kind ကို အသုံးပြု၍ kubernetes cluster ကို မိမိ laptop တွင် အလွယ်တကူ အသုံးပြုနိုင်သော basic command များ ဖြစ်သည်။ ဆက်လက် kind ကို အသုံးပြုပြီး ကျွန်တော်တို့ multi nodes cluster၊ multi control-plane HA နှင့် ingress များကို တည်ဆောက်သွားမှာ ဖြစ်တယ်။
 
+လိုအပ်သည့် manifest များကို [Kubernetes User Group Myanmar git repo](https://github.com/mm-k8s-ug) မှ clone ရပါမည်။
+
+```bash
+$ git clone https://github.com/mm-k8s-ug/Workshop-01.git
+$ cd Workshop-01/part-1/
+```
+
 {% tabs %}
 {% tab title="Multi-node clusters" %}
 ဒါကတော့ multi node cluster တည်ဆောက်ရန် configuration ဖြစ်သည်။ worker node များကို ကိုယ်လိုချင် သလောက် `- role: worker` ဖြင့် ထပ်တိုး တည်ဆောက်နိုင်သည်။ label၊ nodeSelector နှင့် scheduling တို့ လေ့ကျင့် စမ်းသပ်ရာတွင် အသုံး ဝင်သည်။
