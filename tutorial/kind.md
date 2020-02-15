@@ -361,7 +361,7 @@ spec:
 ```bash
 $ kubectl get ingress -n 2048-game
 $ kubectl create -f ingress.yaml
-$ kubectl get ing -n 2048-game
+$ kubectl get ing -n 2048-game 
 $ google-chrome-stable localhost
 ```
 
@@ -376,7 +376,7 @@ $ google-chrome-stable localhost
 ```bash
 $ kubect get pod --show-lables
 $ kubectl label pod hola app=hola
-$ kubectl expose pod hola --port=8080
+$ kubectl expose pod hola --port=8080 --name=hola-svc
 $ kubectl get svc
 ```
 
@@ -387,7 +387,7 @@ kind: Ingress
 metadata:
   name: hola-ingress
   annotations:
-     nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
     nginx.ingress.kubernetes.io/configuration-snippet: |
       rewrite ^/static/(.*)$ /hola/static/$1 redirect;
 spec:
