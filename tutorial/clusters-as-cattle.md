@@ -1,4 +1,8 @@
-# Clusters as Cattle \( Workshop Part-2 \)
+---
+description: Workshop ( Part-2 )
+---
+
+# Clusters as Cattle
 
 ![Clusters as Cattle](../.gitbook/assets/kubernetes-cluster-logos_final-01.svg)
 
