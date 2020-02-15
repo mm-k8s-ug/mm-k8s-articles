@@ -1,4 +1,4 @@
-# Workshop Part-1 \(Kind\)
+# Kind \(Workshop Part-1\)
 
 ![Kubernetes In Docker](../.gitbook/assets/logo.png)
 
