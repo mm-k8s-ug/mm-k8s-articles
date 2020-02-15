@@ -28,8 +28,8 @@ description: Kubernetes User Group Myanmar
 ## **TUTORIAL**
 
 * [How to complete setup kubernetes Cluster on AWS using Kops](https://blog.k8smm.org/tutorial/kops-on-aws)
-
-
+* [Kind \(workshop part-1\)](https://blog.k8smm.org/tutorial/kind)
+* [Clusters as Cattle \(workshop part-2\)](https://blog.k8smm.org/tutorial/clusters-as-cattle)
 
 ## K8S RELATED ARTICLES
 
