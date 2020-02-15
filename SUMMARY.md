@@ -24,7 +24,7 @@
 ## TUTORIAL
 
 * [How to complete setup Kubernetes Cluster on AWS using Kops](tutorial/kops-on-aws.md)
-* [Kind \(Workshop Part-1\)](tutorial/kind.md)
+* [Kind \( Workshop Part-1 \)](tutorial/kind.md)
 * [Clusters as Cattle \( Workshop Part-2 \)](tutorial/clusters-as-cattle.md)
 
 ## K8s related articles
