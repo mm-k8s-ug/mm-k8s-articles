@@ -1,10 +1,10 @@
 ---
-description: Kubernetes User Group Myanmar
+description: Table of contents
 ---
 
-# Main
+# Kubernetes User Group Myanmar
 
-## Table of contents
+## Core Concepts 
 
 * [K8s Cluster Architecture](https://blog.k8smm.org/k8s-cluster-achitecture)
 * [Pods](https://blog.k8smm.org/pods)

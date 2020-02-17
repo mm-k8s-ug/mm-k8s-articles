@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Main](README.md)
+* [Kubernetes User Group Myanmar](README.md)
 * [K8s Cluster Architecture](k8s-cluster-achitecture.md)
 * [Pods](pods.md)
 * [Creating pods](creating-pods.md)
