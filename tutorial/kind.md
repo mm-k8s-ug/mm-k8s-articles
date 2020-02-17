@@ -35,7 +35,7 @@ $ brew install kind
 ```
 {% endtab %}
 
-{% tab title="Window" %}
+{% tab title="Windows" %}
 Kind Install in Window
 
 ```bash
