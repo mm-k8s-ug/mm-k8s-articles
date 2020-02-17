@@ -1,5 +1,5 @@
 ---
-description: Table of contents
+description: Table Of Contents
 ---
 
 # Kubernetes User Group Myanmar
