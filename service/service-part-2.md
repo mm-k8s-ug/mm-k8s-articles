@@ -1,6 +1,6 @@
 ---
-description: Kubernetes Service Types
+description: Kubernetes Types of Service
 ---
 
-# Service Part 2
+# Service Episode II
 

@@ -12,7 +12,7 @@
 * [ReplicaSet](replicaset.md)
 * [DaemonSet](ds.md)
 * [Service](service/README.md)
-  * [Service Part 2](service/service-part-2.md)
+  * [Service Episode II](service/service-part-2.md)
 * [Job](job.md)
 * [CronJob](cronjob.md)
 * [Kubernetes Probes](kubernetes-probes/README.md)
