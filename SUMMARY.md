@@ -1,6 +1,9 @@
 # Table of contents
 
 * [Kubernetes User Group Myanmar](README.md)
+
+## Core Concepts
+
 * [K8s Cluster Architecture](k8s-cluster-achitecture.md)
 * [Pods](pods.md)
 * [Creating pods](creating-pods.md)
