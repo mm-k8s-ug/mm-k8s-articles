@@ -15,6 +15,10 @@
   * [Service Part 2](service/service-part-2.md)
 * [Job](job.md)
 * [CronJob](cronjob.md)
+* [Kubernetes Probes](kubernetes-probes/README.md)
+  * [Liveness Probes](kubernetes-probes/liveness-probes.md)
+  * [Readiness Probes](kubernetes-probes/readiness-probes.md)
+  * [Startup Probes](kubernetes-probes/startup-probes.md)
 
 ## container
 
