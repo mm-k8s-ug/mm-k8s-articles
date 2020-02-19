@@ -8,7 +8,7 @@ Kubernetes ရဲ့ **Service** ဆိုတာကတော့ Cluster ထဲ�
 
 #### Fronted Service to Backend Service
 
-![](https://i.imgur.com/4aUuivD.png)
+![](../.gitbook/assets/services.png)
 
 ဒီပုံမှာဆိုရင် Client က Frontend Service ကိုခေါ်ရင် Frontend Podတွေကို LoadBalance လုပ်ပေးမယ် အဲဒီကမှတစ်ဆင့် Backend Service ကိုလည်း Frontend Service ရဲ့ Podတွေကတစ်ဆင့် အလွယ်တကူ access လုပ်နိုင်သွားမယ်ပေါ့ဗျာ။ ဒါကတော့ Kubernetes Service ရဲ့ High Level View အလုပ်လုပ်ပုံပဲဖြစ်တယ်။ ဒီအတိုင်းပဲ Web, App, DB ဘာညာ အကုန်လုံး Cluster အတွင်းမှာအလုပ်လုပ်နိုင်တယ်။
 
