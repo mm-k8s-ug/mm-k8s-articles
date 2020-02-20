@@ -16,7 +16,7 @@ Kubernetes ရဲ့ **Service** ဆိုတာကတော့ Cluster ထဲ�
 
 #### LabelSelectors
 
-![](https://i.imgur.com/ahpQU73.png)
+![](../.gitbook/assets/service2.png)
 
 ကျွန်တော်တို့ Podတွေမှာ Labelsတွေဘာပါတတ်ကြပါတယ်။ တစ်ခု\(သို့\)တစ်ခုထပ်ပိုတဲ့ Label လည်းပါနိုင်ပါတယ်။ပုံထဲမှာတော့ **Pod ရဲ့ Label က app=kubia** အနေနဲ့ပါပါတယ်။ Pod ရဲ့ဘက်ကကြည့်မယ်ဆိုရင်တော့ Label က app=kubia ပါ။ Service ဘက်ကနေကြည့်မယ်ဆိုရင်တော့ **Selector က app=kubia** ပါ။ ဆိုလိုတာက Service ရဲ့ selector မှာက app=kubia label နဲ့ podတွေဆိုရင်တော့ သူ့ထိန်းချုပ်မှုအောက်ကလို့သက်မှတ်လိုက်ပါတယ်။ အဲ့တော့ Client က Service Kubia ကိုခေါ်လိုက်ရင် Service ကသူအောက်မှာရှိတဲ့ label app=kubia ပါတဲ့ Pod မှန်သမျှဆီက Traffic LoadBalance လုပ်ပေးမှာဖြစ်ပါတယ်။
 
