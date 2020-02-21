@@ -16,6 +16,7 @@ description: Table Of Contents
 * [Service](https://blog.k8smm.org/service)
 * [Job](https://blog.k8smm.org/job)
 * [CronJob](https://blog.k8smm.org/cronjob)
+* [K8s Probes](https://blog.k8smm.org/kubernetes-probes)
 
 ## **CONTAINER**
 
