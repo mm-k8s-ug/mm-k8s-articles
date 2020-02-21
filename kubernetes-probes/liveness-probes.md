@@ -1,6 +1,6 @@
 # Liveness Probes
 
-![](../.gitbook/assets/ezgif.com-crop-1.gif)
+![liveness probes](../.gitbook/assets/ezgif.com-crop-1.gif)
 
 Container က အဆင်ပြေစွာ running ဖြစ်နေလား၊ \(alive\) ဖြစ်နေလား၊ ဆိုတာကို သိရှိဖို့၊ action ယူဖို့၊ liveness probes ကို အသုံးပြုနိုင်ပါတယ်။ အဲလို စစ်ဆေးနိုင်ဖို့ liveness probe ကို container တစ်ခု ချင်းစီ အတွက် pod definition မှာ ထည့်ပြီး configure ပြုလုပ်ရပါတယ်။ configure ပြုလုပ်ပြီး pod တည်ဆောက်ပြီးတဲ့ အခါ kubelet က configure ပြုလုပ်တဲ့ ပုံစံ အပေါ်မူတည် ပြီးတော့ liveness probe ကို အချိန်မှန် ပို့ပါတယ်။ liveness probe က Giving up မလုပ်ခင် အချိန်ထိ Probe ဘယ်နှစ်ကြိမ် fail၊ fail ပြသနာ မရှိပေမဲ့ liveness probe က giving up လုပ်တဲ့ အချိန်မှာ တော့ container ကို restart ချပါတယ်။ အဲတော့ liveness probe giving up မလုပ်ခင်မှာ probe success ဖြစ်မှသာ pass ဖြစ်မှာပါ။ liveness probe ကို method သုံးမျိုး ဖြင့် check နိုင်တယ်။ ဒါတွေကတော့ -
 
