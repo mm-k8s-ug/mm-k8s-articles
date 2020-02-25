@@ -37,6 +37,4 @@
 ## K8s related articles
 
 * [Terraform First Step](k8s-related-articles/terraform-1st-step.md)
-* [Hello Terraform!](k8s-related-articles/hello-terraform.md)
-* [Teamwork with Terraform](k8s-related-articles/teamwork-with-terraform.md)
 
