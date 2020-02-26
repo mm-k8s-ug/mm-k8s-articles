@@ -37,4 +37,5 @@
 ## K8s related articles
 
 * [Terraform First Step](k8s-related-articles/terraform-1st-step.md)
+* [Hola Terraform !](k8s-related-articles/hola-terraform.md)
 
