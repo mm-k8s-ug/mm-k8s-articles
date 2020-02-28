@@ -78,7 +78,7 @@ provider "aws" {
   region  = "us-east-2"
 }
 
-resource "aws_instance" "helloworld" {
+resource "aws_instance" "k8smm" {
   ami           = "ami-0520e698dd500b1d1"
   instance_type = "t2.micro"
 }
