@@ -35,4 +35,6 @@ description: Table Of Contents
 ## K8S RELATED ARTICLES
 
 * [Terraform First Step](https://blog.k8smm.org/k8s-related-articles/terraform-1st-step)
+* [Hola Terraform](https://blog.k8smm.org/k8s-related-articles/hola-terraform)
+* [Teamwork with Terraform](https://blog.k8smm.org/k8s-related-articles/teamwork-with-terraform)
 
