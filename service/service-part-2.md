@@ -4,7 +4,7 @@ description: Kubernetes Types of Service
 
 # Service Episode II
 
-ကျွန်တော်တို့ ရှေ့မှာ Service အကြောင်းကို အနည်းငယ်ရှင်းပြပြီးဆိုတော့ နောက်ထပ် episode တစ်ခုအနေနဲ့ Service 
+ကျွန်တော်တို့ ရှေ့မှာ Service အကြောင်းကို အနည်းငယ်ရှင်းပြပြီးဆိုတော့ နောက်ထပ် episode တစ်ခုအနေနဲ့ Service အထဲမှာဘာတွေ ဘယ်လို အလုပ်လုပ်သွားလဲဆိုတာကို ဆက်လက်လေ့လာဆွေးနွေးကြရအောင်ဗျာ။ 
 
 ဟုတ်ပြီ ဒီတော့ Service တစ်ခု create လုပ်လိုက်ပြီဆိုရင် သူ့ရဲ့ Labels and Selectors ကတူရာတူရာ Pod တွေနဲ့ ချိတ်ပေးမယ်။ ဒါပြီးတော့ Service ကို access လုပ်ဖို့အတွက် Stable IP address တစ်ခုကိုထုတ်ပေးမယ်။ Service ကိုမဖျက်မခြင်း ထို Service IP ကပြောင်းမှာမဟုတ်ပါဘူး။ အဲ့သည် Service IP ကို Kubernetes Cluster ထဲက Pod တွေကနေ Service ကို access လုပ်ရတာအဆင်ပြေသွားမှာပါ။   
 
