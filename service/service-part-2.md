@@ -17,7 +17,18 @@ description: Kubernetes Types of Service
 
 Pod တစ်ခုထဲကို Execute လုပ်ပြီး curl command နဲ့ Service ကိုခေါ်ကြည့်လိုက်ရင် Service ကသူ့အောက်မှာ ရှိတဲ့ Pod တွေကို Randomly select လုပ်ပြီး Curl နဲ့ ခေါ်တဲ့ သူဆီကို response ပြန်လိုက်ပါတယ်။ ဒါကတော့ Cluster ထဲက Pod ကနေ Service ကို Curl command နဲ့ Request လုပ်တဲ့ Scenario တစ်ခုပဲဖြစ်ပါတယ်။ အကယ်လို့ User က Cluster အပြင်ဘက်နေ Access လုပ်မယ်ဆိုရင်လည်း Ingress Controller ကနေတစ်ဆင့် Service ကို ရောက်မယ် အဲ့သည်မှတစ်ဆင့် သူ့အောက်မှာရှိတဲ့ Pod တွေဆီကို randomly probability select လုပ်သွားမှာဖြစ်ပါတယ်။ 
 
-ဒီနေရာမှာ Pod တွေကို random probability နဲ့ select လုပ်မယ်လို့ပြောပေမယ့် တကယ်တမ်းက Service နဲ့ အမြဲအတူရှိနေတဲ့ **Endpoints** တွေဆီကိုပဲဖြစ်ပါတယ်။ ဆိုတော့ကာ Endpoint ဆိုတာဘာလဲ ၊ ဘယ်လဲ ?
+ဒီနေရာမှာ Pod တွေကို random probability နဲ့ select လုပ်မယ်လို့ပြောပေမယ့် တကယ်တမ်းက Service နဲ့ အမြဲအတူရှိနေတဲ့ **Endpoints** တွေဆီကိုပဲဖြစ်ပါတယ်။ ဆိုတော့ကာ Endpoint ဆိုတာဘာလဲ ၊ ဘယ်လဲ ? 
+
+### Service Endpoints
+
+တကယ်တမ်းတော့ Services တွေက Pods တွေနဲ့ တိုက်ရိုက်ကြီး ဆက်သွယ်နေတာမဟုတ်ပါဘူး ။ Services တွေနဲ့ Pods တွေကြားမှာ Endpoints ဆိုတဲ့ resource တစ်ခုရှိနေပါသေးတယ်။ Endpoints ဆိုတာကတော့ labels and selectors တူရာတူရာ စုပြီး ရလာတဲ့ Pods ရဲ့ IP addresses နဲ့ ports တွေပဲဖြစ်ပါတယ်။  Service Endpoints တွေကိုသိနိုင်ဖို့  **kubectl get endpoints** နဲ့ကြည့်လို့ရသလို **kubectl describes svc &lt;service name&gt;**  နဲ့လည်းကြည့်လို့ရနိုင်ပါတယ်။ 
+
+```text
+[waiyanmin@k8smm ~] $ kubectl get endpoints 
+NAME              ENDPOINTS                                  AGE
+hopper            10.0.2.126:80,10.0.2.177:80,10.0.6.90:80   36d
+kubernetes        10.0.2.117:443,10.0.6.38:443               55d
+```
 
 ## Kubernetes Service Types
 
