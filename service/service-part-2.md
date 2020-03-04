@@ -30,6 +30,23 @@ hopper            10.0.2.126:80,10.0.2.177:80,10.0.6.90:80   36d
 kubernetes        10.0.2.117:443,10.0.6.38:443               55d
 ```
 
+```text
+[waiyanmin@k8smm ~] $ kubectl describe svc kubernetes
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP:                172.20.0.1
+Port:              https  443/TCP
+TargetPort:        443/TCP
+Endpoints:         10.0.2.117:443,10.0.6.38:443
+Session Affinity:  None
+Events:            <none>
+```
+
 ## Kubernetes Service Types
 
 ### ClusterIP
