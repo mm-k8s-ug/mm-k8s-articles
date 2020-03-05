@@ -40,3 +40,8 @@
 * [Hola Terraform !](k8s-related-articles/hola-terraform.md)
 * [Teamwork with Terraform](k8s-related-articles/teamwork-with-terraform.md)
 
+## TYRO
+
+* [reserve](tyro/reserve.md)
+* [FAQ](faq.md)
+
