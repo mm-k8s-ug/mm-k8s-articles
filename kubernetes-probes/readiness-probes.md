@@ -4,3 +4,7 @@
 
 Coming Soon
 
+![Readiness probe fails vs Endpoints](../.gitbook/assets/readiness-probe.png)
+
+
+
