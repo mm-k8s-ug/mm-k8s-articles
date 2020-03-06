@@ -115,5 +115,7 @@ spec:
   type: ExternalName
 ```
 
-
+{% hint style="info" %}
+Service Type \( ExternameName \) အကိုအသုံးပြုဖို့အတွက် kube-dns version 1.7 ဒါမှမဟုတ် CoreDNS version 0.0.8 နှင့်အထက်လိုအပ်ပါတယ်။ 
+{% endhint %}
 
