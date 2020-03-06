@@ -78,13 +78,17 @@ hopper-nodeport   NodePort    172.20.23.220    <none>        80:30772/TCP   35d
 
 ![LoadBalancer](../.gitbook/assets/loadbalancer.png)
 
-LoadBalancer Service Type ကတော့ ကိုယ်ရဲ့ Kubernetes Cluster က Cloud Provider တစ်ခုခု မှာတည်ဆောက်ထားတာဆိုရင် cloud provider ရဲ့ loadbalancer ကိုအသုံးပြုပြီး service ကို External ကို expose လုပ်ပေးမှာဖြစ်ပါတယ်။ External ကနေ access ရနိုင်ဖို့ Cloud LoadBalacner ရဲ့ IP ဒါမှမဟုတ် DNS name တစ်ခုကို ထုတ်ပေးမှာပါ။ 
+LoadBalancer Service Type ကတော့ ကိုယ်ရဲ့ Kubernetes Cluster က Cloud Provider တစ်ခုခု မှာတည်ဆောက်ထားတာဆိုရင် cloud provider ရဲ့ loadbalancer ကိုအသုံးပြုပြီး service ကို External ကို expose လုပ်ပေးမှာဖြစ်ပါတယ်။ External ကနေ access ရနိုင်ဖို့ Cloud LoadBalancer ရဲ့ IP ဒါမှမဟုတ် DNS name တစ်ခုကို ထုတ်ပေးမှာပါ။ 
 
 ```text
 [waiyanmin@k8smm ~] $ kubectl  get service
 NAME                  TYPE           CLUSTER-IP       EXTERNAL-IP                                                                   PORT(S)        AGE
 hopper-loadbalancer   LoadBalancer   172.20.197.93    a30b2efd25ec311ea852e06d3624d39a-464378756.ap-southeast-1.elb.amazonaws.com   80:30820/TCP   2m8s                                                                     443/TCP        55d
 ```
+
+LoadBalancer ရဲ့ အလုပ်လုပ်ပုံကလည်းရှင်းပါတယ်။ LoadBalancer Service Type က အပေါ်မှာပြောခဲ့တဲ့ ClusterIP နဲ့ Node Port Service Type တို့ကို ငုံပြီး modify လုပ်ထားတာမျိုးပါပဲ။ 
+
+
 
 
 
