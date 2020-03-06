@@ -19,7 +19,7 @@ Pod တစ်ခုထဲကို Execute လုပ်ပြီး curl command
 
 ဒီနေရာမှာ Pod တွေကို random probability နဲ့ select လုပ်မယ်လို့ပြောပေမယ့် တကယ်တမ်းက Service နဲ့ အမြဲအတူရှိနေတဲ့ **Endpoints** တွေဆီကိုပဲဖြစ်ပါတယ်။ ဆိုတော့ကာ Endpoint ဆိုတာဘာလဲ ၊ ဘယ်လဲ ? 
 
-### Service Endpoints
+### Endpoints
 
 တကယ်တမ်းတော့ Services တွေက Pods တွေနဲ့ တိုက်ရိုက်ကြီး ဆက်သွယ်နေတာမဟုတ်ပါဘူး ။ Services တွေနဲ့ Pods တွေကြားမှာ Endpoints ဆိုတဲ့ resource တစ်ခုရှိနေပါသေးတယ်။ Endpoints ဆိုတာကတော့ labels and selectors တူရာတူရာ စုပြီး ရလာတဲ့ Pods ရဲ့ IP addresses နဲ့ ports တွေပဲဖြစ်ပါတယ်။ လွယ်လွယ်ပြောရရင်တော့ Endpoints က Service နဲ့ Pod ကြားမှာ အလုပ်လုပ်ပေးတဲ့ Resource တစ်ခုပေါ့ဗျာ။  Pod တွေအနေနဲ့ start လုပ်ပြီးတာနဲ့  probe နဲ့ readiness probe check လုပ်ပါတယ်။ health check  သဘောပေါ့၊ Readiness Probe pass ဖြစ်သွားတာနဲ့ endpoint လေးတွေထွက်လာမှာပါ။ Endpoints ကို manual လည်း create လုပ်လို့ရနိုင်ပါသေးတယ်။ Service Endpoints တွေကိုသိနိုင်ဖို့  **kubectl get endpoints** နဲ့ကြည့်လို့ရသလို **kubectl describes svc &lt;service name&gt;**  နဲ့လည်းကြည့်လို့ရနိုင်ပါတယ်။ 
 
