@@ -86,7 +86,7 @@ NAME                  TYPE           CLUSTER-IP       EXTERNAL-IP               
 hopper-loadbalancer   LoadBalancer   172.20.197.93    a30b2efd25ec311ea852e06d3624d39a-464378756.ap-southeast-1.elb.amazonaws.com   80:30820/TCP   2m8s                                                                     443/TCP        55d
 ```
 
-LoadBalancer ရဲ့ အလုပ်လုပ်ပုံကလည်းရှင်းပါတယ်။ LoadBalancer Service Type က အပေါ်မှာပြောခဲ့တဲ့ ClusterIP နဲ့ Node Port Service Type တို့ကို ငုံပြီး modify လုပ်ထားတာမျိုးပါပဲ။ 
+LoadBalancer ရဲ့ အလုပ်လုပ်ပုံကလည်းရှင်းပါတယ်။ LoadBalancer Service Type က အပေါ်မှာပြောခဲ့တဲ့ ClusterIP နဲ့ Node Port Service Type တို့ကို ငုံပြီး modify လုပ်ထားတာမျိုးပါပဲ။ Cloud Provider ရဲ့ External LoadBalancer ကဝင်လာတဲ့ Traffic တွေကို NodePort မှတစ်ဆင့် ClusterIP ကိုရောက်မယ် ClusterIP ကနေ kube-proxy မှတစ်ဆင့် iptables rules  random probability နဲ့ select လုပ်ပြီး Endpoints တွေဆီကိုပို့ပေးမှာဖြစ်ပါတယ်။ 
 
 
 
