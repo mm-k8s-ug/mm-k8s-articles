@@ -90,7 +90,30 @@ LoadBalancer ရဲ့ အလုပ်လုပ်ပုံကလည်းရှ
 
 ### ExternalName
 
+Service Type \( ExternalName \) ကတော့ Service Type တွေထဲမှာ အထူးခြားဆုံး Service Type တစ်ခုပါ။ ပုံမှန် Service Type တွေကတော့ Labels and Selectors တွေနဲ့ အလုပ်လုပ်ကြပေမယ့် ExternalName ကတော့ Labels တွေ Selectors တွေမလိုပါဘူး။ ExternalName ကတော့ Labels and Selectors တွေနဲ့အစား DNS name \( CNAME Record \) နဲ့ IPs တွေနဲ့အလုပ်လုပ်ပါတယ်။ ဆိုလိုတာက Service Name **k8smm** ကိုခေါ်လိုက်ရင် google ကို external name အနေနဲ့ ထည့်ထားတာမျိုးပါ။ 
 
+```text
+[waiyanmin@k8smm ~] $ kubectl get svc
+k8smm    ExternalName   <none>           google.com   80/TCP    3h4m
+```
+
+YAML အနေနဲ့ဆိုရင်တော့ ဒီလိုလေး တွေ့ရမှာပါ။ 
+
+```text
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8smm
+  namespace: default
+spec:
+  externalName: google.com
+  ports:
+  - name: default
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  type: ExternalName
+```
 
 
 
