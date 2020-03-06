@@ -13,6 +13,7 @@
 * [DaemonSet](ds.md)
 * [Service](service/README.md)
   * [Service Episode II](service/service-part-2.md)
+  * [Service Episode III](service/service-episode-iii.md)
 * [Job](job.md)
 * [CronJob](cronjob.md)
 * [Kubernetes Probes](kubernetes-probes/README.md)

@@ -66,6 +66,8 @@ kubernetes        ClusterIP   172.20.0.1       <none>        443/TCP        55d
 
 Service Types ထဲကမှ တစ်ခုဖြစ်တဲ့ Node Port ကတော့ Cluster ထဲမှာရှိတဲ့ Node တိုင်းမှာ Port Range \( 30000-32767 \) အတွင်းမှာရှိတဲ့ Port တစ်ခုကိုအသုံးပြုပြီး External Traffic တွေကိုတာဝန်ယူပေးပါတယ်။ ကျွန်တော်တို့အနေနဲ့ Service Type ကို Node Port အနေနဲ့ expose လုပ်မယ်ဆိုရင် အရင်ဆုံး ClusterIP တစ်ခုကိုသူ့အနေနဲ့ auto create လုပ်သွားမယ်။ သူ့ရဲ့အလုပ်လုပ်ပုံက ကျွန်တော်တို့ External Clients တွေက cluster အတွင်းမှာရှိတဲ့ Node ရဲ့ Port တွေကိုတိုက်ရိုက်ခေါ်ပြီး access လုပ်မယ်ဆိုရင် သူ့ရဲ့ request traffic တွေက NodePort ကမှတစ်ဆင့် auto create လုပ်သွားတဲ့ ClusterIP Service ဆီကိုရောက်မယ်။ ClusterIP ကနေ kube-proxy မှတစ်ဆင့် iptables rules  random probability နဲ့ select လုပ်ပြီး Endpoints တွေဆီကိုပို့ပေးမှာဖြစ်ပါတယ်။
 
+![NodePort](../.gitbook/assets/nodeport.png)
+
 ```text
 [waiyanmin@k8smm ~] $ kubectl  get service
 NAME              TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
@@ -73,6 +75,8 @@ hopper-nodeport   NodePort    172.20.23.220    <none>        80:30772/TCP   35d
 ```
 
 ### LoadBalancer 
+
+![LoadBalancer](../.gitbook/assets/loadbalancer.png)
 
 LoadBalancer Service Type ကတော့ ကိုယ်ရဲ့ Kubernetes Cluster က Cloud Provider တစ်ခုခု မှာတည်ဆောက်ထားတာဆိုရင် cloud provider ရဲ့ loadbalancer ကိုအသုံးပြုပြီး service ကို External ကို expose လုပ်ပေးမှာဖြစ်ပါတယ်။ External ကနေ access ရနိုင်ဖို့ Cloud LoadBalacner ရဲ့ IP ဒါမှမဟုတ် DNS name တစ်ခုကို ထုတ်ပေးမှာပါ။ 
 
