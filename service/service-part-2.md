@@ -121,7 +121,7 @@ Service Type \( ExternameName \) အကိုအသုံးပြုဖို�
 
 အခုလောက်ဆိုရင်တော့ Endpoints နဲ့ Service Types တွေအကြောင်းကို အနည်းနဲ့အများနားလည် သဘောပေါက်ကြမယ်လို့ ယုံကြည်မျှော်လင့်ပါတယ်။ Kubernetes Service အနေနဲ့ ဆက်လက်ဆွေးနွေးစရာတွေရှိသေးတာမို့ နောက်ထပ် episode တစ်ခုမှာပြန်လည်ဆုံတွေကြပါစို့ ခင်ဗျာ။ 
 
-အစဉ်လေးစားလျက်
+အစဉ်လေးစားလျက် 
 
 \*\*\*\*[**Kubernetes User Group Myanmar**](https://www.facebook.com/k8smm/)\*\*\*\*
 
