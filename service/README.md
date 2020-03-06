@@ -55,10 +55,10 @@ K8S manifestတွေရဲ့ ထုံးစံအတိုင်း apiVersio
 
 Service ကို Expose လုပ်တဲ့နေရာမှာ Kubernetes Service Types အနေနဲ့ကတော့ ၄ မျိုးရှိပါတယ်။
 
-1. ClusterIP
-2. NodePort
-3. LoadBalancer
-4. ExternalName
+1. **ClusterIP**
+2. **NodePort**
+3. **LoadBalancer**
+4. **ExternalName**
 
 ဒီကတော့ Kubernetes Service ရဲ့ အကြမ်းဖျင်း နဲ့ Basic အကြောင်းအရာနဲ့ အလုပ်လုပ်ပုံလေးတွေပဲဖြစ်ပါတယ်။ Kubernetes Service Types အကြောင်း နဲ့ တစ်ချို့ ကိုတော့ ‌နောက်ထပ် article တစ်ခုအနေနဲ့ ဆက်လက်ရေးသားသွားပါဦးမယ်။
 

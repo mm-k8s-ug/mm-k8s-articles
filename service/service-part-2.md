@@ -88,6 +88,8 @@ hopper-loadbalancer   LoadBalancer   172.20.197.93    a30b2efd25ec311ea852e06d36
 
 LoadBalancer ရဲ့ အလုပ်လုပ်ပုံကလည်းရှင်းပါတယ်။ LoadBalancer Service Type က အပေါ်မှာပြောခဲ့တဲ့ ClusterIP နဲ့ Node Port Service Type တို့ကို ငုံပြီး modify လုပ်ထားတာမျိုးပါပဲ။ Cloud Provider ရဲ့ External LoadBalancer ကဝင်လာတဲ့ Traffic တွေကို [NodePort](https://blog.k8smm.org/service/service-part-2#node-port) မှတစ်ဆင့် [ClusterIP](https://blog.k8smm.org/service/service-part-2#clusterip) ကိုရောက်မယ် ClusterIP ကနေ kube-proxy မှတစ်ဆင့် iptables rules  random probability နဲ့ select လုပ်ပြီး [Endpoints ](https://blog.k8smm.org/service/service-part-2#endpoints)တွေဆီကိုပို့ပေးမှာဖြစ်ပါတယ်။ 
 
+### ExternalName
+
 
 
 
