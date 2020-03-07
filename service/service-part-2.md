@@ -94,7 +94,8 @@ Service Type \( ExternalName \) ကတော့ Service Type တွေထဲမ�
 
 ```text
 [waiyanmin@k8smm ~] $ kubectl get svc
-k8smm    ExternalName   <none>           google.com   80/TCP    3h4m
+NAME     TYPE           CLUSTER-IP    EXTERNAL-IP     PORT(S)     AGE
+k8smm    ExternalName   <none>        google.com      80/TCP      3h4m
 ```
 
 YAML အနေနဲ့ဆိုရင်တော့ ဒီလိုလေး တွေ့ရမှာပါ။ 
