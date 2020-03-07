@@ -96,7 +96,7 @@ LoadBalancer Service Type ကို Cloud မှာပဲသုံးလို�
 
 ### ExternalName
 
-Service Type \( ExternalName \) ကတော့ Service Type တွေထဲမှာ အထူးခြားဆုံး Service Type တစ်ခုပါ။ ပုံမှန် Service Type တွေကတော့ Labels and Selectors တွေနဲ့ အလုပ်လုပ်ကြပေမယ့် ExternalName ကတော့ Labels တွေ Selectors တွေမလိုပါဘူး။ ExternalName ကတော့ Labels and Selectors တွေနဲ့အစား DNS name \( CNAME Record \) နဲ့ IPs တွေနဲ့အလုပ်လုပ်ပါတယ်။ ဆိုလိုတာက Service Name **k8smm** ကိုခေါ်လိုက်ရင် google ကို external name အနေနဲ့ ထည့်ထားတာမျိုးပါ။ 
+Service Type \( ExternalName \) ကတော့ Service Type တွေထဲမှာ အထူးခြားဆုံး Service Type တစ်ခုပါ။ ပုံမှန် Service Type တွေကတော့ Labels and Selectors တွေနဲ့ အလုပ်လုပ်ကြပေမယ့် ExternalName ကတော့ Labels တွေ Selectors တွေမလိုပါဘူး။ ExternalName ကတော့ Labels and Selectors တွေနဲ့အစား DNS name \( CNAME Record \) နဲ့ IPs တွေနဲ့အလုပ်လုပ်ပါတယ်။ ဆိုလိုတာက Service Name **k8smm** ကိုခေါ်လိုက်ရင် google ကို external name အနေနဲ့ ထည့်ထားတာမျိုးပါ။ ဒီနေရာမှာ google.com မှမဟုတ်ပါဘူး တစ်ခြားဟာတွေလည်းထည့်သုံးလို့ရပါတယ်။ ဥပမာ ကိုယ့်ရဲ့ Database Server IP ကိုလည်း Service Name "my-database" နဲ့ external-ip ကို 192.168.xx.xx အနေနဲ့လည်းထည့်ထားနိုင်ပါတယ်။ 
 
 ```text
 [waiyanmin@k8smm ~] $ kubectl get svc
