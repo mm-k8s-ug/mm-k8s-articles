@@ -88,6 +88,8 @@ hopper-loadbalancer   LoadBalancer   172.20.197.93    a30b2efd25ec311ea852e06d36
 
 LoadBalancer ရဲ့ အလုပ်လုပ်ပုံကလည်းရှင်းပါတယ်။ LoadBalancer Service Type က အပေါ်မှာပြောခဲ့တဲ့ ClusterIP နဲ့ Node Port Service Type တို့ကို ငုံပြီး modify လုပ်ထားတာမျိုးပါပဲ။ Cloud Provider ရဲ့ External LoadBalancer ကဝင်လာတဲ့ Traffic တွေကို [NodePort](https://blog.k8smm.org/service/service-part-2#node-port) မှတစ်ဆင့် [ClusterIP](https://blog.k8smm.org/service/service-part-2#clusterip) ကိုရောက်မယ် ClusterIP ကနေ kube-proxy မှတစ်ဆင့် iptables rules  random probability နဲ့ select လုပ်ပြီး [Endpoints ](https://blog.k8smm.org/service/service-part-2#endpoints)တွေဆီကိုပို့ပေးမှာဖြစ်ပါတယ်။ 
 
+LoadBalancer Service Type ကို Cloud မှာပဲသုံးလို့ရမှာလားဆိုတော့ အဲ့လိုလည်းမဟုတ်ပါဘူး။ On-premises မှာလည်း HA Proxy တို့ F5 တို့နဲ့လည်း non-cloud loadbalancer အဖြစ်တွဲသုံးနိုင်ပါသေးတယ်။ 
+
 ### ExternalName
 
 Service Type \( ExternalName \) ကတော့ Service Type တွေထဲမှာ အထူးခြားဆုံး Service Type တစ်ခုပါ။ ပုံမှန် Service Type တွေကတော့ Labels and Selectors တွေနဲ့ အလုပ်လုပ်ကြပေမယ့် ExternalName ကတော့ Labels တွေ Selectors တွေမလိုပါဘူး။ ExternalName ကတော့ Labels and Selectors တွေနဲ့အစား DNS name \( CNAME Record \) နဲ့ IPs တွေနဲ့အလုပ်လုပ်ပါတယ်။ ဆိုလိုတာက Service Name **k8smm** ကိုခေါ်လိုက်ရင် google ကို external name အနေနဲ့ ထည့်ထားတာမျိုးပါ။ 
