@@ -1,4 +1,26 @@
 # Startup Probes
 
-Coming Soon
+![Startup Probes](../.gitbook/assets/startup-probe.png)
+
+တချို့ Application တွေကို ပထမ အကြိမ်စ run တဲ့ အခါမှာ application up and run ဖြစ်ဖို့ initialization ပြုလုပ်ရတဲ့ အခြေအနေမျိုးတွေ ရှိနိုင်ပါတယ်။ အဲလို အခြေအနေမျိုးမှာ Startup probe ကို setup ပြုလုပ်ထားမယ်ဆိုရင် initialization ပြုလုပ်နေတဲ့ state ကို hold လုပ်ထားပေးမှာ ဖြစ်ပါတယ်။ နောက်ပြီးတော့ Startup Probe က Liveness Probe နဲ့ ဆင်တူပါတယ်။ ဒါကြောင့်မလို့ probe fail တဲ့ အခါမှာ container ကို restart ချတဲ့ action ကို ပြုလုပ်ပါတယ်။ Probe successed ဖြစ်သွားတဲ့ အခါမှာတော့ Startup probe က probe ကိုထပ် ပြီးတော့ မ check တော့ပါဘူး။ Liveness probe ကို အစားထိုးလိုက်ပါတယ်။ Liveness Probe က ဘဲ တောက်လျောက် သူအလုပ်သူ စပြီးတော့ ဆက်လုပ်ပါတယ်။ ဒါကြောင့် မလို့ Startup probe ဆိုသည့် အတိုင်း Startup ပြုလုပ်တဲ့ အချိန်မှာပဲ အလုပ်လုပ်ပါတယ်။ [Startup Probe](https://github.com/kubernetes/enhancements/issues/950) ကတော့ kubernetes 1.16 အသစ် ပါလာတဲ့ Probe type အသစ်ဖြစ်ပါတယ်။
+
+```yaml
+ .......
+startupProbe:
+   httpGet:
+     path: /healthz
+     initialDelaySeconds: 5
+     periodSeconds: 10
+     timeoutSeconds: 4
+     failureThreshold: 6
+livenessProbe:
+   httpGet:
+     path: /healthz
+     periodSeconds: 5
+     timeoutSeconds: 3
+     failureThreshold: 3
+.........
+```
+
+ဒါကတော့ Startup Probe နဲ့ Liveness Probe ကို တွဲ ပြီး အသုံးပြုထားတဲ့ နမူနာ manifest ပါ။ ဒီ manifest အရဆိုရင် manifest ကို create လုပ်ပြီး ၅ စက္ကန့် အကြာမှ Startup Probe စ အလုပ်လုပ်မှာ ဖြစ်ပါတယ်။ Startup Probe စ ပို့လွှတ်ပြီး ၄ စက္ကန့် အထိ စောင့်ဆိုင်းပါမယ်။ Startup Probe စ check တာကနေ နောက် တစ်ခါ ထပ် check ဖို့ကို periodSeconds မှာ configure ပြုလုပ်နိုင်ပါတယ်။ manifest အရဆိုရင် အဲဒီ အချိန်ကို ၁၀ စက္ကန့် ခွာထားတာ ဖြစ်ပါတယ်။ failureThreshold ကတော့ Probes fail တာကို လက်ခံနိုင်တဲ့ အရေအတွက်ပါ။ manifest အရဆို ၆ခါထိ fail လို့ ရတယ်။ အဲတော့ Probe စစ်တာ ၆ ကြိမ်ပြည့်သည်တိုင် fail နေမယ်ဆိုရင် Startup Probe က container ကို restart ချပါမယ်။ kill ပါမယ်။ ဒါတွေကတော့ [Liveness probes](https://blog.k8smm.org/kubernetes-probes/liveness-probes) မှာ ပြောခဲ့ပြီးသားဖြစ်ပါတယ်။ နောက်တစ်ခုက သတ်မှတ် ထားတဲ့ ၆ ကြိမ် မတိုင်ခင် success ဖြစ်ခွင့်ရှိပါတယ်။ အပေါ်မှာ configure ပြုလုပ်ထားတဲ့ manifest ရဲ့ အဓိပ္ပါယ် ကို ချုံကြည့်မယ်ဆိုရင် Startup Probe က Application ကို စတင် initialization \(startup\) ပြုလုပ်နိုင်ဖို့ ၆၀စက္ကန့် \(၁မိနစ်\) စောင့်မှာ ဖြစ်ပါတယ်။ ဘာလို့ တစ်မိနစ် စောင့်တာလဲဆိုတော့ ၁ခါ fail ဖြစ်တိုင်းမှာ နောက် တစ်ခါ fail သို့မဟုတ် success ဖြစ်ဖို့ ၁၀ ခွာထားတဲ့ period စက္ကန့် ကြောင့်ဖြစ်ပါတယ်။ ၆ ခါ fail တော့ ၆၀ စက္ကန့် ဖြစ်ပါတယ်။ periodSeconds x failureThreshold \(၁၀ x ၆ = ၆၀\) ကို မြောက်တဲ့ သဘောပါ။ Liveness Probe မ check ခင် အထိ စုစုပေါင်း အချိန်ဆိုရင်တော့ initialDelaySeconds + \( failureThreshold × periodSeconds \) ကြာမှာဖြစ်ပါတယ်။ ဒါတွေကတော့ နမူနာ ဖြစ်ပါတယ်။ ကိုယ်ရဲ့ application နဲ့ ကိုက်ညီတဲ့ Probes တွေ အတွက် configure ကို ကိုယ်ဘာသာ စိတ်ကြိုက် သတ်မှတ်နိုင်ပါတယ်။ နမူနာ configure ချထားတဲ့ အတိုင်း စက္ကန့် ၆၀ မတိုင်ခင် success ဖြစ်သွားတယ်ဆိုရင် Liveness Probe ကို ဆက်ပြီး တော့ ပြုလုပ်သွားမှာ ဖြစ်ပါတယ်။ Startup Probe က Liveness တို့ Readness တို့လို့ အချိန်တိုင်း check မနေပါဘူး။ container ကို စ run တဲ့ အချိန်ကနေ သူ့ကို configure ပြုလုပ်ထားတဲ့ အချိန်အထိ ဘဲ check ပါတယ်။ ဒါကတော့ တခြား Probe တွေနဲ့ မတူတဲ့ ကွားခြားချက် တစ်ခုဖြစ်ပါတယ်။ အခု ချိန်မှာတော့ ဒီ Startup Probes feature ရဲ့ state ကတော့ အသစ်ဖြစ်နေသေးတဲ့ အတွက် alpha ပဲ ရှိပါသေးတယ်။
 
