@@ -1,8 +1,8 @@
 # How To Get Started Learning Container
 
-Container တွေ အကြောင်းကို စတင်လေ့လာမယ်ဆိုရင်တော့ Docker နဲ့ အရင် စတင်လေ့လာရတာဟာ ပိုမိုလွယ်ကူမှာ ဖြစ်ပါတယ်။ Docker ရဲ့ user interface တွေ က အသုံးပြုရတဲ့ သူတွေကို လွယ်ကူရိုးရှင်းနားလည် လွယ်စေပါတယ်။ အခု ဒီ အကြောင်းအရာမှာတော့ Container ကို လေ့လာဖို့ အသုံးဝင်တဲ့ resource တွေကို share ပေးသွားမှာ ဖြစ်ပါတယ်။
+Container တွေအကြောင်းကို စတင်လေ့လာမယ်ဆိုရင်တော့ Docker နဲ့အရင် စတင်လေ့လာရတာဟာ ပိုမိုလွယ်ကူမှာ ဖြစ်ပါတယ်။ Docker ရဲ့ user interface တွေက အသုံးပြုရတဲ့သူတွေကို လွယ်ကူရိုးရှင်း နားလည်လွယ်စေပါတယ်။ အခု ဒီအကြောင်းအရာမှာတော့ Container ကို လေ့လာဖို့ အသုံးဝင်တဲ့ resource တွေကို share ပေးသွားမှာ ဖြစ်ပါတယ်။
 
-## စာဖတ်ရ အားသန်တဲ့ သူတွေ အတွက်
+## စာဖတ်ရ အားသန်တဲ့ သူတွေအတွက်
 
 ပထမဆုံး share ပေးချင်တာကတော့ Docker ကို မြန်မာလို လေ့လာလို့ ရနိုင်တဲ့ Fossmyanmar က ရေးထားတဲ့ Docker Quick Start Guide ပါ။
 
@@ -10,11 +10,11 @@ Container တွေ အကြောင်းကို စတင်လေ့လ�
 
 {% embed url="https://github.com/fossmyanmar/docker-quick-start" %}
 
-Docker နဲ့ Development ပြုလုပ်တဲ့ အခါ လေ့လာနိုင်မဲ့ tutorial ဖြစ်ပါတယ်။
+**Docker** နဲ့ Development ပြုလုပ်တဲ့အခါ လေ့လာနိုင်မဲ့ tutorial ဖြစ်ပါတယ်။
 
 {% embed url="https://medium.com/@winhtaikaung76/docker-%E1%80%94%E1%80%B2%E1%80%B7-development-%E1%80%9C%E1%80%AF%E1%80%95%E1%80%BA%E1%80%80%E1%80%BC%E1%80%99%E1%80%9A%E1%80%BA-e98ad953d517" %}
 
-Docker Tutorial for Beginners ဒါ ကတော့ Docker ကို စလုပ်တဲ့ သူတွေ အတွက် ရိုးရှင်းပြီး ဖတ်လို့ ကောင်းတဲ့ Tutorial ပါ။
+Docker Tutorial for Beginners ဒါ ကတော့ Docker ကို စလုပ်တဲ့သူတွေအတွက် ရိုးရှင်းပြီး ဖတ်လို့ကောင်းတဲ့ Tutorial ပါ။
 
 {% embed url="https://docker-curriculum.com/" %}
 
@@ -38,7 +38,7 @@ The Evolution of Linux Containers and Their Future
 
 {% embed url="https://dzone.com/articles/evolution-of-linux-containers-future" %}
 
-CRIO
+## **CRIO**
 
 {% embed url="https://medium.com/cri-o" %}
 
@@ -58,7 +58,7 @@ Opensource.com က ဖတ္လို႔ ေကာင္းတဲ့ Articles �
 
 {% embed url="https://opensource.com/tags/containers" %}
 
-systemd-nspawn
+## **systemd-nspawn**
 
 {% embed url="http://man7.org/linux/man-pages/man1/systemd-nspawn.1.html" %}
 
@@ -104,11 +104,17 @@ Applications Developer တွေ အတွက် Docker ကို Udemy က Free
 
 {% embed url="https://www.udemy.com/course/deploying-containerized-applications-technical-overview/?" %}
 
-ထက်ပြီတော့ ညွန်ပေးချင်တာကတော့ Nigel Poulton ရဲ့ Pluralsight က docker courses တွေ ဖြစ်ပါတယ်။ Pluralsight က free မရပါဘူး ဒါပေမဲ့ Trial ရပါတယ်။ ပြီးတော့ Visual Studio subscription နဲ့ ဆိုရင် အလကား ၃ လ ကြည့်လို့ရနိုင်ပါတယ်။ တကယ် စာလုပ်ဖြစ်မယ်ဆိုရင်တော့ ၃လ အတွင်း အကုန်လေ့လာလို့ရပါတယ်။ အောက်မှာ free ၃လ ရယူတဲ့ လင့်ကိုပါ share ပေးထားပါမယ်။
+KodeKloud ရဲ့ Docker For The Absolute Beginner သည်လဲ container စတင်လေ့လာသူတွေ သင့်တော်တဲ့ free course တစ်ခုပါပဲ။
+
+{% embed url="https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/lectures/4554674+/" %}
+
+
+
+ထက်ပြီးတော့ ညွန်ပေးချင်တာကတော့ Nigel Poulton ရဲ့ Pluralsight က docker courses တွေ ဖြစ်ပါတယ်။ Pluralsight က free မရပါဘူး ဒါပေမဲ့ Trial ရပါတယ်။ ပြီးတော့ Visual Studio subscription နဲ့ ဆိုရင် အလကား ၃ လ ကြည့်လို့ရနိုင်ပါတယ်။ တကယ် စာလုပ်ဖြစ်မယ်ဆိုရင်တော့ ၃လ အတွင်း အကုန်လေ့လာလို့ရပါတယ်။ အောက်မှာ free ၃လ ရယူတဲ့ လင့်ကိုပါ share ပေးထားပါမယ်။
 
 {% embed url="https://docs.microsoft.com/en-us/visualstudio/subscriptions/vs-pluralsight" %}
 
-Pluralsight Nigel Poulton ရဲ႕ Docker Courses 
+Pluralsight Nigel Poulton ရဲ့ Docker Courses 
 
 {% embed url="https://www.pluralsight.com/courses/docker-kubernetes-big-picture" %}
 
@@ -147,6 +153,4 @@ Docker Playlist
 {% embed url="http://dockerlabs.collabnix.com/" %}
 
 {% embed url="https://www.katacoda.com/courses/container-runtimes" %}
-
-
 
