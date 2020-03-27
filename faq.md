@@ -1,12 +1,26 @@
 # FAQ
 
-## Can I become who I want to be?
+## Kubernetes User Group Myanmar ဆိုတာ ဘာလဲ ?
 
-That's a tough question but thankfully, our team is on it. Please bear with us while we're investigating.
+     ယခုဆိုရင် kubernetes ပေါ်ပေါက်လာတာ ၅နှစ်ကျော် ရှိပြီး ဖြစ်ပါတယ်။ လက်ရှိ အချိန်အထိ လက်လှမ်းမှီ သလောက်မှာ kubernetes ကို local မှာ တွင်တွင်ကျယ်ကျယ် အသုံးချနေတာ နည်းပါးနေသည့်အတွက် လက်ရှိ လေ့လာနေကြသော စိတ်အားထက်သန်သူများ စုပေါင်းထားပြီး တတ်နိုင်သလောက် တတ်စွမ်းသလောက် sharing ပြုလုပ်ခြင်း၊ activities များ ပြုလုပ်ခြင်းတို့အတွက် ဖွဲစည်းထားသော non-profit community တစ်ခု ဖြစ်ပါတယ်။
 
-## Have you had a chance to answer the previous question?
+## K8s User Group Blog မှာ ဘယ်သူ တွေ ရေးသလဲ ?
 
-Yes, after a few months we finally found the answer. Sadly, Mike is on vacations right now so I'm afraid we are not able to provide the answer at this point.
+  လက်ရှိ ဒီ blog မှာ contribute လုပ်ပေးနေတဲ့ [contributors](https://github.com/mm-k8s-ug/mm-k8s-articles/graphs/contributors) ၄ ယောက်ရှိပါတယ်။ ဒီ blog မှာရေးတဲ့ articles တွေနဲ့ ပတ်သက်ပြီးတော့ မရှင်းလင်းတာ၊ discuss ပြုလုပ်ချင်တာများ ရှိခဲ့သော် [contributors](https://github.com/mm-k8s-ug/mm-k8s-articles/graphs/contributors) များသို့ တိုက်ရိုက် သို့မဟုတ် [k8smm facebook page](http://fb.com/k8smm) မှတဆင့် သို့မဟုတ် [k8smm facebook group](https://www.fb.com/groups/k8smm) တွင် ဝင်ရောက် ပြောဆို ဆွေးနွေးနိုင်ပါတယ်။
 
+## Kubernetes ဆိုတာ ဘာလဲ?
 
+kubernetes \(“koo-burr-NET-eez”\) ဆိုတဲ့ စကားလုံးက ဂရိဘာသာစကားနဲ့ဆိုရင် မာလိန်မူးကိုပြောတာ ဖြစ်ပါတယ်။ မာလိန်မူးဆိုတာကတော့ သဘော် စတီယာတိုင်ကိုကိုင်ပြီး သဘော်ကို မောင်းနှင်တဲ့သူ သို့မဟုတ် သဘော် ကပ္ပတိန်ကို ပြောတာဖြစ်ပါတယ်။
+
+containerized ပြုလုပ်ထားတဲ့ applications တွေကို အဆင်ပြေစွာ၊ လုံခြုံစိတ်ချစွာ manage ပြုလုပ်ဖို့၊ scale ပြုလုပ်ဖို့၊ automate deployment တွေ၊ self healing စတာတွေကို ပြုလုပ်ပေးနိုင်တဲ့ opensource system တစ်ခု ဖြစ်ပါတယ်။ လက်ရှိအချိန်မှာတော့ kubernetes က အဲ့ထက်ပိုတဲ့ features တွေ၊ solutions တွေ အများကြီး ပေါ်ထွက်လာပါပီ။
+
+kubernetes ဆိုတာ distributed systems တွေရဲ့ kernel ဖြစ်ပါတယ်။ ဘာနဲ့တူသလဲ ဆိုတော့ Phone တွေ၊ laptop တွေ၊ server တွေနဲ့ Raspberry PI စတဲ့အရာတွေရဲ့ hardware တွေအပေါ်မှာ တိုက်ရိုက် ထိုင် run နေတဲ့ Linux kernel တွေလိုပါဘဲ။ distribution တွေဘဲ ကွဲသွားမယ် ကျန်တာကတော့ Linux kernel ဖြစ်နေသလိုမျိုးပေါ့။ ဒီနေရာမှာ OpenShift တို့၊ Rancher တို့၊ PKS \(Pivotal Kubernetes Services\) တို့က distribution တွေဖြစ်ပြီး kubernetes ကတော့ ဒီ distribution တွေရဲ့ kernel ဖြစ်ပါတယ်။
+
+## Kubernetes နဲ့ Docker ဘာကွာသလဲ ?
+
+Docker ဟာ container technology တစ်ခုဖြစ်တယ်။ Docker, Inc. company ကနေ ထုတ်လုပ်တဲ့ open-source software တစ်ခုလည်း ဖြစ်ပါတယ်။ Applications တွေကို portable ဖြစ်အောင် container အနေနဲ့ ပြုလုပ်ပေးနိုင်ပါတယ်။ application တစ်ခုကို အသုံးပြုနိုင်ဖို့ တကယ် Operating System ကို အမြဲတမ်း setup ပြုလုပ်စရာ မလိုအပ်ပါဘူး။ အလွယ်တကူ container တစ်ခုကို OS အပေါ်မှာ run ရုံနဲ့ အသုံးပြုနိုင်ပါတယ်။ ဒါတွေအပြင် တခြားသော features တွေဖြစ်တဲ့ isolation တွေ၊ resources control လုပ်တာတွေ အများကြီးကို container ကပြုလုပ်ပေးနိုင်ပါတယ်။ အဲတော့ ဒီနေရာမှာ Docker က ခုနက container technology တွေထဲက တစ်ခု ဖြစ်တယ်။ Docker လိုမျိုး တစ်ခြားသော container technology တွေလဲ အများကြီး ရှိတယ်။ အားလုံးကတော့ ဒီ container ကို standard တစ်ခု သတ်မှတ်ပြီးတော့ ဖန်တီးကြတယ် ပြုလုပ်ကြတယ်၊ တစ်ခုနဲ့တစ်ခု မတူညီတဲ့ features တွေ၊ structure တွေ၊ user interface စတာတွေ အနည်းငယ်ကွဲမယ်။ ဒီနေရာမှာ Docker အကြောင်းကိုဘဲ အဓိက ပြောသွားမယ် အမေးများလို့။ Docker ရဲ့ command တွေက အသုံးပြုရလွယ်တယ်။ container တစ်ခု တည်ဆောက်ရတာလဲ Developer တွေအတွက် လွယ်ကူစေတယ်။ ပြီးတော့ သူ့ရဲ့ Docker hub စတာတွေက သုံးလို့ကောင်းတယ်။ ပြီးတော့ အခုချိန်မှာ Docker က mature ဖြစ်တယ်။ လူတစ်ယောက် သို့မဟုတ် Developer တယောက်က container ကို အသုံးပြုမယ် စလေ့လာမယ်ဆိုရင်လဲ Docker ကို လေ့လာအသုံးပြုဖို့ resource တွေများမယ် အရမ်းကြီး အလှမ်းဝေးမနေဘူး။ အဲ့တော့ အကျဉ်းချုပ်ပြောရရင် Docker ကို အသုံးပြုပြီးတော့ container image တွေကို အလွယ်တကူ ဖန်တီးနိုင်မယ်၊ on-premises နဲ့ cloud တွေမှာလဲ container ကို run နိုင်မယ်။ Laptop အထဲမှာလဲ run နိုင်မယ်။ Application တွေ software တွေကို အလွယ်တကူ deliver ပြုလုပ်နိုင်မယ်။
+
+ Kubernetes - ကတော့ ခုက Docker ကို အသုံးပြုပြီးဖြစ်စေ၊ တစ်ခြားသော container technology တစ်ခုခုကို အသုံးပြုလို့ ဖြစ်စေ ဖန်တီးထားသော container image တွေ ကို Docker နဲ့ ဖြစ်စေ၊ တစ်ခြားသော container technology တစ်ခုခုနဲ့ ဖြစ်စေ container အနေနဲ့ run တဲ့အခါမှာ manage ပြုလုပ်ပေးနိုင်တဲ့ အရာဖြစ်ပါတယ်။ ဒါကတော့ အလွယ်ရှင်းတာပါ။ ခုနက container တွေကို orchestration ပြုလုပ်ပေးတယ်။ ဒါ့အပြင် containerization ပြုလုပ်ထားတဲ့ application တွေ ဒါမှမဟုတ် application တွေကို အလွယ်တကူ အဆင်ပြေစွာ container အသုံးပြုနိုင်ဖို့ kubernetes ရဲ့ တစ်ခြား features တွေ၊ resources တွေ ပါရှိပါတယ်။ ဥပမာ configmap၊ secret၊ service၊ volumes စတာတွေ ဖြစ်ပါတယ်။ နောက်တစ်ခု သိထားရမှာက kubernetes က container ကို run လို့nမရပါဘူး။ တည်ဆောက်လို့ မရပါဘူး၊ ဖန်တီးလို့ မရပါဘူး။ ဒါပေမဲ့ kubernetes ကနေတစ်ဆင့် container ကို docker သို့ မဟုတ် တစ်ခြားသော container technology တစ်ခုခုကို အသုံးပြုပြီး container ကို run လို့ရနိုင်ပါတယ်။ အဲတော့ administrator/ user / Developer တစ်ယောက်က nginx run နေတဲ့ container ၃ လုံး လိုချင်တယ်လို့ kubernetes ကို ပြောရင် kubernetes က အဲ့ nginx container ၃ လုံးကို ခုနက Docker သို့မဟုတ် တခြား container technology တစ်ခုခုကို ပြန်ခိုင်းပါတယ်။ Docker သို့မဟုတ် container technology တစ်ခုခုကမှ ခုနက nginx ၃ လုံးကို run ပေးပါတယ်။ ဒါက အကြမ်းဖျင်း အလွယ်ပြောတာပါ။ ဒီနေရာမှာ kubernetes က တဆင့်ခံ စကားပြောပေးတဲ့ အရာမဟုတ်ပါဘူး။ အဲ့ထက် အများကြီး ပိုတဲ့ အလုပ်တွေကို လုပ်ပေးပါတယ်။
+
+အချုပ်ပြောရရင် Docker ဆိုတာက container technology တစ်ခုဖြစ်တဲ့အတိုင်း မျက်လုံးထဲမှာ မြင်ကြည့်ရင် ဆိပ်ကမ်းမှာ ရှိတဲ့ container တွေနဲ့ တူပါတယ်။ Docker container ထဲမှာ တကယ် application ရှိမယ်။ ဒါနဲ့ တူညီတာကတော့ ဆိပ်ကမ်းက container အထဲထဲမှာ အရေးပါတဲ့ ပစ္စည်းတွေရှိမယ်။ ဒီနေရာမှာ kubernetes ကတော့ အဲဒီ့ ဆိပ်ကမ်းက container တွေကို သယ်ဆောင်ထားတဲ့ သဘော်ကို မောင်းနှင်ရတဲ့ မာလိန်မူး \( captain \) နဲ့တူတယ်။
 

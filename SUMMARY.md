@@ -20,6 +20,7 @@
   * [Liveness Probes](kubernetes-probes/liveness-probes.md)
   * [Readiness Probes](kubernetes-probes/readiness-probes.md)
   * [Startup Probes](kubernetes-probes/startup-probes.md)
+* [Volumes](volumes.md)
 
 ## container
 
@@ -43,6 +44,6 @@
 
 ## TYRO
 
-* [reserve](tyro/reserve.md)
+* [How To Get Started Learning Container](tyro/gsc.md)
 * [FAQ](faq.md)
 

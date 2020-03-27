@@ -42,7 +42,5 @@ description: Table Of Contents
 
 * reserve
 
-## FAQ
-
-* FAQ
+## [FAQ](https://blog.k8smm.org/faq)
 
