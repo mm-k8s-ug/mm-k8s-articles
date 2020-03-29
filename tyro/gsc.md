@@ -54,7 +54,7 @@ The Evolution of Linux Containers and Their Future
 
 {% embed url="https://www.freecodecamp.org/news/demystifying-containers-101-a-deep-dive-into-container-technology-for-beginners-d7b60d8511c1/" %}
 
-Opensource.com က ဖတ္လို႔ ေကာင္းတဲ့ Articles ေတြ
+Opensource.com က ဖတ်လို့ ကောင်းတဲ့ Articles တွေ
 
 {% embed url="https://opensource.com/tags/containers" %}
 
