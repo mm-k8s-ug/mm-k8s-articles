@@ -1,6 +1,6 @@
 # Folding @ home with Containers
 
-[Folding](https://foldingathome.org/start-folding/) လုပ်တယ်၊ [Folding at home project](https://foldingathome.org/) က ဘယ်လိုဘာညာ စတာတွေကိုတော့ မရှင်းပြတော့ပါဘူး။ [Ubuntu-mm.net](https://ubuntu-mm.net/knowledge/foldinghome-project-coronavirus/) မှာ ရေးထားတဲ့ [post](https://ubuntu-mm.net/knowledge/foldinghome-project-coronavirus/) ကို ဖတ်ရှုနိုင်ပါတယ်။ အခု ဒီ articles ကို ရေးရတဲ့ အကြောင်းအရင်း ကတော့ ကျွန်တော်တို့ folding ကို container နဲ့ ဘယ်လို အလွယ်တကူ ပြုလုပ်နိုင်မလဲ၊ ကိုယ်မှာ server မရှိတဲ့ အခါ သို့မဟုတ် ကိုယ် laptop ရဲ့ resource ကို အမြဲ \(အချိန်ပြည့်\) ပေးမသုံးနိုင်တဲ့ အခါ container ကို free run လို့ ရတဲ့ service တွေကို အသုံးပြုပြီး တစ်နိုင်တစ်ပိုင် folding ဘယ်လို ပြုလုပ်မလဲ ဆိုတာကို ပြောပြပေးသွားမှာ ဖြစ်ပါတယ်။ အခု ဒီ articles မှာ container ကို free အသုံးပြုလို့ရတဲ့ service နှစ်မျိုးနဲ့ ပြောပြပေးသွားမှာ ဖြစ်ပါတယ်။ ပထမတစ်ခု ကတော့ Redhat ရဲ့ openshift online ကို အသုံးပြုသွားမှာဖြစ်ပြီး ဒုတိယ တစ်မျိုးကတော့ kubesail ဆိုတာကို အသုံးပြုသွားမှာ ဖြစ်ပါတယ်။
+[Folding](https://foldingathome.org/start-folding/) လုပ်တယ်၊ [Folding at home project](https://foldingathome.org/) က ဘယ်လိုဘာညာ စတာတွေကိုတော့ မရှင်းပြတော့ပါဘူး။ [ubuntu-mm.net](https://ubuntu-mm.net/knowledge/foldinghome-project-coronavirus/) မှာ ရေးထားတဲ့ [post](https://ubuntu-mm.net/knowledge/foldinghome-project-coronavirus/) ကို ဖတ်ရှုနိုင်ပါတယ်။ အခု ဒီ articles ကို ရေးရတဲ့ အကြောင်းအရင်းကတော့ ကျွန်တော်တို့ folding ကို container နဲ့ ဘယ်လို အလွယ်တကူ ပြုလုပ်နိုင်မလဲ၊ ကိုယ်မှာ server မရှိတဲ့အခါ သို့မဟုတ် ကိုယ့် laptop ရဲ့ resource ကို အမြဲ \(အချိန်ပြည့်\) ပေးမသုံးနိုင်တဲ့အခါ container ကို free run လို့ရတဲ့ service တွေကို အသုံးပြုပြီး တစ်နိုင်တစ်ပိုင် folding ဘယ်လိုပြုလုပ်မလဲ ဆိုတာကို ပြောပြပေးသွားမှာ ဖြစ်ပါတယ်။ အခု ဒီ articles မှာ container ကို free အသုံးပြုလို့ရတဲ့ service နှစ်မျိုးနဲ့ ပြောပြပေးသွားမှာ ဖြစ်ပါတယ်။ ပထမတစ်ခုကတော့ Redhat ရဲ့ openshift online ကို အသုံးပြုသွားမှာဖြစ်ပြီး ဒုတိယတစ်မျိုးကတော့ kubesail ဆိုတာကို အသုံးပြုသွားမှာ ဖြစ်ပါတယ်။
 
 ## Folding Using Openshift Online
 
@@ -8,31 +8,31 @@
 
 {% embed url="https://manage.openshift.com/" %}
 
-2 -ပြီးရင် Sign up ပြုလုပ်ပါ။ အောက်မှာ ပြထားတဲ့ အတိုင်း Github \| stackoverflow \| linkedin \| twitter \| facebook \| gmail \| microsoft စတာတွေနဲ့ လည်း အလွယ်တကူ Sign in ပြုလုပ်နိုင်ပါတယ်။
+2 - ပြီးရင် Sign up ပြုလုပ်ပါ။ အောက်မှာ ပြထားတဲ့အတိုင်း Github \| stackoverflow \| linkedin \| twitter \| facebook \| gmail \| microsoft စတာတွေနဲ့လည်း အလွယ်တကူ Sign in ပြုလုပ်နိုင်ပါတယ်။
 
 ![](../.gitbook/assets/2.png)
 
-3 - Sign in ပြုလုပ်ပြီးလို့ openshift online console ထဲ ကို ရောက်သွားပြီ ဆိုရင်တော့ အောက်မှ ပြထားတဲ့ Screenshot ထဲက အတိုင်းမြင်ရပါမယ်။ Open Web Console ကို နှိပ်ပြီးတော့ openshift console ထဲကို ထပ်ဝင်ပါ။
+3 - Sign in ပြုလုပ်ပြီးလို့ openshift online console ထဲကို ရောက်သွားပြီ ဆိုရင်တော့ အောက်မှာ ပြထားတဲ့ Screenshot ထဲက အတိုင်းမြင်ရပါမယ်။ Open Web Console ကို နှိပ်ပြီးတော့ openshift console ထဲကို ထပ်ဝင်ပါ။
 
 ![](../.gitbook/assets/3.png)
 
-4 -အောက်မှာ မြင်ရတဲ့ screenshot ကတော့ openshift console ဖြစ်ပါတယ်။ ကျွန်တော်တို့ အရင်ဆုံး အသုံးပြုမယ့် project တစ်ခု တည်ဆောက် ပေးဖို့ လိုပါတယ်။ Project က kubernetes မှာ ဆိုရင် namespace နဲ့ ဆင်တူပါတယ်။
+4 -အောက်မှာ မြင်ရတဲ့ screenshot ကတော့ openshift console ဖြစ်ပါတယ်။ ကျွန်တော်တို့ အရင်ဆုံး အသုံးပြုမယ့် project တစ်ခု တည်ဆောက် ပေးဖို့လိုပါတယ်။ Project က kubernetes မှာ ဆိုရင် namespace နဲ့ ဆင်တူပါတယ်။
 
 ![](../.gitbook/assets/4.png)
 
-5 - Project တစ်ခု တည်ဆောက်ဖို့ ကျွန်တော်တို့ project ဆိုတဲ့ အပေါ်ကို click နှိပ် လိုက်ရုံပါဘဲ။ Create Project ဆိုတဲ့ popup တစ်ခု အောက်မှာ ပြထားတဲ့ အတိုင်း ထွက်လာမှာ ဖြစ်ပါတယ်။ ကျွန်တော်ကတော့ project name ကို fah လို့ ပေးခဲ့ပြီးတော့ Display Name ကိုတော့ Folding At Home ဆို ပေးထားပါတယ်။ ဒီနေရာမှာ ကိုယ် ကြိုက်တဲ့ နာမည်ကို ပေးလို့ရပါတယ်။ ပြီးရင်တော့ Create ဆိုတဲ့ button နှိပ်လိုက်ရုံဖြင့် fah ဆိုတဲ့ project ကို တည်ဆောက် ပေးသွားမှာ ဖြစ်ပါတယ်။
+5 - Project တစ်ခု တည်ဆောက်ဖို့ ကျွန်တော်တို့ project ဆိုတဲ့ အပေါ်ကို click နှိပ်လိုက်ရုံပါပဲ။ Create Project ဆိုတဲ့ popup တစ်ခုအောက်မှာ ပြထားတဲ့အတိုင်း ထွက်လာမှာ ဖြစ်ပါတယ်။ ကျွန်တော်ကတော့ project name ကို fah လို့ ပေးခဲ့ပြီးတော့ Display Name ကိုတော့ Folding At Home လို့ ပေးထားပါတယ်။ ဒီနေရာမှာ ကိုယ်ကြိုက်တဲ့ နာမည်ကို ပေးလို့ရပါတယ်။ ပြီးရင်တော့ Create ဆိုတဲ့ button နှိပ်လိုက်ရုံဖြင့် fah ဆိုတဲ့ project ကို တည်ဆောက် ပေးသွားမှာ ဖြစ်ပါတယ်။
 
 ![](../.gitbook/assets/5.png)
 
-6 - Project တည်ဆောက်ပြီးသွားရင်တော့ ကျွန်တော်တို့ Folding ပြုလုပ်ဖို့ Openshift ရဲ့ resource နှစ်ခုကို yaml နဲ့ create လုပ်ရပါမယ်။ ဒါကြောင့်မလို့ အောက်မှာ ပြထားတဲ့ ပုံထဲက Yaml ကို ရွေးရပါမယ်။ 
+6 - Project တည်ဆောက်ပြီးသွားရင်တော့ ကျွန်တော်တို့ Folding ပြုလုပ်ဖို့ Openshift ရဲ့ resource နှစ်ခုကို yaml နဲ့ create လုပ်ရပါမယ်။ ဒါကြောင့်မို့လို့ အောက်မှာ ပြထားတဲ့ ပုံထဲက yaml ကို ရွေးရပါမယ်။ 
 
 ![](../.gitbook/assets/6.png)
 
-7 - Import Yaml ဆိုတဲ့ နေရာမှာ configmap ကို create ပြုလုပ်ရပါမယ်။ မခက်ပါဘူး အောက်မှာ ပေးထားတဲ့ code ကို copy paste ပြုလုပ် ရုံပါဘဲ။ ဒါကတော့ အလွယ်ပြောရရင် folding ကို run ဖို့ လိုအပ်တဲ့ configuration ကို openshift ထဲမှာ save တဲ့ သဘောဖြစ်ပါတယ်။ line number 14 နဲ့ 15 မှာ ကိုယ်ရဲ့ နာမည်နဲ့ Team id ကို ထည့်ပေးရမှာ ဖြစ်ပါတယ်။ ပြီးရင်တော့ create button ကို နိပ်ပေးရမှာဖြစ်ပါတယ်။
+7 - Import yaml ဆိုတဲ့ နေရာမှာ configmap ကို create ပြုလုပ်ရပါမယ်။ မခက်ပါဘူး အောက်မှာ ပေးထားတဲ့ code ကို copy paste ပြုလုပ်ရုံပါပဲ။ ဒါကတော့ အလွယ်ပြောရရင် folding ကို run ဖို့လိုအပ်တဲ့ configuration ကို openshift ထဲမှာ save တဲ့သဘောဖြစ်ပါတယ်။ line number 14 နဲ့ 15 မှာ ကိုယ့်ရဲ့ နာမည်နဲ့ Team id ကို ထည့်ပေးရမှာ ဖြစ်ပါတယ်။ ပြီးရင်တော့ create button ကို နိပ်ပေးရမှာဖြစ်ပါတယ်။
 
 ![](../.gitbook/assets/7.png)
 
-Team Id နေရာမှာတော့ အခု လူအများ အသုံးပြုနေတဲ့ Team create ပြုလုပ်ပြီးသာ ဖြစ်တဲ့ Ubuntu-MM ရဲ့ team id ကို ထည့်သွင်းပေးထားပါတယ်။ ကိုယ်ကိုတိုင် Team အသစ် တစ်ခု တည်ဆောက်ချင်ရင်တော့ ဒီမှာ [https://apps.foldingathome.org/team](https://apps.foldingathome.org/team) ပြုလုပ်နိုင်ပါတယ်။ အခုအောက်မှာ ပြထားတဲ့ configmap.yaml ကတော့ အပေါ်က Import Yaml မှာ ထည့်ပေးရမှာ yaml ဖြစ်ပါတယ်။
+Team Id နေရာမှာတော့ အခု လူအများ အသုံးပြုနေတဲ့ Team create ပြုလုပ်ပြီးသား ဖြစ်တဲ့ Ubuntu-MM ရဲ့ team id ကို ထည့်သွင်းပေးထားပါတယ်။ ကိုယ်ကိုတိုင် Team အသစ် တစ်ခု တည်ဆောက်ချင်ရင်တော့ ဒီမှာ [https://apps.foldingathome.org/team](https://apps.foldingathome.org/team) ပြုလုပ်နိုင်ပါတယ်။ အခုအောက်မှာ ပြထားတဲ့ configmap.yaml ကတော့ အပေါ်က Import yaml မှာ ထည့်ပေးရမှာ yaml ဖြစ်ပါတယ်။
 
 {% code title="configmap.yaml" %}
 ```yaml
@@ -79,11 +79,11 @@ data:
 
 ![](../.gitbook/assets/9.png)
 
-9 -ဒီတစ်ခါမှာတော့ folding ကို container အနေနဲ့ run ဖို့ YAML ကို Import ပြုလုပ်ပေးရမှာ ဖြစ်ပါတယ်။ အောက်မှာ ပေးထားတဲ့ DeploymentConfig YAML ကို ဘာမှပြင်စရာမလိုဘဲ copy paste လုပ်ပြီး Import YAML ထဲ ထည့်ပေး ထည့်ပေး ရုံပါဘဲ။ ပြီးရင်တော့ create button ကို နှိပ်ပေးရမှာ ဖြစ်ပါတယ်။ 
+9 -ဒီတစ်ခါမှာတော့ folding ကို container အနေနဲ့ run ဖို့ YAML ကို Import ပြုလုပ်ပေးရမှာ ဖြစ်ပါတယ်။ အောက်မှာ ပေးထားတဲ့ DeploymentConfig YAML ကို ဘာမှပြင်စရာမလိုဘဲ copy paste လုပ်ပြီး Import YAML ထဲ ထည့်ပေး ထည့်ပေးရုံပါပဲ။ ပြီးရင်တော့ create button ကို နှိပ်ပေးရမှာ ဖြစ်ပါတယ်။ 
 
 ![](../.gitbook/assets/10.png)
 
-ဒါကတော့ container ကို run မဲ့ DeploymentConfig Yaml ဖြစ်ပါတယ်။
+ဒါကတော့ container ကို run မဲ့ DeploymentConfig yaml ဖြစ်ပါတယ်။
 
 {% code title="fah-ocp.yaml" %}
 ```yaml
@@ -151,7 +151,7 @@ spec:
 ```
 {% endcode %}
 
-10 - အခုဆိုရင် ပြီးသလောက်နီးနီး ဖြစ်ပါပြီ။ create button ကို နှိပ်ပြီးတဲ့ နောက်မှာတော့ အခုလို 0 အလယ်မှာ ပြတဲ့ အဝိုင်း မှိန်မှိန်လေး တွေ့မြင်ရမှာဖြစ်ပါတယ်။ ဒါကတော့ container ကို pull လုပ်မယ် schedule လုပ်မယ် စတင် run မယ်ဆိုတဲ့ အခြေနေတွေ ပြုလုပ်နေလို့ ဖြစ်ပါတယ်။ ခဏ စောင့်ရပါမယ်။
+10 - အခုဆိုရင် ပြီးသလောက်နီးနီး ဖြစ်ပါပြီ။ create button ကို နှိပ်ပြီးတဲ့ နောက်မှာတော့ အခုလို 0 အလယ်မှာ ပြတဲ့အဝိုင်း မှိန်မှိန်လေး တွေ့မြင်ရမှာဖြစ်ပါတယ်။ ဒါကတော့ container ကို pull လုပ်မယ် schedule လုပ်မယ် စတင် run မယ်ဆိုတဲ့ အခြေအနေတွေ ပြုလုပ်နေလို့ ဖြစ်ပါတယ်။ ခဏ စောင့်ရပါမယ်။
 
 ![](../.gitbook/assets/11.png)
 
@@ -159,11 +159,11 @@ spec:
 
 ![](../.gitbook/assets/12.png)
 
-12 - ဘေးက Advanced ထဲက Projects ကို နှိပ်လိုက်ရင် အောက်မှာ ပြထားတဲ့ အ တိုင်း fah project ကို မြင်ရမှာ ဖြစ်ပါတယ်။
+12 - ဘေးက Advanced ထဲက Projects ကို နှိပ်လိုက်ရင် အောက်မှာ ပြထားတဲ့ အတိုင်း fah project ကို မြင်ရမှာ ဖြစ်ပါတယ်။
 
 ![](../.gitbook/assets/13.png)
 
-fah ကို ထပ်နိပ်လိုက်ရင်တော့ project overview ကို မြင်ရမှာဖြစ်ပါတယ်။ folding ပြုလုပ်နေတာရဲ့ resources အသုံး ပြုတာကိုလဲ အောက်မှာ ပြထားတဲ့ အတိုင်း မြင်ရမှာဖြစ်ပါတယ်။ 
+fah ကို ထပ်နိပ်လိုက်ရင်တော့ project overview ကို မြင်ရမှာဖြစ်ပါတယ်။ folding ပြုလုပ်နေတာရဲ့ resources အသုံးပြုတာကိုလဲ အောက်မှာ ပြထားတဲ့အတိုင်း မြင်ရမှာဖြစ်ပါတယ်။ 
 
 ![](../.gitbook/assets/14.png)
 
@@ -183,15 +183,15 @@ fah ကို ထပ်နိပ်လိုက်ရင်တော့ project 
 
 ![](../.gitbook/assets/17.png)
 
-3 - New Deployment ကို click ပြီးတဲ့ အခါမှာတော့ အောက်မှာ ပြထားတဲ့ အတိုင်း မြင်ရမှာ ဖြစ်ပါတယ်။ ကျွန်တော် တို့ အခု node.js / ror / python / postgres / redis / nginx တို့ကို run မှာ မဟုတ်ပါဘူး။ ကျွန်တော်တို့ folding လုပ်မှာ ဖြစ်ပါတယ်။ ဒါကြောင့်မလို့ ကျွန်တော်တို့ custom အသုံးပြုနိုင်ဖို့ kubeconfig လိုအပ်ပါတယ်။ အောက်က ပုံထဲက get kubectl config ကို ထပ် click ပါ။ kubeconfig ကို မြင်ရမှာ ဖြစ်ပါတယ်။ 
+3 - New Deployment ကို click ပြီးတဲ့အခါမှာတော့ အောက်မှာ ပြထားတဲ့အတိုင်း မြင်ရမှာ ဖြစ်ပါတယ်။ ကျွန်တော်တို့ အခု node.js / ror / python / postgres / redis / nginx တို့ကို run မှာ မဟုတ်ပါဘူး။ ကျွန်တော်တို့ folding လုပ်မှာ ဖြစ်ပါတယ်။ ဒါကြောင့်မလို့ ကျွန်တော်တို့ custom အသုံးပြုနိုင်ဖို့ kubeconfig လိုအပ်ပါတယ်။ အောက်က ပုံထဲက Get kubectl config ကို ထပ် click ပါ။ kubeconfig ကို မြင်ရမှာ ဖြစ်ပါတယ်။ 
 
 ![](../.gitbook/assets/18.png)
 
-4 - အောက်မှာ ပြထားတဲ့ kubeconfig ထပ် ပေါ်လာပါလိမ့်မယ်။ copy လုပ်ပြီးတော့ laptop ထဲက directory တစ်ခု အောက်မှာ config.yaml ဆိုပြီးတော့ save ပါ။ 
+4 - အောက်မှာ ပြထားတဲ့ kubeconfig ထပ် ပေါ်လာပါလိမ့်မယ်။ copy လုပ်ပြီးတော့ laptop ထဲက directory တစ်ခုအောက်မှာ config.yaml ဆိုပြီးတော့ save ပါ။ 
 
 ![](../.gitbook/assets/19.png)
 
-5 - kubeconfig ကို အသုံးပြုပြီးတော့ folding ကို run မှာ ဖြစ်တဲ့ အတွက် kubectl command line tools ကို လိုအပ် မှာ ဖြစ်ပါတယ်။ laptop ထဲမှာ မရှိသေးရင် ဒီမှာ download လုပ်နိုင်ပါတယ်။ 
+5 - kubeconfig ကို အသုံးပြုပြီးတော့ folding ကို run မှာ ဖြစ်တဲ့ အတွက် kubectl command line tools ကို လိုအပ်မှာ ဖြစ်ပါတယ်။ laptop ထဲမှာ မရှိသေးရင် ဒီမှာ download လုပ်နိုင်ပါတယ်။ 
 
 6 - ကျွန်တော်တို့ folding ပြုလုပ်ဖို့ အတွက် အပေါ်က openshift မှာ ပြုလုပ်သွားတဲ့ အတိုင်း configmap နဲ့ deployment ကို kubectl အသုံးပြုပြီး ဖန်တီးရပါမယ်။
 
@@ -297,11 +297,11 @@ $ wget https://gist.githubusercontent.com/DTherHtun/3708a3a06aba06257381f8afdcd5
 
 ![](../.gitbook/assets/20.png)
 
-8 - အောက်မှာ ပြထားတဲ့ အတိုင်း မြင်ရပြီဆိုရင်တော့ ကျွန်တော် တို့ folding ကို kubesail မှာ Deployment အနေနဲ့ ပြုုလုပ်နေတာ အဆင်ပြေစွာနဲ့ ပြီးပြီ ဖြစ်ပါတယ်။
+8 - အောက်မှာပြထားတဲ့အတိုင်း မြင်ရပြီဆိုရင်တော့ ကျွန်တော် တို့ folding ကို kubesail မှာ Deployment အနေနဲ့ ပြုလုပ်နေတာ အဆင်ပြေစွာနဲ့ ပြီးပြီ ဖြစ်ပါတယ်။
 
 ![](../.gitbook/assets/image%20%281%29.png)
 
-တစ်ညလောက် စောင့်ပြီးတဲ့ နောက်မှာ တော့ [ဒီမှာ](https://stats.foldingathome.org/team/250150) ကိုယ်နာမည်ကို တွေ့ရမှာ ဖြစ်ပါတယ်။
+တစ်ညလောက် စောင့်ပြီးတဲ့နောက်မှာတော့ [ဒီမှာ](https://stats.foldingathome.org/team/250150) ကိုယ့်နာမည်ကို တွေ့ရမှာ ဖြစ်ပါတယ်။
 
 ![FAH](../.gitbook/assets/91466431_243384423483341_6944896812654264320_n.jpg)
 
