@@ -1,6 +1,6 @@
 # Folding @ home using Containers
 
-[Folding](https://foldingathome.org/start-folding/) လုပ်တယ်၊ [Folding at home project](https://foldingathome.org/) က ဘယ်လိုဘာညာ စတာတွေကိုတော့ မရှင်းပြတော့ပါဘူး။ [Ubuntu-mm.net](https://ubuntu-mm.net/knowledge/foldinghome-project-coronavirus/) မှာ ရေးထားတဲ့ [post](https://ubuntu-mm.net/knowledge/foldinghome-project-coronavirus/) ကို ဖတ်ရှုနိုင်ပါတယ်။ အခု ဒီ articles ကို ရေးရတဲ့ အကြောင်းအရင် ကတော့ ကျွန်တော်တို့ folding ကို container နဲ့ ဘယ်လို အလွယ်တကူ ပြုလုပ်နိုင်မလဲ၊ ကိုယ်မှာ server မရှိတဲ့ အခါ သို့မဟုတ် ကိုယ် laptop ရဲ့ resource ကို အမြဲ \(အချိန်ပြည့်\) ပေးမသုံးနိုင်တဲ့ အခါ container ကို free run လို့ ရတဲ့ service တွေကို အသုံးပြုပြီး တစ်နိုင်တစ်ပိုင် folding ဘယ်လို ပြုလုပ်မလဲ ဆိုတာကို ပြောပြပေးသွားမှာ ဖြစ်ပါတယ်။ အခု ဒီ articles မှာ container ကို free အသုံးပြုလို့ရတဲ့ service နှစ်မျိုးနဲ့ ပြောပြပေးသွားမှာ ဖြစ်ပါတယ်။ ပထမတစ်ခု ကတော့ Redhat ရဲ့ openshift online ကို အသုံးပြုသွားမှာဖြစ်ပြီး ဒုတိယ တစ်မျိုးကတော့ kubesail ဆိုတာကို အသုံးပြုသွားမှာ ဖြစ်ပါတယ်။
+[Folding](https://foldingathome.org/start-folding/) လုပ်တယ်၊ [Folding at home project](https://foldingathome.org/) က ဘယ်လိုဘာညာ စတာတွေကိုတော့ မရှင်းပြတော့ပါဘူး။ [Ubuntu-mm.net](https://ubuntu-mm.net/knowledge/foldinghome-project-coronavirus/) မှာ ရေးထားတဲ့ [post](https://ubuntu-mm.net/knowledge/foldinghome-project-coronavirus/) ကို ဖတ်ရှုနိုင်ပါတယ်။ အခု ဒီ articles ကို ရေးရတဲ့ အကြောင်းအရင်း ကတော့ ကျွန်တော်တို့ folding ကို container နဲ့ ဘယ်လို အလွယ်တကူ ပြုလုပ်နိုင်မလဲ၊ ကိုယ်မှာ server မရှိတဲ့ အခါ သို့မဟုတ် ကိုယ် laptop ရဲ့ resource ကို အမြဲ \(အချိန်ပြည့်\) ပေးမသုံးနိုင်တဲ့ အခါ container ကို free run လို့ ရတဲ့ service တွေကို အသုံးပြုပြီး တစ်နိုင်တစ်ပိုင် folding ဘယ်လို ပြုလုပ်မလဲ ဆိုတာကို ပြောပြပေးသွားမှာ ဖြစ်ပါတယ်။ အခု ဒီ articles မှာ container ကို free အသုံးပြုလို့ရတဲ့ service နှစ်မျိုးနဲ့ ပြောပြပေးသွားမှာ ဖြစ်ပါတယ်။ ပထမတစ်ခု ကတော့ Redhat ရဲ့ openshift online ကို အသုံးပြုသွားမှာဖြစ်ပြီး ဒုတိယ တစ်မျိုးကတော့ kubesail ဆိုတာကို အသုံးပြုသွားမှာ ဖြစ်ပါတယ်။
 
 ## Folding Using Openshift Online
 
@@ -12,15 +12,15 @@
 
 ![](../.gitbook/assets/2.png)
 
-3 - Sign in ပြုလုပ်ပြီးလို့ openshift online console ထဲ ကို ရောက်သွားပြီ ဆိုရင်တော့ အောက်မှ ပြထားတဲ့ Screenshot ထဲက အတိုင်းမြင်ရပါမယ်။ Open Web Console ကို နှိပ်ပြီးတော့ openshift console ထဲကို ထက်ဝင်ပါ။
+3 - Sign in ပြုလုပ်ပြီးလို့ openshift online console ထဲ ကို ရောက်သွားပြီ ဆိုရင်တော့ အောက်မှ ပြထားတဲ့ Screenshot ထဲက အတိုင်းမြင်ရပါမယ်။ Open Web Console ကို နှိပ်ပြီးတော့ openshift console ထဲကို ထပ်ဝင်ပါ။
 
 ![](../.gitbook/assets/3.png)
 
-4 -အောက်မှာ မြင်ရတဲ့ screen shot ကတော့ openshift console ဖြစ်ပါတယ်။ ကျွန်တော်တို့ အရင်ဆုံး အသုံးပြုမဲ့ project တစ်ခု တည်ဆောက် ပေးဖို့ လိုပါတယ်။ Project က kubernetes မှာ ဆိုရင် namespace နဲ့ ဆင်တူပါတယ်။
+4 -အောက်မှာ မြင်ရတဲ့ screenshot ကတော့ openshift console ဖြစ်ပါတယ်။ ကျွန်တော်တို့ အရင်ဆုံး အသုံးပြုမယ့် project တစ်ခု တည်ဆောက် ပေးဖို့ လိုပါတယ်။ Project က kubernetes မှာ ဆိုရင် namespace နဲ့ ဆင်တူပါတယ်။
 
 ![](../.gitbook/assets/4.png)
 
-5 - Project တစ်ခု တည်ဆောက်ဖို့ ကျွန်တော်တို့ project ဆိုတဲ့ အပေါ်ကို click နှိပ် လိုက်ယုံပါဘဲ။ Create Project ဆိုတဲ့ popup တစ်ခု အောက်မှာ ပြထားတဲ့ အတိုင်း ထွက်လာမှာ ဖြစ်ပါတယ်။ ကျွန်တော်ကတော့ project name ကို fah လို့ ပေးခဲ့ပြီးတော့ Display Name ကိုတော့ Folding At Home ဆို ပေးထားပါတယ်။ ဒီနေရာမှာ ကိုယ် ကြိုက်တဲ့ နာမည်ကို ပေးလို့ရပါတယ်။ ပြီးရင်တော့ Create ဆိုတဲ့ button နှိပ်လိုက်ယုံဖြင့် fah ဆိုတဲ့ project ကို တည်ဆောက် ပေးသွားမှာ ဖြစ်ပါတယ်။
+5 - Project တစ်ခု တည်ဆောက်ဖို့ ကျွန်တော်တို့ project ဆိုတဲ့ အပေါ်ကို click နှိပ် လိုက်ရုံပါဘဲ။ Create Project ဆိုတဲ့ popup တစ်ခု အောက်မှာ ပြထားတဲ့ အတိုင်း ထွက်လာမှာ ဖြစ်ပါတယ်။ ကျွန်တော်ကတော့ project name ကို fah လို့ ပေးခဲ့ပြီးတော့ Display Name ကိုတော့ Folding At Home ဆို ပေးထားပါတယ်။ ဒီနေရာမှာ ကိုယ် ကြိုက်တဲ့ နာမည်ကို ပေးလို့ရပါတယ်။ ပြီးရင်တော့ Create ဆိုတဲ့ button နှိပ်လိုက်ရုံဖြင့် fah ဆိုတဲ့ project ကို တည်ဆောက် ပေးသွားမှာ ဖြစ်ပါတယ်။
 
 ![](../.gitbook/assets/5.png)
 
@@ -79,7 +79,7 @@ data:
 
 ![](../.gitbook/assets/9.png)
 
-9 -ဒီတစ်ခါမှာတော့ folding ကို container အနေနဲ့ run ဖို့ YAML ကို Import ပြုလုပ်ပေးရမှာ ဖြစ်ပါတယ်။ အောက်မှာ ပေးထားတဲ့ DeploymentConfig YAML ကို ဘာမှပြင်စရာမလိုဘဲ copy paste လုပ်ပြီး Import YAML ထဲ ထည့်ပေး ထည့်ပေး ရုံးပါဘဲ။ ပြီးရင်တော့ create button ကို နှိပ်ပေးရမှာ ဖြစ်ပါတယ်။ 
+9 -ဒီတစ်ခါမှာတော့ folding ကို container အနေနဲ့ run ဖို့ YAML ကို Import ပြုလုပ်ပေးရမှာ ဖြစ်ပါတယ်။ အောက်မှာ ပေးထားတဲ့ DeploymentConfig YAML ကို ဘာမှပြင်စရာမလိုဘဲ copy paste လုပ်ပြီး Import YAML ထဲ ထည့်ပေး ထည့်ပေး ရုံပါဘဲ။ ပြီးရင်တော့ create button ကို နှိပ်ပေးရမှာ ဖြစ်ပါတယ်။ 
 
 ![](../.gitbook/assets/10.png)
 
@@ -151,7 +151,7 @@ spec:
 ```
 {% endcode %}
 
-10 - အခုဆိုရင် ပြီးသလောက်နီးနီး ဖြစ်ပါပြီ။ create button ကို နှိပ်ပြီးတဲ့ နောက်မှာတော့ အခုလို 0 အလည်မှာ ပြတဲ့ အဝိုင်း မှိန်မှိန်လေး တွေ့မြင်ရမှာဖြစ်ပါတယ်။ ဒါကတော့ container ကို pull လုပ်မယ် schedule လုပ်မယ် စတင် run မယ်ဆိုတဲ့ အခြေနေတွေ ပြုလုပ်နေလို့ ဖြစ်ပါတယ်။ ခဏ စောင့်ရပါမယ်။
+10 - အခုဆိုရင် ပြီးသလောက်နီးနီး ဖြစ်ပါပြီ။ create button ကို နှိပ်ပြီးတဲ့ နောက်မှာတော့ အခုလို 0 အလယ်မှာ ပြတဲ့ အဝိုင်း မှိန်မှိန်လေး တွေ့မြင်ရမှာဖြစ်ပါတယ်။ ဒါကတော့ container ကို pull လုပ်မယ် schedule လုပ်မယ် စတင် run မယ်ဆိုတဲ့ အခြေနေတွေ ပြုလုပ်နေလို့ ဖြစ်ပါတယ်။ ခဏ စောင့်ရပါမယ်။
 
 ![](../.gitbook/assets/11.png)
 
@@ -163,7 +163,7 @@ spec:
 
 ![](../.gitbook/assets/13.png)
 
-fah ကို ထက်နိပ်လိုက်ရင်တော့ project overview ကို မြင်ရမှာဖြစ်ပါတယ်။ folding ပြုလုပ်နေတာရဲ့ resources အသုံး ပြုတာကိုလဲ အောက်မှာ ပြထားတဲ့ အတိုင်း မြင်ရမှာဖြစ်ပါတယ်။ 
+fah ကို ထပ်နိပ်လိုက်ရင်တော့ project overview ကို မြင်ရမှာဖြစ်ပါတယ်။ folding ပြုလုပ်နေတာရဲ့ resources အသုံး ပြုတာကိုလဲ အောက်မှာ ပြထားတဲ့ အတိုင်း မြင်ရမှာဖြစ်ပါတယ်။ 
 
 ![](../.gitbook/assets/14.png)
 
@@ -183,11 +183,11 @@ fah ကို ထက်နိပ်လိုက်ရင်တော့ project 
 
 ![](../.gitbook/assets/17.png)
 
-3 - New Deployment ကို click ပြီးတဲ့ အခါမှာတော့ အောက်မှာ ပြထားတဲ့ အတိုင်း မြင်ရမှာ ဖြစ်ပါတယ်။ ကျွန်တော် တို့ အခု node.js / ror / python / postgres / redis / nginx တို့ကို run မှာ မဟုတ်ပါဘူး။ ကျွန်တော်တို့ folding လုပ်မှာ ဖြစ်ပါတယ်။ ဒါကြောင့်မလို့ ကျွန်တော်တို့ custom အသုံးပြုနိုင်ဖို့ kubeconfig လိုအပ်ပါတယ်။ အောက်က ပုံထဲက get kubectl config ကို ထက် click ပါ။ kubeconfig ကို မြင်ရမှာ ဖြစ်ပါတယ်။ 
+3 - New Deployment ကို click ပြီးတဲ့ အခါမှာတော့ အောက်မှာ ပြထားတဲ့ အတိုင်း မြင်ရမှာ ဖြစ်ပါတယ်။ ကျွန်တော် တို့ အခု node.js / ror / python / postgres / redis / nginx တို့ကို run မှာ မဟုတ်ပါဘူး။ ကျွန်တော်တို့ folding လုပ်မှာ ဖြစ်ပါတယ်။ ဒါကြောင့်မလို့ ကျွန်တော်တို့ custom အသုံးပြုနိုင်ဖို့ kubeconfig လိုအပ်ပါတယ်။ အောက်က ပုံထဲက get kubectl config ကို ထပ် click ပါ။ kubeconfig ကို မြင်ရမှာ ဖြစ်ပါတယ်။ 
 
 ![](../.gitbook/assets/18.png)
 
-4 - အောက်မှာ ပြထားတဲ့ kubeconfig ထက် ပေါ်လာပါလိမ့်မယ်။ copy လုပ်ပြီးတော့ laptop ထဲက directory တစ်ခု အောက်မှာ config.yaml ဆိုပြီးတော့ save ပါ။ 
+4 - အောက်မှာ ပြထားတဲ့ kubeconfig ထပ် ပေါ်လာပါလိမ့်မယ်။ copy လုပ်ပြီးတော့ laptop ထဲက directory တစ်ခု အောက်မှာ config.yaml ဆိုပြီးတော့ save ပါ။ 
 
 ![](../.gitbook/assets/19.png)
 
