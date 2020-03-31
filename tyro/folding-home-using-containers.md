@@ -301,7 +301,7 @@ $ wget https://gist.githubusercontent.com/DTherHtun/3708a3a06aba06257381f8afdcd5
 
 ![](../.gitbook/assets/image%20%281%29.png)
 
-တစ်ညလောက် စောင့်ပြီးတဲ့ နောက်မှာ တော့ ဒီမှာ ကိုယ်နာမည်ကို တွေ့ရမှာ ဖြစ်ပါတယ်။
+တစ်ညလောက် စောင့်ပြီးတဲ့ နောက်မှာ တော့ [ဒီမှာ](https://stats.foldingathome.org/team/250150) ကိုယ်နာမည်ကို တွေ့ရမှာ ဖြစ်ပါတယ်။
 
 ![FAH](../.gitbook/assets/91466431_243384423483341_6944896812654264320_n.jpg)
 
