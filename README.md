@@ -41,7 +41,7 @@ description: Table Of Contents
 ## TYRO
 
 * [How To Get Started Learning Container](https://blog.k8smm.org/tyro/gsc)
-* [Folding @ home with Containers](https://blog.k8smm.org/tyro/folding-home-using-containers)
+* [Folding @ home with Containers](https://blog.k8smm.org/tyro/folding-home-with-containers)
 
 ## [FAQ](https://blog.k8smm.org/faq)
 
