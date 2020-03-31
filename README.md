@@ -40,7 +40,8 @@ description: Table Of Contents
 
 ## TYRO
 
-* reserve
+* How To Get Started Learning Container
+* Folding @ home with Containers
 
 ## [FAQ](https://blog.k8smm.org/faq)
 

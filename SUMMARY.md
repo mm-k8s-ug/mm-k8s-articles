@@ -45,6 +45,6 @@
 ## TYRO
 
 * [How To Get Started Learning Container](tyro/gsc.md)
-* [Folding @ home using Containers](tyro/folding-home-using-containers.md)
+* [Folding @ home with Containers](tyro/folding-home-using-containers.md)
 * [FAQ](faq.md)
 

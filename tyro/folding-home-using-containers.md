@@ -1,4 +1,4 @@
-# Folding @ home using Containers
+# Folding @ home with Containers
 
 [Folding](https://foldingathome.org/start-folding/) လုပ်တယ်၊ [Folding at home project](https://foldingathome.org/) က ဘယ်လိုဘာညာ စတာတွေကိုတော့ မရှင်းပြတော့ပါဘူး။ [Ubuntu-mm.net](https://ubuntu-mm.net/knowledge/foldinghome-project-coronavirus/) မှာ ရေးထားတဲ့ [post](https://ubuntu-mm.net/knowledge/foldinghome-project-coronavirus/) ကို ဖတ်ရှုနိုင်ပါတယ်။ အခု ဒီ articles ကို ရေးရတဲ့ အကြောင်းအရင်း ကတော့ ကျွန်တော်တို့ folding ကို container နဲ့ ဘယ်လို အလွယ်တကူ ပြုလုပ်နိုင်မလဲ၊ ကိုယ်မှာ server မရှိတဲ့ အခါ သို့မဟုတ် ကိုယ် laptop ရဲ့ resource ကို အမြဲ \(အချိန်ပြည့်\) ပေးမသုံးနိုင်တဲ့ အခါ container ကို free run လို့ ရတဲ့ service တွေကို အသုံးပြုပြီး တစ်နိုင်တစ်ပိုင် folding ဘယ်လို ပြုလုပ်မလဲ ဆိုတာကို ပြောပြပေးသွားမှာ ဖြစ်ပါတယ်။ အခု ဒီ articles မှာ container ကို free အသုံးပြုလို့ရတဲ့ service နှစ်မျိုးနဲ့ ပြောပြပေးသွားမှာ ဖြစ်ပါတယ်။ ပထမတစ်ခု ကတော့ Redhat ရဲ့ openshift online ကို အသုံးပြုသွားမှာဖြစ်ပြီး ဒုတိယ တစ်မျိုးကတော့ kubesail ဆိုတာကို အသုံးပြုသွားမှာ ဖြစ်ပါတယ်။
 
