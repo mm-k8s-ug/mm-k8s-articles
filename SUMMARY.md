@@ -20,7 +20,12 @@
   * [Liveness Probes](kubernetes-probes/liveness-probes.md)
   * [Readiness Probes](kubernetes-probes/readiness-probes.md)
   * [Startup Probes](kubernetes-probes/startup-probes.md)
-* [Volumes](volumes.md)
+* [Volumes](volumes/README.md)
+  * [EmptyDir](volumes/emptydir.md)
+  * [GitRepo](volumes/gitrepo.md)
+  * [HostPath](volumes/hostpath.md)
+  * [GCE Persistent Disk](volumes/gce-persistent-disk.md)
+  * [AWS Elastic BlockStore](volumes/aws-elastic-blockstore.md)
 
 ## container
 
