@@ -1,8 +1,8 @@
 # EmptyDir
 
-EmptyDir \(Empty Directory\) ဒီ volume type ကတော့ ရိုးရှင်းပြီး pod တစ်ခု အတွင်းမှာ ရှိတဲ့ containers တွေက data တွေကို share သုံးဖို့ အတွက် ဖြစ်ပါတယ်။ ဒါကြောင့်မလို့ EmptyDir က မတူညီတဲ့ pod တစ်ခုနဲ့ တစ်ခုကြားမှာ အသုံးပြုလို့မရနိုင်ပါဘူး။ EmptyDir က တော်တော် အသုံးဝင်ပါတယ်။ EmptyDir ကို အဓိက သုံးရတဲ့ ရည်ရွယ်ချက်တွေကတော့ volumes အကြောင်းမှာ ပြောသွားတဲ့ example \(content ageant/webserver/logRotator\) လို use case မျိုးတွေ မှာ ဖြစ်ပါတယ်။ single container ဘဲရှိတဲ့ pod မှာလဲ သုံးလို့ရပါတယ်။
+EmptyDir \(Empty Directory\) ဒီ volume type ကတော့ ရိုးရှင်းပြီး pod တစ်ခု အတွင်းမှာ ရှိတဲ့ containers တွေက data တွေကို share သုံးဖို့ အတွက် ဖြစ်ပါတယ်။ ဒါကြောင့်မလို့ EmptyDir က မတူညီတဲ့ pod တစ်ခုနဲ့ တစ်ခုကြားမှာ အသုံးပြုလို့မရနိုင်ပါဘူး။ EmptyDir က တော်တော် အသုံးဝင်ပါတယ်။ EmptyDir ကို အဓိက သုံးရတဲ့ ရည်ရွယ်ချက်တွေကတော့ volumes အကြောင်းမှာ ပြောသွားတဲ့ example \(content ageant/webserver/logRotator\) လို use case မျိုးတွေ မှာ ဖြစ်ပါတယ်။ single container ပဲရှိတဲ့ pod မှာလဲ သုံးလို့ရပါတယ်။
 
-  EmptyDir Volume နဲ့ အတူ pod တစ်ခုကို တည်ဆောက်တဲ့ အခါမှာ scheduler က worker ကို assign ပေးပြီးတာနှင့် အရင်ဆုံး EmptyDir ကို create လုပ်ပါတယ်။ ဘယ်မှာလုပ်လဲ ဆိုတော့ အဲဒီ pod ကို တည်ဆောက်မဲ့ node ရဲ့ SSD/HDD\(node storage\) သို့မဟုတ် RAM\(memory\) အပေါ်မှာ လုပ်ပါတယ်။ Default ကတော့ RAM အပေါ်မှာ မလုပ်ပါဘူး၊ node ရဲ့ storage ဖြစ်တဲ့ SSD/HDD အပေါ်မှာ ဘဲ ပြုလုပ်ပါတယ်။ node ရဲ့ operating system ထဲမှာ ဆိုရင်တော့ အောက်မှာ ဖေါ်ပြထားတဲ့ path ထဲမှာ ရှိနေမှာဖြစ်ပါတယ်။
+  EmptyDir Volume နဲ့ အတူ pod တစ်ခုကို တည်ဆောက်တဲ့ အခါမှာ scheduler က worker ကို assign ပေးပြီးတာနှင့် အရင်ဆုံး EmptyDir ကို create လုပ်ပါတယ်။ ဘယ်မှာလုပ်လဲ ဆိုတော့ အဲဒီ pod ကို တည်ဆောက်မယ့် node ရဲ့ SSD/HDD\(node storage\) သို့မဟုတ် RAM\(memory\) အပေါ်မှာ လုပ်ပါတယ်။ Default ကတော့ RAM အပေါ်မှာ မလုပ်ပါဘူး။ node ရဲ့ storage ဖြစ်တဲ့ SSD/HDD အပေါ်မှာပဲ ပြုလုပ်ပါတယ်။ node ရဲ့ operating system ထဲမှာ ဆိုရင်တော့ အောက်မှာ ဖေါ်ပြထားတဲ့ path ထဲမှာ ရှိနေမှာဖြစ်ပါတယ်။
 
 ```text
 $/var/lib/kubelet/pods/[pod's uuid]/volumes/kubernetes.io~empty-dir
@@ -10,7 +10,7 @@ $/var/lib/kubelet/pods/[pod's uuid]/volumes/kubernetes.io~empty-dir
 
 ![EmptyDir](../.gitbook/assets/emptydir.png)
 
- EmptyDir ရဲ့ lifetime ကတော့ EmptyDir ပါရှိတဲ့ Pod ရဲ့ lifetime နဲ့ အတူတူပါဘဲ။ Pod တည်ဆောက် တဲ့ အချိန်ကနေ အကြောင်းအမျိုးမျိုးကြောင့် Pod မပျက်ခင် အချိန်ထိ ရှိနေမှာ ဖြစ်ပါတယ်။ replication controller / replicaset / job / etc စတဲ့ controller တွေမှ တဆင့် pod ကို run ထားသည်တိုင်အောင် Pod အဟောင်း ပျက်ပြီး Pod အသစ်ကို recreate လုပ်တဲ့ အခါမှာ EmptyDir ဆိုသည့် နာမည် အတိုင်း initial empty ဖြစ်တဲ့ directory ဘဲ ပြန်တည်ဆောက် ပေးသွားမှာ ဖြစ်ပါတယ်။ ဒါကြောင့် မို့ persistent data တွေကို သိမ်ဖို့ အတွက်ဆိုရင် အဆင် ပြေနိုင်မှာ မဟုတ်ပါဘူး။ Pod up and running ဖြစ်နေတဲ့ အချိန် မှာ container တစ်ခုနဲ့ တစ်ခုကြား လုပ်ဆောင်တဲ့ operation အတွက် ယာယီ data write ဖို့၊ read ဖို့ အတွက် အသုံးပြုကြပါတယ်။ တကယ်လို့ storage medium ကို RAM ကို အသုံးပြုမယ်ဆိုရင် ကြီးမှာတဲ့ dataset တွေနဲ့ ပြုလုပ်ရမဲ့ operation တွေကို မလုပ်သင့်ပါဘူး။
+ EmptyDir ရဲ့ lifetime ကတော့ EmptyDir ပါရှိတဲ့ Pod ရဲ့ lifetime နဲ့ အတူတူပါဘဲ။ Pod တည်ဆောက်တဲ့ အချိန်ကနေ အကြောင်းအမျိုးမျိုးကြောင့် Pod မပျက်ခင် အချိန်ထိ ရှိနေမှာ ဖြစ်ပါတယ်။ replication controller / replicaset / job / etc စတဲ့ controller တွေမှ တဆင့် pod ကို run ထားသည့်တိုင်အောင် Pod အဟောင်း ပျက်ပြီး Pod အသစ်ကို recreate လုပ်တဲ့ အခါမှာ EmptyDir ဆိုသည့် နာမည် အတိုင်း initial empty ဖြစ်တဲ့ directory ဘဲ ပြန်တည်ဆောက် ပေးသွားမှာ ဖြစ်ပါတယ်။ ဒါကြောင့် မို့ persistent data တွေကို သိမ်းဖို့ အတွက်ဆိုရင် အဆင်ပြေနိုင်မှာ မဟုတ်ပါဘူး။ Pod up and running ဖြစ်နေတဲ့ အချိန် မှာ container တစ်ခုနဲ့ တစ်ခုကြား လုပ်ဆောင်တဲ့ operation အတွက် ယာယီ data write ဖို့၊ read ဖို့ အတွက် အသုံးပြုကြပါတယ်။ တကယ်လို့ storage medium ကို RAM ကို အသုံးပြုမယ်ဆိုရင် ကြီးမှာတဲ့ dataset တွေနဲ့ ပြုလုပ်ရမဲ့ operation တွေကို မလုပ်သင့်ပါဘူး။
 
 {% code title="emptydir-pod.yaml" %}
 ```yaml
