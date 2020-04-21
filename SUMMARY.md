@@ -40,13 +40,13 @@
 * [How to complete setup Kubernetes Cluster on AWS using Kops](tutorial/kops-on-aws.md)
 * [Kind](tutorial/kind.md)
 * [Clusters as Cattle](tutorial/clusters-as-cattle.md)
+* [Kubeflow](tutorial/kubeflow.md)
 
 ## K8s related articles
 
 * [Terraform First Step](k8s-related-articles/terraform-1st-step.md)
 * [Hola Terraform !](k8s-related-articles/hola-terraform.md)
 * [Teamwork with Terraform](k8s-related-articles/teamwork-with-terraform.md)
-* [Kubeflow](k8s-related-articles/kubeflow.md)
 
 ## TYRO
 
