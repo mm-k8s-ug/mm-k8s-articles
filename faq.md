@@ -6,7 +6,7 @@
 
 ## K8s User Group Blog မှာ ဘယ်သူ တွေ ရေးသလဲ ?
 
-  လက်ရှိ ဒီ blog မှာ contribute လုပ်ပေးနေတဲ့ [contributors](https://github.com/mm-k8s-ug/mm-k8s-articles/graphs/contributors) ၅ ယောက်ရှိပါတယ်။ ဒီ blog မှာရေးတဲ့ articles တွေနဲ့ ပတ်သက်ပြီးတော့ မရှင်းလင်းတာ၊ discuss ပြုလုပ်ချင်တာများ ရှိခဲ့သော် [contributors](https://github.com/mm-k8s-ug/mm-k8s-articles/graphs/contributors) များသို့ တိုက်ရိုက် သို့မဟုတ် [k8smm facebook page](http://fb.com/k8smm) မှတဆင့် သို့မဟုတ် [k8smm facebook group](https://www.fb.com/groups/k8smm) တွင် ဝင်ရောက် ပြောဆို ဆွေးနွေးနိုင်ပါတယ်။
+  လက်ရှိ ဒီ blog မှာ contribute လုပ်ပေးနေတဲ့ [contributors](https://github.com/mm-k8s-ug/mm-k8s-articles/graphs/contributors) ၆ ယောက်ရှိပါတယ်။ ဒီ blog မှာရေးတဲ့ articles တွေနဲ့ ပတ်သက်ပြီးတော့ မရှင်းလင်းတာ၊ discuss ပြုလုပ်ချင်တာများ ရှိခဲ့သော် [contributors](https://github.com/mm-k8s-ug/mm-k8s-articles/graphs/contributors) များသို့ တိုက်ရိုက် သို့မဟုတ် [k8smm facebook page](http://fb.com/k8smm) မှတဆင့် သို့မဟုတ် [k8smm facebook group](https://www.fb.com/groups/k8smm) တွင် ဝင်ရောက် ပြောဆို ဆွေးနွေးနိုင်ပါတယ်။
 
 ## Kubernetes ဆိုတာ ဘာလဲ?
 
