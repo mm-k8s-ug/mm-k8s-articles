@@ -2,7 +2,7 @@
 
 #### Kubeflow ဆိုတာဘာလဲ။
 
-Kubeflow project မှာ machine learning\(ML\) workflows တွေကို Kubernetes ပေါ်မှာ simple\(ရိုးရှင်းစွာ\) scalablity\(လိုအပ်သလို တိုးချဲ့နိုင်စွမ်းရှိစွာ\) portablity\(မည်သည့် enviroment မဆို adaptလုပ်နိုင်ရန်\) အတွက်ဖြစ်ပါတယ်။
+Kubeflow project မှာ machine learning\(ML\) workflows တွေကို Kubernetes ပေါ်မှာ simple\(ရိုးရှင်းစွာ\) scalablity\(လိုအပ်သလို တိုးချဲ့နိုင်စွမ်းရှိစွာ\) portablity\(မည်သည့် enviroment မဆို adaptလုပ်နိုင်ရန်\) အတွက် ဖန်တီးထားတာဖြစ်ပါတယ်။
 
 Kubeflow အ​ကြောင်းမပြောခင် MLOps နဲ့ပတ်သတ်ပြီး နည်းနည်းလောက်ပြောပြဖို့လိုပါတယ်။
 
