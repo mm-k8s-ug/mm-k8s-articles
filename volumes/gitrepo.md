@@ -13,6 +13,7 @@ GitRepo ကရဲ့ feature ကမြင်တဲ့ အတိုင်း awes
 GitRepo ကိုဘယ်လိုနေရာမျိုးတွေမှာ အသုံး၀င်နိုင်မလဲ ? ဘယ်လိုအသုံးပြုမလဲ ? အလွယ်ပြောရရင် တော့ kubernetes ကို သုံးတဲ့ environment မျိုးမှာ company website သို့မဟုတ် portfolio စတာတွေအတွက် static website တွေကို `gitRepo` volume အသုံးပြုပြီး အလွယ်တကူ အသုံးပြုလို့ ရနိုင်ပါတယ်။ ဒါကြောင့်မလို့ GitRepo ကို သုံးမယ်ဆို အသင့်ရှိပြီးသား git repository တစ်ခု မဖြစ်မနေရှိဖို့ လိုအပ်ပါတယ်။ GitRepo အတွက် sample manifest ကို ဖော်ပြပေးပါ့မယ်။
 
 ```yaml
+apiVersion: v1
 kind: Pod
 metadata:
   name: gitrepo-volume-pod
@@ -27,20 +28,6 @@ spec:
     ports:
     - containerPort: 80
       protocol: TCP
-  - image: k8s.gcr.io/git-sync:v3.0.1
-    name: git-sync
-    volumeMounts:
-    - name: html
-      mountPath: /tmp/git/gitsync
-    env:
-    - name: GIT_SYNC_REPO
-      value: https://github.com/DTherHtun/static-gitrepo.git
-    - name: GIT_SYNC_DEST
-      value: gitsync
-    securityContext:
-            #  fsGroup: 2000
-      runAsNonRoot: false
-      runAsUser: 0
   volumes:
   - name: html
     gitRepo:
@@ -49,5 +36,5 @@ spec:
       directory: .
 ```
 
-Line number 31 ကတော့ volume type - `gitRepo` လို့ declare လုပ်ထားတာ ဖြစ်ပါတယ်။ `gitRepo` ရဲ့ parameter တွေကတော့ `repository` , `revision`, `directory` တို့ဖြစ်ပြီး `repository` သည် အသုံးပြုမယ့် repository url ကိုထည့်ပေးရမှာ ဖြစ်ပါတယ်။ `revision` ကတော့ repository မှ clone ချင်သည့် branch ကို ထည့်ပေးဖို့ ဖြစ်ပါတယ်။ `directory` ကတော့ destination နဲ့ တူပါတယ်။ ဘယ် path သို့မဟုတ် ဘယ် folder အောက်ကို clone မလဲ ဆိုတာကို ထည့်ပေးဖို့ဖြစ်ပါတယ်။
+Line number 18 ကတော့ volume type - `gitRepo` လို့ declare လုပ်ထားတာ ဖြစ်ပါတယ်။ `gitRepo` ရဲ့ parameter တွေကတော့ `repository` , `revision`, `directory` တို့ဖြစ်ပြီး `repository` သည် အသုံးပြုမယ့် repository url ကိုထည့်ပေးရမှာ ဖြစ်ပါတယ်။ `revision` ကတော့ repository မှ clone ချင်သည့် branch ကို ထည့်ပေးဖို့ ဖြစ်ပါတယ်။ `directory` ကတော့ destination နဲ့ တူပါတယ်။ ဘယ် path သို့မဟုတ် ဘယ် folder အောက်ကို clone မလဲ ဆိုတာကို ထည့်ပေးဖို့ဖြစ်ပါတယ်။
 
