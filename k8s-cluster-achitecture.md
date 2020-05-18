@@ -27,7 +27,7 @@ Worker node \(minion\) မှာ အကြမ်းဖျင်း အဓိက 
 
   ဒါတွေက တော့ k8s cluster ရဲ့ architecture အကြမ်းဖျင်း ဖြစ်တယ်။
 
-![](.gitbook/assets/k8s-cluster-arch01.jpg)
+![](.gitbook/assets/arch-k8s.png)
 
 ```text
 Reference: - https://kubernetes.io/docs/
