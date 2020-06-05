@@ -11,6 +11,7 @@
 * [Replication Controller](replication-controller.md)
 * [ReplicaSet](replicaset.md)
 * [DaemonSet](ds.md)
+* [Deployment](deployment.md)
 * [Service](service/README.md)
   * [Service Episode II](service/service-part-2.md)
   * [Service Episode III](service/service-episode-iii.md)
