@@ -4,6 +4,8 @@
 
 ## Core Concepts
 
+---
+
 * [K8s Cluster Architecture](k8s-cluster-achitecture.md)
 * [Pods](pods.md)
 * [Creating pods](creating-pods.md)
@@ -54,5 +56,8 @@
 
 * [How To Get Started Learning Container](tyro/gsc.md)
 * [Folding @ home with Containers](tyro/folding-home-with-containers.md)
+
+---
+
 * [FAQ](faq.md)
 
